@@ -3672,6 +3672,11 @@ body {
       color: #FFFFFF;
     }
 
+    .mp-status--expired {
+      background: rgba(239,68,68,0.90);
+      color: #FFFFFF;
+    }
+
     /* Card body */
     .mp-course-body {
       padding: 12px 14px 14px;
@@ -5085,6 +5090,287 @@ body {
     }
     .gc-send-btn:active { transform: scale(0.88); opacity: 0.85; }
 
+
+
+
+
+    /* =========================================
+       PRESALES PAGE  (.ps- prefix)
+       ========================================= */
+
+    #page-presales { background: #F5F5F5; }
+
+    .ps-navbar {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 48px; padding: 0 12px;
+      background: #FFFFFF;
+      border-bottom: 1px solid #F2F2F7;
+      flex-shrink: 0;
+    }
+
+    .ps-nav-btn {
+      width: 34px; height: 34px; border: none;
+      background: none; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #333; cursor: pointer;
+      transition: background 150ms;
+    }
+    .ps-nav-btn:active { background: #F0F0F0; }
+
+    .ps-nav-title {
+      font-size: 16px; font-weight: 700; color: #1A1A1A;
+    }
+
+    /* Scrollable area */
+    .ps-scroll {
+      flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
+    }
+    .ps-scroll::-webkit-scrollbar { display: none; }
+
+    /* 16:9 cover */
+    .ps-cover {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(145deg,#0D2B4E 0%,#1B5E8A 50%,#1B3A8C 100%);
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .ps-cover-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% 40%, rgba(99,102,241,0.15) 0%, transparent 70%);
+    }
+
+    .ps-play-btn {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.18);
+      border: 2px solid rgba(255,255,255,0.4);
+      backdrop-filter: blur(6px);
+      display: flex; align-items: center; justify-content: center;
+      color: #FFFFFF; position: relative; z-index: 1;
+      padding-left: 4px; /* optical center for play icon */
+    }
+
+    .ps-cover-label {
+      position: absolute; top: 10px; left: 10px;
+      background: rgba(22,119,255,0.85);
+      color: #fff; font-size: 10px; font-weight: 700;
+      border-radius: 4px; padding: 3px 8px;
+    }
+
+    /* Info card */
+    .ps-info-card {
+      background: #FFFFFF; padding: 16px;
+      margin-bottom: 10px;
+    }
+
+    .ps-price-row {
+      display: flex; align-items: baseline;
+      gap: 8px; margin-bottom: 10px;
+    }
+
+    .ps-price-now {
+      font-size: 32px; font-weight: 900;
+      color: #EF4444; letter-spacing: -1px; line-height: 1;
+    }
+
+    .ps-price-old {
+      font-size: 14px; color: #BBBBBB;
+      text-decoration: line-through;
+    }
+
+    .ps-badge-tag {
+      font-size: 10px; font-weight: 700; color: #D97706;
+      background: #FEF3C7; border-radius: 4px;
+      padding: 2px 7px; white-space: nowrap;
+    }
+
+    .ps-course-title {
+      font-size: 17px; font-weight: 800; color: #1A1A1A;
+      letter-spacing: -0.3px; margin-bottom: 8px; line-height: 1.3;
+    }
+
+    .ps-course-desc {
+      font-size: 13px; color: #666; line-height: 1.65;
+      margin-bottom: 12px;
+    }
+
+    .ps-meta-row {
+      display: flex; flex-wrap: wrap; gap: 6px;
+    }
+
+    .ps-meta-pill {
+      font-size: 11px; color: #555;
+      background: #F4F4F8; border-radius: 99px;
+      padding: 4px 10px;
+    }
+
+    /* Detail card (skeleton) */
+    .ps-detail-card {
+      background: #FFFFFF; padding: 16px;
+      margin-bottom: 10px;
+    }
+
+    .ps-detail-title {
+      font-size: 14px; font-weight: 700; color: #1A1A1A;
+      margin-bottom: 14px;
+    }
+
+    .ps-skeleton-rows {
+      display: flex; flex-direction: column; gap: 14px;
+    }
+
+    .ps-sk-row {
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+
+    .ps-sk-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #E0E0E0; flex-shrink: 0; margin-top: 4px;
+    }
+
+    .ps-sk-line {
+      height: 10px; border-radius: 5px; background: #EEEEEE;
+    }
+
+    .ps-sk-l40 { width: 40%; }
+    .ps-sk-l50 { width: 50%; }
+    .ps-sk-l60 { width: 60%; }
+    .ps-sk-l70 { width: 70%; }
+    .ps-sk-l75 { width: 75%; }
+    .ps-sk-l80 { width: 80%; }
+    .ps-sk-l90 { width: 90%; }
+
+    /* Instructor row */
+    .ps-instructor-row {
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+
+    .ps-instructor-av {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg,#4F46E5,#6366F1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 800; color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ps-instructor-info { flex: 1; }
+
+    /* Fixed checkout bar */
+    .ps-checkout-bar {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: #FFFFFF;
+      border-top: 1px solid #F0F0F0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      padding-bottom: max(10px, env(safe-area-inset-bottom));
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+      z-index: 50;
+    }
+
+    .ps-checkout-total {
+      font-size: 13px; color: #888;
+    }
+
+    .ps-checkout-price {
+      font-size: 20px; font-weight: 800;
+      color: #EF4444; vertical-align: baseline;
+    }
+
+    .ps-checkout-btn {
+      height: 44px; padding: 0 28px;
+      background: linear-gradient(135deg,#1677FF,#0B5CCC);
+      border: none; border-radius: 99px;
+      font-size: 15px; font-weight: 700; color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(22,119,255,0.40);
+      transition: transform 150ms var(--ease-spring), opacity 150ms;
+    }
+    .ps-checkout-btn:active { transform: scale(0.96); opacity: 0.88; }
+    .ps-checkout-btn:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+    /* =========================================
+       PAYMENT SUCCESS PAGE  (.succ- prefix)
+       ========================================= */
+
+    #page-payment-success { background: #FFFFFF; }
+
+    .succ-body {
+      flex: 1;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 0 32px;
+      gap: 12px;
+    }
+
+    /* Glow + circle */
+    .succ-icon-wrap {
+      position: relative;
+      width: 120px; height: 120px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .succ-glow {
+      position: absolute; inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(16,185,129,0.22) 0%, transparent 70%);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .succ-circle {
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg,#10B981,#059669);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 28px rgba(16,185,129,0.45);
+      position: relative; z-index: 1;
+      animation: scaleIn 0.5s var(--ease-spring) both;
+    }
+
+    .succ-title {
+      font-size: 28px; font-weight: 900;
+      color: #1A1A1A; letter-spacing: -0.8px;
+    }
+
+    .succ-amount {
+      font-size: 14px; color: #888;
+    }
+
+    .succ-amount strong {
+      color: #1A1A1A; font-weight: 700;
+    }
+
+    .succ-course-tip {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600; color: #059669;
+      background: #F0FDF4;
+      border: 1px solid rgba(5,150,105,0.2);
+      border-radius: 8px; padding: 8px 14px;
+      margin: 8px 0 16px;
+      text-align: center;
+    }
+
+    .succ-btn {
+      width: 100%; height: 50px;
+      background: linear-gradient(135deg,#1677FF,#0B5CCC);
+      border: none; border-radius: 14px;
+      font-size: 16px; font-weight: 700; color: #fff;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(22,119,255,0.38);
+      transition: transform 150ms var(--ease-spring), opacity 150ms;
+      margin-bottom: 4px;
+    }
+    .succ-btn:active { transform: scale(0.97); opacity: 0.88; }
+
+    .succ-fine {
+      font-size: 11px; color: #CCCCCC;
+    }
+
   </style>
 </head>
 <body>
@@ -6012,9 +6298,9 @@ body {
             </div>
           </div>
 
-          <div class="mp-course-card">
+          <div class="mp-course-card" id="macro-course-card">
             <div class="mp-course-thumb" style="background:linear-gradient(135deg,#1A3D2B 0%,#2E7D52 60%,#1677FF 100%);">
-              <span class="mp-course-status mp-status--unlocked">已解锁</span>
+              <span class="mp-course-status" style="background:#EF4444;color:#fff;" id="macro-course-status">已到期</span>
             </div>
             <div class="mp-course-body">
               <div class="mp-course-title">宏观经济周期与资产配置精讲</div>
@@ -6026,11 +6312,13 @@ body {
                 <span class="mp-progress-pct" style="color:#34D399;">100%</span>
               </div>
               <div class="mp-course-foot">
-                <span class="mp-unlocked-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                  已完成
+                <span class="mp-unlocked-badge" id="macro-course-badge" style="color:#EF4444;">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  权益已于今日到期
                 </span>
-                <button class="mp-continue-btn" style="background:#F0FDF4;color:#059669;">重温课程 →</button>
+                <button class="mp-continue-btn" id="macro-course-btn"
+                        style="background:linear-gradient(135deg,#FF6B6B,#EF4444);color:#fff;box-shadow:0 3px 10px rgba(239,68,68,0.35);"
+                        onclick="event.stopPropagation(); router.navigate('presales')">特惠续费</button>
               </div>
             </div>
           </div>
@@ -6067,6 +6355,155 @@ body {
 
     </div>
     <!-- /page-mentor -->
+    <!-- =============================================
+         PAGE: PRESALES — 课程售前页
+         ============================================= -->
+    <div class="page hidden" id="page-presales" style="display:none;">
+
+      <!-- Status bar -->
+      <div class="status-bar" style="background:#fff;color:#1A1A1A;border-bottom:1px solid #F2F2F7;flex-shrink:0;">
+        <span class="time">9:41</span>
+        <div class="icons" style="color:#1A1A1A;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="1" y="15" width="4" height="6" rx="1"/><rect x="7" y="11" width="4" height="10" rx="1"/><rect x="13" y="7" width="4" height="14" rx="1"/><rect x="19" y="3" width="4" height="18" rx="1" opacity=".3"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 13v-2" stroke-linecap="round"/><rect x="3" y="8" width="14" height="8" rx="1" fill="currentColor" stroke="none"/></svg>
+        </div>
+      </div>
+
+      <!-- Navbar -->
+      <div class="ps-navbar">
+        <button class="ps-nav-btn" onclick="router.navigate('mentor')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <span class="ps-nav-title">课程详情</span>
+        <button class="ps-nav-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        </button>
+      </div>
+
+      <!-- Scrollable content — ends before fixed bar -->
+      <div class="ps-scroll">
+
+        <!-- 16:9 video cover -->
+        <div class="ps-cover">
+          <div class="ps-cover-bg"></div>
+          <div class="ps-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <div class="ps-cover-label">试看 · 免费</div>
+        </div>
+
+        <!-- Price + title card -->
+        <div class="ps-info-card">
+          <div class="ps-price-row">
+            <span class="ps-price-now">¥199</span>
+            <span class="ps-price-old">¥499</span>
+            <span class="ps-badge-tag">老学员续费专属</span>
+          </div>
+          <div class="ps-course-title">宏观经济周期与资产配置精讲</div>
+          <div class="ps-course-desc">掌握大类资产轮动规律，跟随周期配置资产，构建属于你的宏观投研框架。</div>
+
+          <!-- Meta pills -->
+          <div class="ps-meta-row">
+            <span class="ps-meta-pill">📚 共 12 节</span>
+            <span class="ps-meta-pill">⏱ 约 18 小时</span>
+            <span class="ps-meta-pill">♾ 永久有效</span>
+          </div>
+        </div>
+
+        <!-- Outline skeleton card -->
+        <div class="ps-detail-card">
+          <div class="ps-detail-title">课程大纲</div>
+          <div class="ps-skeleton-rows">
+            <div class="ps-sk-row">
+              <div class="ps-sk-dot"></div>
+              <div>
+                <div class="ps-sk-line ps-sk-l80"></div>
+                <div class="ps-sk-line ps-sk-l50" style="margin-top:6px;"></div>
+              </div>
+            </div>
+            <div class="ps-sk-row">
+              <div class="ps-sk-dot"></div>
+              <div>
+                <div class="ps-sk-line ps-sk-l90"></div>
+                <div class="ps-sk-line ps-sk-l60" style="margin-top:6px;"></div>
+              </div>
+            </div>
+            <div class="ps-sk-row">
+              <div class="ps-sk-dot"></div>
+              <div>
+                <div class="ps-sk-line ps-sk-l70"></div>
+                <div class="ps-sk-line ps-sk-l40" style="margin-top:6px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instructor skeleton card -->
+        <div class="ps-detail-card">
+          <div class="ps-detail-title">讲师介绍</div>
+          <div class="ps-instructor-row">
+            <div class="ps-instructor-av">李</div>
+            <div class="ps-instructor-info">
+              <div class="ps-sk-line ps-sk-l40" style="height:14px;border-radius:4px;"></div>
+              <div class="ps-sk-line ps-sk-l90" style="margin-top:8px;"></div>
+              <div class="ps-sk-line ps-sk-l75" style="margin-top:6px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom padding to clear fixed bar -->
+        <div style="height:88px;"></div>
+      </div>
+
+      <!-- Fixed checkout bar -->
+      <div class="ps-checkout-bar">
+        <div class="ps-checkout-total">
+          合计：<span class="ps-checkout-price">¥199</span>
+        </div>
+        <button class="ps-checkout-btn" id="ps-checkout-btn" onclick="simulateCheckout()">
+          立即支付
+        </button>
+      </div>
+
+    </div>
+    <!-- /page-presales -->
+
+    <!-- =============================================
+         PAGE: PAYMENT SUCCESS — 支付成功页
+         ============================================= -->
+    <div class="page hidden" id="page-payment-success" style="display:none;">
+
+      <div class="succ-body">
+
+        <!-- Success visual -->
+        <div class="succ-icon-wrap">
+          <div class="succ-glow"></div>
+          <div class="succ-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="succ-title">支付成功</div>
+        <div class="succ-amount">实付金额 <strong>¥199.00</strong></div>
+
+        <div class="succ-course-tip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" width="14" height="14"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          《宏观经济周期与资产配置精讲》已解锁
+        </div>
+
+        <button class="succ-btn" onclick="finishPaymentAndReturn()">
+          立即开始学习
+        </button>
+
+        <div class="succ-fine">权益立即生效 · 永久有效</div>
+
+      </div>
+
+    </div>
+    <!-- /page-payment-success -->
     <!-- =============================================
          PAGE: CIRCLE DETAIL — 圈子主页
          ============================================= -->
@@ -6498,7 +6935,9 @@ body {
     </div>
     <!-- /page-group-chat -->
 
-  </div>
+  
+
+</div>
 </div>
 
 <script>
@@ -6594,8 +7033,10 @@ window.router = new AppRouter();
     router.register('auth', authPage);
     router.register('main', mainPage);
     router.register('mentor',        document.getElementById('page-mentor'));
-    router.register('circle-detail', document.getElementById('page-circle-detail'));
-    router.register('group-chat',    document.getElementById('page-group-chat'));
+    router.register('circle-detail',    document.getElementById('page-circle-detail'));
+    router.register('group-chat',       document.getElementById('page-group-chat'));
+    router.register('presales',          document.getElementById('page-presales'));
+    router.register('payment-success',   document.getElementById('page-payment-success'));
 
     // Show auth page immediately
     router.show('auth');
@@ -7146,7 +7587,7 @@ window.router = new AppRouter();
       bioTags: ['卫视嘉宾', '策略交易', '量化对冲'],
       courses: [
         { title: '期权双买实战7天训练营',   lessons: 7,  progress: 43,  grad: 'linear-gradient(135deg,#0D2B4E 0%,#1B5E8A 60%,#C9770A 100%)', status: 'active'   },
-        { title: '宏观经济周期与资产配置精讲', lessons: 12, progress: 100, grad: 'linear-gradient(135deg,#1A3D2B 0%,#2E7D52 60%,#1677FF 100%)', status: 'done'     },
+        { title: '宏观经济周期与资产配置精讲', lessons: 12, progress: 100, grad: 'linear-gradient(135deg,#1A3D2B 0%,#2E7D52 60%,#1677FF 100%)', status: 'expired'  },
         { title: '量化选股因子模型实操',    lessons: 8,  progress: 0,   grad: 'linear-gradient(135deg,#2A1A4E 0%,#6A3FA0 60%,#C9A94B 100%)', status: 'locked'   },
       ],
     },
@@ -7239,15 +7680,25 @@ window.router = new AppRouter();
   /* ── Course status helpers ── */
   function courseStatusBadge(status) {
     const map = {
-      active: ['mp-status--active',   '学习中'],
-      done:   ['mp-status--unlocked', '已完成'],
-      locked: ['mp-status--locked',   '待解锁'],
+      active:   ['mp-status--active',   '学习中'],
+      done:     ['mp-status--unlocked', '已完成'],
+      locked:   ['mp-status--locked',   '待解锁'],
+      expired:  ['mp-status--expired',  '已到期'],
     };
     const [cls, txt] = map[status] || map.locked;
     return `<span class="mp-course-status ${cls}">${txt}</span>`;
   }
 
   function courseFooter(status, progress) {
+    if (status === 'expired') {
+      return `<span class="mp-locked-badge" style="color:#EF4444;">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                权益已过期
+              </span>
+              <button class="mp-continue-btn"
+                      style="background:linear-gradient(135deg,#FF6B6B,#EF4444);color:#fff;box-shadow:0 3px 10px rgba(239,68,68,0.35);"
+                      onclick="event.stopPropagation(); router.navigate('presales')">特惠续费</button>`;
+    }
     if (status === 'done') {
       return `<span class="mp-unlocked-badge">
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
@@ -7550,6 +8001,40 @@ window.router = new AppRouter();
       });
     }
   });
+
+
+
+
+
+  /* =============================================
+     PRESALES & PAYMENT FLOW
+     ============================================= */
+
+  function simulateCheckout() {
+    const btn = document.getElementById('ps-checkout-btn');
+    if (!btn || btn.disabled) return;
+    btn.disabled = true;
+    btn.textContent = '安全支付中...';
+
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.textContent = '立即支付';
+      router.navigate('payment-success');
+    }, 1000);
+  }
+
+  function finishPaymentAndReturn() {
+    // 1. Mutate data: expired → done
+    const liGuang = MENTOR_LIST[0];
+    const macroCourse = liGuang.courses.find(c => c.title.includes('宏观经济周期'));
+    if (macroCourse) macroCourse.status = 'done';
+
+    // 2. Re-render mentor page with updated data
+    openMentorPage(0);
+
+    // 3. Navigate back to mentor page
+    router.navigate('mentor');
+  }
 
 </script>
 
