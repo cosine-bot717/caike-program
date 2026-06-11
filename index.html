@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>财科严选 — 大V专属伴学平台</title>
+  <title>沙丘学习交流平台 — 大V专属伴学平台</title>
   <style>
 /* === GLOBAL DESIGN TOKENS & RESET (inlined from global.css) === */
 /* =========================================
@@ -500,9 +500,9 @@ body {
     }
 
     .auth-brand-name {
-      font-size: 26px;
+      font-size: 20px;
       font-weight: 700;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.3px;
       color: var(--c-text-primary);
     }
 
@@ -731,22 +731,6 @@ body {
       box-shadow: 0 4px 12px rgba(7, 193, 96, 0.2);
     }
 
-    .btn-secondary-auth {
-      width: 100%;
-      height: 44px;
-      background: transparent;
-      border: none;
-      border-radius: var(--r-lg);
-      font-size: 14px;
-      color: var(--c-text-secondary);
-      cursor: pointer;
-      transition: color var(--dur-fast);
-      margin-top: 8px;
-    }
-
-    .btn-secondary-auth:active {
-      color: var(--c-text-primary);
-    }
 
     /* Agreement text */
     .auth-agreement {
@@ -3275,12 +3259,6 @@ body {
       text-overflow: ellipsis;
     }
 
-    .lc-adv-fans {
-      font-size: 10px;
-      color: rgba(26,43,94,0.52);
-      margin-top: 2px;
-    }
-
     /* Floating avatar */
     .lc-adv-avatar {
       position: absolute;
@@ -3309,15 +3287,6 @@ body {
       font-weight: 700;
       color: #1A1A1A;
       margin-bottom: 2px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .lc-adv-license {
-      font-size: 9px;
-      color: #BBBBBB;
-      margin-bottom: 7px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -3508,14 +3477,6 @@ body {
       margin-bottom: 6px;
     }
 
-    .mp-cert-row {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 10px;
-      color: rgba(255,255,255,0.45);
-    }
-
     /* Stats row */
     .mp-stats-row {
       display: flex;
@@ -3591,9 +3552,6 @@ body {
       background: #FFFFFF;
       border-bottom: 1px solid #F0F0F0;
       padding: 0 20px;
-      position: sticky;
-      top: 48px;       /* below mp-navbar */
-      z-index: 20;
     }
 
     .mp-tab {
@@ -3768,224 +3726,8 @@ body {
     /* Shrink tab label font for 5 tabs */
     .tabbar .tab-label { font-size: 9px; letter-spacing: 0; }
 
-    /* Orb arch — narrower for 5-tab spacing */
-    .tab-item-orb::before { width: 64px; }
-
-    /* =========================================
-       COMMUNITY PAGE — 圈子发现 (.qz- prefix)
-       ========================================= */
-
-    #tab-community {
-      background: #FFFFFF;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    /* Navbar */
-    .qz-navbar {
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #FFFFFF;
-      border-bottom: 1px solid #F2F2F7;
-      flex-shrink: 0;
-    }
-
-    .qz-navbar-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #1A1A1A;
-      letter-spacing: 0.2px;
-    }
-
-    /* Scrollable pills wrapper */
-    .qz-pills-wrap {
-      flex-shrink: 0;
-      background: #FFFFFF;
-      padding: 10px 0 10px 16px;
-      border-bottom: 1px solid #F2F2F7;
-      overflow: hidden;
-    }
-
-    .qz-pills {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      padding-right: 16px;
-      scrollbar-width: none;
-    }
-    .qz-pills::-webkit-scrollbar { display: none; }
-
-    .qz-pill {
-      flex-shrink: 0;
-      display: inline-flex;
-      align-items: center;
-      height: 30px;
-      padding: 0 13px;
-      border-radius: 99px;
-      font-size: 12px;
-      font-weight: 500;
-      color: #555555;
-      background: #F4F4F8;
-      cursor: pointer;
-      transition: background 150ms, color 150ms;
-      white-space: nowrap;
-    }
-
-    .qz-pill--active {
-      background: var(--c-primary);
-      color: #FFFFFF;
-      font-weight: 600;
-    }
-
-    /* Circle list */
-    .qz-list {
-      flex: 1;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    .qz-list::-webkit-scrollbar { display: none; }
-
-    /* Circle card */
-    .qz-card {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 14px 16px;
-      background: #FFFFFF;
-      border-bottom: 1px solid #F2F2F7;
-      cursor: pointer;
-      transition: background 150ms;
-    }
-    .qz-card:active { background: #FAFAFA; }
-
-    /* Left cover image */
-    .qz-cover {
-      width: 70px;
-      height: 70px;
-      border-radius: 8px;
-      flex-shrink: 0;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .qz-cover-bg {
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Right info area */
-    .qz-info {
-      flex: 1;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 70px;
-    }
-
-    .qz-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: #1A1A1A;
-      letter-spacing: -0.2px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    /* Meta row: avatar + name | members | posts */
-    .qz-meta {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: nowrap;
-      overflow: hidden;
-    }
-
-    .qz-meta-avatar {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 8px;
-      font-weight: 700;
-      color: #FFFFFF;
-    }
-
-    .qz-meta-name {
-      font-size: 11px;
-      color: #999999;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 70px;
-    }
-
-    .qz-meta-sep {
-      font-size: 11px;
-      color: #DDDDDD;
-      flex-shrink: 0;
-    }
-
-    .qz-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      flex-shrink: 0;
-    }
-
-    .qz-meta-item svg {
-      width: 12px;
-      height: 12px;
-      color: #BBBBBB;
-    }
-
-    .qz-meta-item span {
-      font-size: 11px;
-      color: #999999;
-      white-space: nowrap;
-    }
-
-    /* Description — max 2 lines with ellipsis */
-    .qz-desc {
-      font-size: 12px;
-      color: #666666;
-      line-height: 1.55;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Join button */
-    .qz-join-btn {
-      position: absolute;
-      bottom: 14px;
-      right: 16px;
-      height: 26px;
-      padding: 0 12px;
-      background: var(--c-primary-light);
-      color: var(--c-primary);
-      border: none;
-      border-radius: 99px;
-      font-size: 11px;
-      font-weight: 600;
-      cursor: pointer;
-      flex-shrink: 0;
-      white-space: nowrap;
-      transition: background 150ms;
-    }
-    .qz-join-btn:active { background: #d0e4ff; }
-
-    /* Make card position:relative for absolute join btn */
-    .qz-card { position: relative; padding-bottom: 34px; }
+    /* Orb arch — 4-tab spacing */
+    .tab-item-orb::before { width: 72px; }
 
     /* =========================================
        PROFILE PAGE  (.pf- prefix)
@@ -4205,893 +3947,6 @@ body {
       background: #F5F5F5;
       margin: 0 16px;
     }
-
-
-    /* =========================================
-       CIRCLE DETAIL PAGE  (.cd- prefix)
-       ========================================= */
-
-    #page-circle-detail {
-      background: #F5F5F5;
-      flex-direction: column;
-    }
-
-    /* Dark hero */
-    .cd-hero {
-      background: linear-gradient(160deg,#0D1226 0%,#1B3A8C 60%,#0D1F6B 100%);
-      padding: 0 16px 28px;
-      flex-shrink: 0;
-      position: relative;
-    }
-
-    .cd-hero-navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 48px;
-    }
-
-    .cd-back-btn {
-      width: 34px; height: 34px;
-      border: none;
-      background: rgba(255,255,255,0.10);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; color: #fff;
-      transition: background 150ms;
-    }
-    .cd-back-btn:active { background: rgba(255,255,255,0.20); }
-
-    .cd-hero-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: #FFFFFF;
-    }
-
-    /* Circle info row */
-    .cd-info-row {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      margin-bottom: 14px;
-    }
-
-    .cd-cover {
-      width: 60px; height: 60px;
-      border-radius: 10px;
-      overflow: hidden;
-      flex-shrink: 0;
-      border: 1.5px solid rgba(255,255,255,0.15);
-    }
-
-    .cd-info-text { flex: 1; }
-
-    .cd-circle-name {
-      font-size: 15px;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 4px;
-    }
-
-    .cd-circle-desc {
-      font-size: 11px;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.5;
-      margin-bottom: 6px;
-    }
-
-    .cd-circle-stats {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.9);
-    }
-
-    .cd-stat-label {
-      font-weight: 400;
-      color: rgba(255,255,255,0.45);
-      font-size: 11px;
-    }
-
-    .cd-stat-sep { color: rgba(255,255,255,0.2); }
-
-    /* Member avatar stack */
-    .cd-members-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 12px;
-    }
-
-    .cd-avatar-stack {
-      position: relative;
-      height: 28px;
-      width: 110px;
-    }
-
-    .cd-mini-av {
-      position: absolute;
-      width: 26px; height: 26px;
-      border-radius: 50%;
-      border: 2px solid rgba(13,18,38,0.8);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 9px; font-weight: 700; color: #fff;
-    }
-
-    .cd-mini-more {
-      background: rgba(255,255,255,0.15);
-      font-size: 8px;
-      color: rgba(255,255,255,0.7);
-    }
-
-    .cd-rank-btn {
-      font-size: 11px;
-      color: rgba(255,255,255,0.55);
-      cursor: pointer;
-    }
-
-    /* Announcements */
-    .cd-announcements {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .cd-announcement {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      color: rgba(255,255,255,0.6);
-      line-height: 1.4;
-    }
-
-    /* White overlay sheet */
-    .cd-sheet {
-      flex: 1;
-      background: #F5F5F5;
-      border-radius: 20px 20px 0 0;
-      margin-top: -20px;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-      padding: 0 0 16px;
-    }
-    .cd-sheet::-webkit-scrollbar { display: none; }
-
-    /* 5-item menu */
-    .cd-menu-row {
-      display: flex;
-      background: #FFFFFF;
-      border-radius: 20px 20px 0 0;
-      padding: 14px 0 10px;
-      border-bottom: 1px solid #F2F2F7;
-    }
-
-    .cd-menu-item {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      cursor: pointer;
-    }
-
-    .cd-menu-item span {
-      font-size: 11px;
-      color: #888888;
-    }
-
-    .cd-menu-item svg { color: #AAAAAA; }
-
-    .cd-menu-active span { color: #1677FF; font-weight: 600; }
-
-    /* Group chat entry card */
-    .cd-chat-card {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: #FFFFFF;
-      margin: 12px 16px 0;
-      border-radius: 14px;
-      padding: 14px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-    }
-
-    .cd-chat-icon-wrap {
-      width: 44px; height: 44px;
-      border-radius: 12px;
-      background: var(--c-primary-light);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .cd-chat-info { flex: 1; min-width: 0; }
-
-    .cd-chat-name {
-      font-size: 14px;
-      font-weight: 700;
-      color: #1A1A1A;
-      margin-bottom: 3px;
-    }
-
-    .cd-chat-sub {
-      font-size: 11px;
-      color: #AAAAAA;
-    }
-
-    .cd-enter-btn {
-      height: 32px;
-      padding: 0 16px;
-      background: var(--grad-primary);
-      border: none;
-      border-radius: 99px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #FFFFFF;
-      cursor: pointer;
-      flex-shrink: 0;
-      box-shadow: 0 3px 8px rgba(22,119,255,0.30);
-      transition: transform 150ms var(--ease-spring), opacity 150ms;
-    }
-    .cd-enter-btn:active { transform: scale(0.93); opacity: 0.88; }
-
-    /* Pinned post */
-    .cd-post-card {
-      background: #FFFFFF;
-      margin: 10px 16px 0;
-      border-radius: 14px;
-      padding: 14px;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-    }
-
-    .cd-post-header {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .cd-post-av {
-      width: 36px; height: 36px;
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 13px; font-weight: 700; color: #fff;
-      flex-shrink: 0;
-    }
-
-    .cd-post-author {
-      font-size: 13px;
-      font-weight: 700;
-      color: #1A1A1A;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .cd-tag-pin {
-      font-size: 9px;
-      background: #FEF3C7;
-      color: #D97706;
-      border-radius: 3px;
-      padding: 1px 5px;
-      font-weight: 600;
-    }
-
-    .cd-post-time {
-      font-size: 11px;
-      color: #AAAAAA;
-      margin-top: 2px;
-    }
-
-    .cd-post-body {
-      font-size: 13px;
-      color: #444444;
-      line-height: 1.65;
-    }
-
-    /* =========================================
-       GROUP CHAT PAGE  (.gc- prefix)
-       ========================================= */
-
-    #page-group-chat {
-      background: #F0F0F5;
-      flex-direction: column;
-    }
-
-    /* Navbar */
-    .gc-navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 12px;
-      height: 52px;
-      background: #FFFFFF;
-      border-bottom: 1px solid #F0F0F0;
-      flex-shrink: 0;
-    }
-
-    .gc-back-btn, .gc-more-btn {
-      width: 34px; height: 34px;
-      border: none;
-      background: transparent;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; color: #333;
-      border-radius: 8px;
-      transition: background 150ms;
-    }
-    .gc-back-btn:active, .gc-more-btn:active { background: #F0F0F0; }
-
-    .gc-navbar-center { text-align: center; }
-
-    .gc-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: #1A1A1A;
-      letter-spacing: -0.2px;
-    }
-
-    .gc-subtitle {
-      font-size: 10px;
-      color: #AAAAAA;
-      margin-top: 1px;
-    }
-
-    /* Messages scroll area */
-    .gc-messages {
-      flex: 1;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-      padding: 14px 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .gc-messages::-webkit-scrollbar { display: none; }
-
-    /* Message rows */
-    .gc-row {
-      display: flex;
-      gap: 8px;
-      align-items: flex-start;
-      animation: fadeUp 0.25s var(--ease-out) both;
-    }
-
-    .gc-row--user {
-      flex-direction: row-reverse;
-    }
-
-    /* Avatar */
-    .gc-av {
-      width: 36px; height: 36px;
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 13px; font-weight: 700; color: #fff;
-      flex-shrink: 0;
-      background: linear-gradient(135deg,#1677FF,#0B5CCC);
-    }
-
-    .gc-av--user {
-      background: linear-gradient(135deg,#4F46E5,#6366F1);
-    }
-
-    /* Name + role tag row */
-    .gc-msg-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      max-width: 72%;
-    }
-
-    .gc-name-row {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      padding-left: 2px;
-    }
-
-    .gc-name {
-      font-size: 11px;
-      color: #888888;
-      font-weight: 500;
-    }
-
-    /* Role tag */
-    .gc-role-tag {
-      font-size: 9px;
-      font-weight: 700;
-      border-radius: 3px;
-      padding: 1px 5px;
-    }
-
-    .gc-tag--owner {
-      background: #FEE2E2;
-      color: #B91C1C;
-    }
-
-    .gc-tag--assistant {
-      background: #FEF3C7;
-      color: #D97706;
-    }
-
-    /* Bubbles */
-    .gc-bubble {
-      padding: 10px 13px;
-      font-size: 13px;
-      line-height: 1.6;
-      color: #1A1A1A;
-      word-break: break-all;
-    }
-
-    .gc-bubble--left {
-      background: #FFFFFF;
-      border-radius: 4px 14px 14px 14px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-    }
-
-    .gc-bubble--user {
-      background: linear-gradient(135deg,#4F46E5,#6366F1);
-      color: #FFFFFF;
-      border-radius: 14px 4px 14px 14px;
-      box-shadow: 0 2px 8px rgba(99,102,241,0.28);
-    }
-
-    /* System tip */
-    .gc-system-tip {
-      text-align: center;
-      font-size: 11px;
-      color: #AAAAAA;
-      background: rgba(0,0,0,0.06);
-      border-radius: 99px;
-      padding: 3px 12px;
-      display: inline-block;
-      align-self: center;
-    }
-
-    /* Input bar */
-    .gc-input-bar {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      padding-bottom: max(8px, env(safe-area-inset-bottom));
-      background: #F0F0F5;
-      border-top: 1px solid rgba(0,0,0,0.06);
-    }
-
-    .gc-input-wrap {
-      flex: 1;
-      background: #FFFFFF;
-      border-radius: 20px;
-      padding: 9px 14px;
-      border: 1px solid #E8E8EE;
-      transition: border-color 150ms, box-shadow 150ms;
-    }
-
-    .gc-input-wrap:focus-within {
-      border-color: #6366F1;
-      box-shadow: 0 0 0 3px rgba(99,102,241,0.10);
-    }
-
-    .gc-input-field {
-      width: 100%;
-      border: none;
-      background: transparent;
-      font-size: 14px;
-      color: #1A1A2E;
-      font-family: var(--font-sans);
-      outline: none;
-    }
-    .gc-input-field::placeholder { color: #AAAAAA; }
-
-    .gc-send-btn {
-      width: 38px; height: 38px;
-      border-radius: 50%;
-      border: none;
-      background: linear-gradient(135deg,#4F46E5,#6366F1);
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; color: #FFFFFF; flex-shrink: 0;
-      box-shadow: 0 3px 10px rgba(99,102,241,0.38);
-      transition: transform 150ms var(--ease-spring);
-    }
-    .gc-send-btn:active { transform: scale(0.88); }
-
-
-    /* =========================================
-       CIRCLE DETAIL PAGE  (.cd- prefix)
-       ========================================= */
-
-    #page-circle-detail { background: #F5F5F5; }
-
-    /* Hero dark area */
-    .cd-hero {
-      background: linear-gradient(160deg,#0D1226 0%,#1B3A8C 60%,#0D1F6B 100%);
-      padding-bottom: 28px;
-      position: relative;
-      flex-shrink: 0;
-    }
-
-    /* Navbar */
-    .cd-navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 6px 12px 10px;
-    }
-
-    .cd-nav-btn {
-      width: 34px; height: 34px;
-      background: rgba(255,255,255,0.10);
-      border: none; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; cursor: pointer;
-      transition: background 150ms;
-    }
-    .cd-nav-btn:active { background: rgba(255,255,255,0.20); }
-
-    .cd-nav-title {
-      font-size: 15px; font-weight: 700; color: #fff;
-      letter-spacing: -0.2px;
-    }
-
-    /* Circle identity */
-    .cd-identity {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 0 16px 14px;
-    }
-
-    .cd-cover-img {
-      width: 62px; height: 62px;
-      border-radius: 10px;
-      background: linear-gradient(135deg,#0D2B4E 0%,#1B5E8A 55%,#4F46E5 100%);
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    .cd-circle-name {
-      font-size: 15px; font-weight: 800; color: #fff;
-      letter-spacing: -0.3px; margin-bottom: 5px;
-    }
-
-    .cd-circle-desc {
-      font-size: 11px; color: rgba(255,255,255,0.55);
-      line-height: 1.55;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Stats + ranking */
-    .cd-stats-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 16px 12px;
-    }
-
-    .cd-stat-val { font-size: 13px; font-weight: 700; color: #fff; }
-    .cd-stat-lbl { font-size: 11px; color: rgba(255,255,255,0.5); }
-    .cd-stat-sep { font-size: 11px; color: rgba(255,255,255,0.25); margin: 0 8px; }
-
-    .cd-rank-group {
-      display: flex; align-items: center; gap: 8px;
-    }
-
-    .cd-avatar-stack {
-      position: relative;
-      width: 52px; height: 22px;
-    }
-
-    .cd-mini-av {
-      position: absolute;
-      width: 22px; height: 22px;
-      border-radius: 50%;
-      border: 2px solid rgba(255,255,255,0.3);
-      font-size: 9px; font-weight: 700; color: #fff;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    .cd-rank-link {
-      font-size: 11px; color: rgba(255,255,255,0.6); cursor: pointer;
-    }
-
-    /* Announcements */
-    .cd-announcements {
-      padding: 0 16px;
-      display: flex; flex-direction: column; gap: 5px;
-    }
-
-    .cd-announce {
-      display: flex; align-items: flex-start; gap: 6px;
-      font-size: 11px; color: rgba(255,255,255,0.65);
-      line-height: 1.45;
-    }
-
-    /* White overlay content */
-    .cd-content {
-      background: #FFFFFF;
-      border-radius: 20px 20px 0 0;
-      margin-top: -20px;
-      flex: 1;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    .cd-content::-webkit-scrollbar { display: none; }
-
-    /* Five-icon menu */
-    .cd-menu {
-      display: flex;
-      padding: 16px 8px 10px;
-      border-bottom: 1px solid #F2F2F7;
-    }
-
-    .cd-menu-item {
-      flex: 1;
-      display: flex; flex-direction: column;
-      align-items: center; gap: 5px;
-      cursor: pointer;
-    }
-
-    .cd-menu-icon {
-      width: 46px; height: 46px;
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      transition: transform 150ms var(--ease-spring);
-    }
-    .cd-menu-icon:active { transform: scale(0.9); }
-
-    .cd-menu-label {
-      font-size: 11px; color: #888; font-weight: 500;
-    }
-
-    .cd-menu-item--active .cd-menu-label {
-      color: var(--c-primary); font-weight: 700;
-    }
-
-    /* Group entry card */
-    .cd-group-entry {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 12px 16px;
-      padding: 12px 14px;
-      background: #FFFFFF;
-      border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    }
-
-    .cd-group-icon {
-      width: 44px; height: 44px;
-      border-radius: 12px;
-      background: var(--c-primary-light);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .cd-group-info { flex: 1; min-width: 0; }
-
-    .cd-group-name {
-      font-size: 13px; font-weight: 700; color: #1A1A1A;
-      margin-bottom: 3px;
-    }
-
-    .cd-group-meta {
-      font-size: 11px; color: #AAAAAA;
-    }
-
-    .cd-enter-btn {
-      height: 30px; padding: 0 16px;
-      background: var(--c-primary);
-      border: none; border-radius: 99px;
-      font-size: 12px; font-weight: 700; color: #fff;
-      cursor: pointer; flex-shrink: 0;
-      box-shadow: 0 3px 10px rgba(22,119,255,0.3);
-      transition: opacity 150ms;
-    }
-    .cd-enter-btn:active { opacity: 0.85; }
-
-    /* Pinned post */
-    .cd-post-card {
-      margin: 4px 16px 16px;
-      padding: 12px 14px;
-      background: #FAFAFA;
-      border-radius: 12px;
-      border: 1px solid #F0F0F0;
-    }
-
-    .cd-post-top {
-      display: flex; align-items: center; gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .cd-post-av {
-      width: 34px; height: 34px;
-      border-radius: 9px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px; font-weight: 700; color: #fff;
-      flex-shrink: 0;
-    }
-
-    .cd-post-author {
-      font-size: 12px; font-weight: 700; color: #1A1A1A;
-      display: flex; align-items: center; gap: 5px;
-    }
-
-    .cd-post-tag {
-      font-size: 9px; font-weight: 700;
-      border-radius: 3px; padding: 1px 5px;
-    }
-
-    .cd-tag-assist { background: #FEF3C7; color: #D97706; }
-    .cd-tag-top    { background: #FEE2E2; color: #EF4444; }
-
-    .cd-post-time { font-size: 10px; color: #AAAAAA; margin-top: 1px; }
-    .cd-post-body { font-size: 12px; color: #444; line-height: 1.6; }
-
-    /* =========================================
-       GROUP CHAT PAGE  (.gc- prefix)
-       ========================================= */
-
-    #page-group-chat { background: #EDEDF2; }
-
-    /* Navbar */
-    .gc-navbar {
-      display: flex; align-items: center;
-      justify-content: space-between;
-      padding: 8px 12px 10px;
-      background: #F7F7F7;
-      border-bottom: 1px solid #E8E8E8;
-      flex-shrink: 0;
-    }
-
-    .gc-nav-btn {
-      width: 34px; height: 34px;
-      background: none; border: none;
-      display: flex; align-items: center; justify-content: center;
-      color: #333; cursor: pointer; border-radius: 8px;
-    }
-    .gc-nav-btn:active { background: #EBEBEB; }
-
-    .gc-nav-center { text-align: center; }
-
-    .gc-nav-title {
-      font-size: 14px; font-weight: 700; color: #1A1A1A;
-      letter-spacing: -0.2px;
-    }
-
-    .gc-nav-sub { font-size: 10px; color: #AAAAAA; margin-top: 1px; }
-
-    /* Chat body */
-    .gc-body {
-      flex: 1;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-      padding: 14px 12px 10px;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .gc-body::-webkit-scrollbar { display: none; }
-
-    /* Message rows */
-    .gc-row {
-      display: flex;
-      gap: 8px;
-      align-items: flex-start;
-    }
-
-    .gc-row--right { flex-direction: row-reverse; }
-
-    /* Avatar */
-    .gc-av {
-      width: 36px; height: 36px;
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 13px; font-weight: 700; color: #fff;
-      flex-shrink: 0;
-      background: linear-gradient(135deg,#6366F1,#4F46E5);
-    }
-
-    .gc-av--user {
-      background: linear-gradient(135deg,#1677FF,#0B5CCC);
-    }
-
-    /* Name + role row */
-    .gc-name-row {
-      display: flex; align-items: center; gap: 5px;
-      margin-bottom: 4px;
-    }
-
-    .gc-name {
-      font-size: 11px; font-weight: 600; color: #888;
-    }
-
-    .gc-role-tag {
-      font-size: 9px; font-weight: 700;
-      border-radius: 3px; padding: 1px 5px;
-    }
-
-    .gc-tag-assist { background: #FEF3C7; color: #D97706; }
-    .gc-tag-owner  { background: #FEE2E2; color: #B91C1C; }
-
-    /* Bubbles */
-    .gc-bubble {
-      max-width: 72%;
-      padding: 10px 13px;
-      font-size: 13px;
-      line-height: 1.6;
-      word-break: break-all;
-    }
-
-    .gc-bubble--ai {
-      background: #FFFFFF;
-      color: #1A1A1A;
-      border-radius: 4px 14px 14px 14px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
-    }
-
-    .gc-bubble--user {
-      background: linear-gradient(135deg,#4F46E5,#6366F1);
-      color: #fff;
-      border-radius: 14px 4px 14px 14px;
-    }
-
-    /* System tip */
-    .gc-sys-tip {
-      text-align: center;
-      font-size: 11px;
-      color: #AAAAAA;
-      background: rgba(0,0,0,0.06);
-      border-radius: 99px;
-      padding: 3px 12px;
-      align-self: center;
-    }
-
-    /* Input bar */
-    .gc-input-bar {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      padding-bottom: max(8px, env(safe-area-inset-bottom));
-      background: #F7F7F7;
-      border-top: 1px solid #E8E8E8;
-    }
-
-    .gc-input {
-      flex: 1;
-      height: 38px;
-      background: #FFFFFF;
-      border: 1px solid #E5E5EA;
-      border-radius: 20px;
-      padding: 0 14px;
-      font-size: 14px;
-      color: #1A1A1A;
-      font-family: var(--font-sans);
-      outline: none;
-      transition: border-color 180ms;
-    }
-    .gc-input:focus { border-color: var(--c-primary); }
-    .gc-input::placeholder { color: #BBBBBB; }
-
-    .gc-send-btn {
-      width: 38px; height: 38px;
-      border-radius: 50%;
-      background: linear-gradient(135deg,#4F46E5,#6366F1);
-      border: none;
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; cursor: pointer; flex-shrink: 0;
-      box-shadow: 0 3px 10px rgba(99,102,241,0.40);
-      transition: transform 150ms var(--ease-spring), opacity 150ms;
-    }
-    .gc-send-btn:active { transform: scale(0.88); opacity: 0.85; }
-
-
-
 
 
     /* =========================================
@@ -5371,6 +4226,532 @@ body {
       font-size: 11px; color: #CCCCCC;
     }
 
+
+    /* =========================================
+       PHONE AUTH SHEET  (WeChat-style)
+       ========================================= */
+
+    .phone-auth-scrim {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.50);
+      z-index: 90;          /* below loading-overlay (100) */
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 300ms var(--ease-out);
+    }
+    .phone-auth-scrim.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .phone-auth-sheet {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      background: #FFFFFF;
+      border-radius: 16px 16px 0 0;
+      z-index: 95;          /* below loading-overlay (100) */
+      padding: 0 20px calc(16px + env(safe-area-inset-bottom, 0px));
+      transform: translateY(100%);
+      transition: transform 320ms var(--ease-out);
+      box-shadow: 0 -4px 32px rgba(0,0,0,0.14);
+    }
+    .phone-auth-sheet.open {
+      transform: translateY(0);
+    }
+
+    /* Header */
+    .pa-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0 10px;
+      border-bottom: 1px solid #F2F2F7;
+      margin-bottom: 18px;
+    }
+
+    .pa-header-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #888888;
+    }
+
+    .pa-close-btn {
+      width: 28px; height: 28px;
+      border: none; background: #F2F2F7;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #888; cursor: pointer;
+      transition: background 150ms;
+    }
+    .pa-close-btn:active { background: #E5E5EA; }
+
+    /* App identity */
+    .pa-identity {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .pa-app-icon {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      background: var(--grad-card);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 12px rgba(22,119,255,0.25);
+    }
+
+    .pa-app-name {
+      font-size: 13px;
+      color: #555;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* Phone card */
+    .pa-phone-card {
+      background: #F7F7F7;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+
+    .pa-phone-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pa-wechat-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: #FFFFFF;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .pa-phone-info { flex: 1; }
+
+    .pa-phone-number {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1A1A1A;
+      letter-spacing: 1px;
+    }
+
+    .pa-phone-sub {
+      font-size: 11px;
+      color: #AAAAAA;
+      margin-top: 2px;
+    }
+
+    .pa-safe-badge {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #07C160;
+      background: rgba(7,193,96,0.08);
+      border-radius: 99px;
+      padding: 4px 8px;
+      flex-shrink: 0;
+    }
+
+    /* Tip */
+    .pa-tip {
+      font-size: 11px;
+      color: #AAAAAA;
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    /* Buttons */
+    .pa-allow-btn {
+      width: 100%;
+      height: 48px;
+      background: #07C160;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+      cursor: pointer;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 14px rgba(7,193,96,0.35);
+      transition: opacity 150ms, transform 150ms var(--ease-spring);
+    }
+    .pa-allow-btn:active { opacity: 0.85; transform: scale(0.98); }
+
+    .pa-deny-btn {
+      width: 100%;
+      height: 44px;
+      background: #F2F2F7;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #888888;
+      cursor: pointer;
+      transition: background 150ms;
+    }
+    .pa-deny-btn:active { background: #E5E5EA; }
+
+
+    /* Mentor page tab panels */
+    .mp-tab-content { position: relative; }
+    .mp-tab-panel { display: none; }
+    .mp-tab-panel.active { display: block; animation: fadeIn 0.3s ease; }
+
+
+    /* =========================================
+       导师主页：圈子卡片样式复用 (.qz- prefix)
+       ========================================= */
+    .qz-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 12px 16px;
+    }
+
+    .qz-card {
+      display: flex;
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 12px;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      cursor: pointer;
+      transition: transform 150ms var(--ease-out);
+      position: relative;
+    }
+    .qz-card:active { transform: scale(0.98); }
+
+    .qz-cover {
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .qz-cover-bg { width: 100%; height: 100%; }
+
+    .qz-info {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .qz-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 6px;
+      padding-right: 50px;
+    }
+
+    .qz-meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: #999999;
+      margin-bottom: 6px;
+    }
+
+    .qz-meta-avatar {
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 9px; color: #fff; font-weight: 700;
+    }
+
+    .qz-meta-name { color: #666; }
+    .qz-meta-sep  { color: #DDD; }
+    .qz-meta-item { display: flex; align-items: center; gap: 3px; }
+    .qz-meta-item svg { width: 11px; height: 11px; }
+
+    .qz-desc {
+      font-size: 12px; color: #666;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 1.4;
+    }
+
+    .qz-join-btn {
+      position: absolute;
+      right: 12px; top: 12px;
+      font-size: 11px; font-weight: 600;
+      color: #1677FF; background: #E8F1FF;
+      border: none; border-radius: 99px;
+      padding: 4px 10px; cursor: pointer;
+    }
+
+
+    /* =========================================
+       CIRCLE DETAIL  (.cd- prefix)
+       ========================================= */
+
+    #page-circle-detail { background: #F5F5F5; }
+
+    .cd-hero {
+      background: linear-gradient(160deg,#0D1226 0%,#1B3A8C 60%,#0D1F6B 100%);
+      padding-bottom: 28px;
+      flex-shrink: 0;
+    }
+
+    .cd-navbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 6px 12px 10px;
+    }
+
+    .cd-nav-btn {
+      width: 34px; height: 34px;
+      background: rgba(255,255,255,0.10); border: none; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; cursor: pointer; transition: background 150ms;
+    }
+    .cd-nav-btn:active { background: rgba(255,255,255,0.20); }
+
+    .cd-nav-title { font-size: 15px; font-weight: 700; color: #fff; }
+
+    .cd-identity {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 0 16px 14px;
+    }
+
+    .cd-cover-img {
+      width: 62px; height: 62px; border-radius: 10px;
+      background: linear-gradient(135deg,#0D2B4E 0%,#1B5E8A 55%,#4F46E5 100%);
+      flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .cd-circle-name {
+      font-size: 15px; font-weight: 800; color: #fff;
+      letter-spacing: -0.3px; margin-bottom: 5px;
+    }
+
+    .cd-circle-desc {
+      font-size: 11px; color: rgba(255,255,255,0.55); line-height: 1.55;
+      display: -webkit-box; -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; overflow: hidden;
+    }
+
+    .cd-stats-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 16px 12px;
+    }
+
+    .cd-stat-val { font-size: 13px; font-weight: 700; color: #fff; }
+    .cd-stat-lbl { font-size: 11px; color: rgba(255,255,255,0.5); }
+    .cd-stat-sep { font-size: 11px; color: rgba(255,255,255,0.25); margin: 0 8px; }
+
+    .cd-rank-group { display: flex; align-items: center; gap: 8px; }
+
+    .cd-avatar-stack { position: relative; width: 52px; height: 22px; }
+
+    .cd-mini-av {
+      position: absolute;
+      width: 22px; height: 22px; border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+      font-size: 9px; font-weight: 700; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .cd-rank-link { font-size: 11px; color: rgba(255,255,255,0.6); cursor: pointer; }
+
+    /* White overlap */
+    .cd-content {
+      background: #fff; border-radius: 20px 20px 0 0;
+      margin-top: -20px; flex: 1;
+      overflow-y: auto; -webkit-overflow-scrolling: touch;
+    }
+    .cd-content::-webkit-scrollbar { display: none; }
+
+    .cd-menu {
+      display: flex; padding: 16px 8px 12px;
+      border-bottom: 1px solid #F2F2F7;
+    }
+
+    .cd-menu-item {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; gap: 5px; cursor: pointer;
+    }
+
+    .cd-menu-icon {
+      width: 46px; height: 46px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 150ms var(--ease-spring);
+    }
+    .cd-menu-icon:active { transform: scale(0.9); }
+
+    .cd-menu-label { font-size: 11px; color: #888; font-weight: 500; }
+    .cd-menu-item--active .cd-menu-label { color: var(--c-primary); font-weight: 700; }
+
+    .cd-group-entry {
+      display: flex; align-items: center; gap: 12px;
+      margin: 12px 16px;
+      padding: 12px 14px;
+      background: #fff; border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .cd-group-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--c-primary-light);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .cd-group-info { flex: 1; min-width: 0; }
+    .cd-group-name { font-size: 13px; font-weight: 700; color: #1A1A1A; margin-bottom: 3px; }
+    .cd-group-meta { font-size: 11px; color: #AAAAAA; }
+
+    .cd-enter-btn {
+      height: 30px; padding: 0 16px;
+      background: var(--c-primary); border: none; border-radius: 99px;
+      font-size: 12px; font-weight: 700; color: #fff;
+      cursor: pointer; flex-shrink: 0;
+      box-shadow: 0 3px 10px rgba(22,119,255,0.3);
+      transition: opacity 150ms;
+    }
+    .cd-enter-btn:active { opacity: 0.85; }
+
+    .cd-post-card {
+      margin: 4px 16px 20px;
+      padding: 12px 14px;
+      background: #FAFAFA;
+      border-radius: 12px;
+      border: 1px solid #F0F0F0;
+    }
+
+    .cd-post-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+
+    .cd-post-av {
+      width: 34px; height: 34px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; color: #fff; flex-shrink: 0;
+    }
+
+    .cd-post-author {
+      font-size: 12px; font-weight: 700; color: #1A1A1A;
+      display: flex; align-items: center; gap: 5px;
+    }
+
+    .cd-post-tag {
+      font-size: 9px; font-weight: 700; border-radius: 3px; padding: 1px 5px;
+    }
+    .cd-tag-assist { background: #FEF3C7; color: #D97706; }
+    .cd-tag-top    { background: #FEE2E2; color: #EF4444; }
+
+    .cd-post-time { font-size: 10px; color: #AAAAAA; margin-top: 1px; }
+    .cd-post-body { font-size: 12px; color: #444; line-height: 1.6; }
+
+    /* =========================================
+       GROUP CHAT  (.gc- prefix)
+       ========================================= */
+
+    .gc-navbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 12px 10px;
+      background: #F7F7F7; border-bottom: 1px solid #E8E8E8;
+      flex-shrink: 0;
+    }
+
+    .gc-nav-btn {
+      width: 34px; height: 34px; background: none; border: none;
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      color: #333; cursor: pointer; transition: background 150ms;
+    }
+    .gc-nav-btn:active { background: #EBEBEB; }
+
+    .gc-nav-center { text-align: center; }
+    .gc-nav-title { font-size: 14px; font-weight: 700; color: #1A1A1A; letter-spacing: -0.2px; }
+    .gc-nav-sub   { font-size: 10px; color: #AAAAAA; margin-top: 1px; }
+
+    .gc-body {
+      flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
+      padding: 14px 12px 10px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .gc-body::-webkit-scrollbar { display: none; }
+
+    .gc-row { display: flex; gap: 8px; align-items: flex-start; }
+    .gc-row--right { flex-direction: row-reverse; }
+
+    .gc-av {
+      width: 36px; height: 36px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: #fff; flex-shrink: 0;
+      background: linear-gradient(135deg,#6366F1,#4F46E5);
+    }
+    .gc-av--user { background: linear-gradient(135deg,#1677FF,#0B5CCC); }
+
+    .gc-name-row { display: flex; align-items: center; gap: 5px; margin-bottom: 4px; }
+    .gc-name { font-size: 11px; font-weight: 600; color: #888; }
+
+    .gc-role-tag {
+      font-size: 9px; font-weight: 700; border-radius: 3px; padding: 1px 5px;
+    }
+    .gc-tag-assist { background: #FEF3C7; color: #D97706; }
+    .gc-tag-owner  { background: #FEE2E2; color: #B91C1C; }
+
+    .gc-bubble {
+      max-width: 72%; padding: 10px 13px;
+      font-size: 13px; line-height: 1.6; word-break: break-all;
+    }
+
+    .gc-bubble--ai {
+      background: #fff; color: #1A1A1A;
+      border-radius: 4px 14px 14px 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+    }
+
+    .gc-bubble--user {
+      background: linear-gradient(135deg,#4F46E5,#6366F1);
+      color: #fff; border-radius: 14px 4px 14px 14px;
+    }
+
+    .gc-sys-tip {
+      text-align: center; font-size: 11px; color: #AAAAAA;
+      background: rgba(0,0,0,0.06); border-radius: 99px;
+      padding: 3px 12px; align-self: center;
+    }
+
+    .gc-input-bar {
+      flex-shrink: 0; display: flex; align-items: center; gap: 8px;
+      padding: 8px 12px; padding-bottom: max(8px, env(safe-area-inset-bottom));
+      background: #F7F7F7; border-top: 1px solid #E8E8E8;
+    }
+
+    .gc-input {
+      flex: 1; height: 38px; background: #fff;
+      border: 1px solid #E5E5EA; border-radius: 20px;
+      padding: 0 14px; font-size: 14px; color: #1A1A1A;
+      font-family: var(--font-sans); outline: none;
+      transition: border-color 180ms;
+    }
+    .gc-input:focus { border-color: var(--c-primary); }
+    .gc-input::placeholder { color: #BBBBBB; }
+
+    .gc-send-btn {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: linear-gradient(135deg,#4F46E5,#6366F1); border: none;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; cursor: pointer; flex-shrink: 0;
+      box-shadow: 0 3px 10px rgba(99,102,241,0.40);
+      transition: transform 150ms var(--ease-spring);
+    }
+    .gc-send-btn:active { transform: scale(0.88); }
+
   </style>
 </head>
 <body>
@@ -5416,7 +4797,7 @@ body {
               <path d="M38 6 L40 12 L46 14 L40 16 L38 22 L36 16 L30 14 L36 12 Z" fill="#E8C97A"/>
             </svg>
           </div>
-          <div class="auth-brand-name">财科<em>严选</em></div>
+          <div class="auth-brand-name">沙丘<em>学习交流平台</em></div>
         </div>
 
         <!-- Illustration Card -->
@@ -5478,7 +4859,7 @@ body {
 
         <div class="auth-slogan">
           <h2>跟着大V，学透财经</h2>
-          <p>财科严选官方专属伴学平台<br/>AI 助教 24 小时答疑，让投资学习更高效</p>
+          <p>沙丘学习交流平台官方伴学<br/>AI 助教 24 小时答疑，让投资学习更高效</p>
         </div>
 
         <!-- WeChat Auth Button -->
@@ -5490,9 +4871,7 @@ body {
           <span>微信一键授权登录</span>
         </button>
 
-        <button class="btn-secondary-auth" onclick="handleGuestMode()">
-          暂不登录，先随便看看 →
-        </button>
+        
 
         <div class="auth-agreement">
           登录即代表同意
@@ -5501,6 +4880,64 @@ body {
           我们承诺保护您的个人信息安全
         </div>
       </div>
+
+      <!-- Phone Auth Sheet (WeChat-style) -->
+      <div class="phone-auth-scrim" id="phone-auth-scrim" onclick="closePhoneAuth()"></div>
+
+      <div class="phone-auth-sheet" id="phone-auth-sheet">
+
+        <!-- Sheet header -->
+        <div class="pa-header">
+          <span class="pa-header-title">微信授权</span>
+          <button class="pa-close-btn" onclick="closePhoneAuth()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="18" height="18">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- App identity -->
+        <div class="pa-identity">
+          <div class="pa-app-icon">
+            <svg viewBox="0 0 48 48" fill="none" width="32" height="32">
+              <rect x="6" y="26" width="7" height="14" rx="2" fill="rgba(255,255,255,0.5)"/>
+              <rect x="16" y="18" width="7" height="22" rx="2" fill="rgba(255,255,255,0.7)"/>
+              <rect x="26" y="10" width="7" height="30" rx="2" fill="rgba(255,255,255,0.9)"/>
+              <path d="M38 6 L40 12 L46 14 L40 16 L38 22 L36 16 L30 14 L36 12 Z" fill="#E8C97A"/>
+            </svg>
+          </div>
+          <p class="pa-app-name"><strong>沙丘学习交流平台</strong> 申请获取你的手机号</p>
+        </div>
+
+        <!-- Phone number card -->
+        <div class="pa-phone-card">
+          <div class="pa-phone-row">
+            <!-- WeChat icon -->
+            <div class="pa-wechat-icon">
+              <svg viewBox="0 0 24 24" fill="#07C160" width="22" height="22">
+                <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.045c.134 0 .241-.107.241-.245 0-.06-.023-.12-.04-.177l-.325-1.233a.491.491 0 01.177-.554 6.257 6.257 0 002.5-4.633c.025-3.551-3.058-6.148-7.06-6.11zm-2.098 2.439c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982zm4.406 0c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982z"/>
+              </svg>
+            </div>
+            <div class="pa-phone-info">
+              <div class="pa-phone-number">138 **** 8866</div>
+              <div class="pa-phone-sub">微信绑定手机号</div>
+            </div>
+            <div class="pa-safe-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#07C160" stroke-width="2" stroke-linecap="round" width="12" height="12"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              安全绑定
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip text -->
+        <p class="pa-tip">授权后可使用手机号快捷登录，我们承诺不会向第三方泄露你的手机号</p>
+
+        <!-- Action buttons -->
+        <button class="pa-allow-btn" onclick="confirmPhoneAuth()">允许</button>
+        <button class="pa-deny-btn"  onclick="closePhoneAuth()">拒绝</button>
+
+      </div>
+      <!-- /phone-auth-sheet -->
 
       <!-- Loading Overlay -->
       <div id="loading-overlay">
@@ -5846,7 +5283,7 @@ body {
               <div class="lc-card-mid">
                 <div class="lc-card-text">
                   <div class="lc-course-title">《期权双买实战<br/>7天训练营》</div>
-                  <div class="lc-course-sub">已学习 3&thinsp;/&thinsp;7 节 &nbsp;·&nbsp; 王老师主讲</div>
+                  <div class="lc-course-sub">已学习 3&thinsp;/&thinsp;7 节 &nbsp;·&nbsp; 刘纪鹏主讲</div>
                   <button class="lc-continue-btn">继续学习 →</button>
                 </div>
 
@@ -5877,31 +5314,7 @@ body {
 
         </div>
         <!-- /tab-advisor -->
-        <!-- COMMUNITY TAB -->
-        <div class="tab-panel" id="tab-community">
 
-          <!-- Navbar -->
-          <div class="qz-navbar">
-            <span class="qz-navbar-title">发现</span>
-          </div>
-
-          <!-- Scrollable filter pills -->
-          <div class="qz-pills-wrap">
-            <div class="qz-pills" id="qz-pills">
-              <span class="qz-pill qz-pill--active" onclick="qzSwitchPill(this)">全部</span>
-              <span class="qz-pill" onclick="qzSwitchPill(this)">宏观策略</span>
-              <span class="qz-pill" onclick="qzSwitchPill(this)">量化交易</span>
-              <span class="qz-pill" onclick="qzSwitchPill(this)">研报共读</span>
-              <span class="qz-pill" onclick="qzSwitchPill(this)">实盘分享</span>
-              <span class="qz-pill" onclick="qzSwitchPill(this)">行业研究</span>
-            </div>
-          </div>
-
-          <!-- Circle list -->
-          <div class="qz-list" id="qz-list"></div>
-
-        </div>
-        <!-- /tab-community -->
 
         <!-- PROFILE TAB -->
         <div class="tab-panel" id="tab-profile">
@@ -6035,19 +5448,6 @@ body {
           <span class="tab-label">首页</span>
         </div>
 
-        <!-- 圈子 -->
-        <div class="tab-item" id="tab-btn-community" onclick="switchTab('community')">
-          <div class="tab-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="12" y1="8" x2="12" y2="12"/>
-              <line x1="12" y1="16" x2="12.01" y2="16"/>
-              <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
-            </svg>
-          </div>
-          <span class="tab-label">圈子</span>
-        </div>
-
         <!-- AI 半球悬浮按钮（居中） -->
         <div class="tab-item tab-item-orb" id="tab-btn-ai" onclick="openAIPanel()">
           <div class="orb-stage">
@@ -6118,7 +5518,7 @@ body {
               <div class="ai-wave-bar" style="animation-delay:0.15s;"></div>
               <div class="ai-wave-bar" style="animation-delay:0s;"></div>
             </div>
-            <span>财科 · 专属AI助教</span>
+            <span>沙丘 · 专属AI助教</span>
           </div>
           <div class="ai-drawer-header-right">
             <span class="ai-kb-badge">王老师知识库</span>
@@ -6132,7 +5532,7 @@ body {
           <div class="aic-row aic-row--ai">
             <div class="aic-avatar">财</div>
             <div class="aic-bubble aic-bubble--ai">
-              你好！我是财科专属AI助教。关于王老师的课程内容、专业名词解释，或者需要生成随堂测试，都可以随时问我哦～
+              你好！我是沙丘专属AI助教。关于王老师的课程内容、专业名词解释，或者需要生成随堂测试，都可以随时问我哦～
             </div>
           </div>
 
@@ -6228,10 +5628,6 @@ body {
             <div class="mp-identity-text">
               <div class="mp-realname">李光</div>
               <div class="mp-title-tag">量化策略主理人</div>
-              <div class="mp-cert-row">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="#34D399"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                <span>证券执业资格 · A0670626010092</span>
-              </div>
             </div>
           </div>
 
@@ -6268,86 +5664,31 @@ body {
 
         <!-- ② Content tabs -->
         <div class="mp-tabs-bar">
-          <div class="mp-tab mp-tab--active">主讲课程</div>
-          <div class="mp-tab">内部专栏</div>
+          <div class="mp-tab mp-tab--active" onclick="switchMentorTab(this,'course')">课程</div>
+          <div class="mp-tab" onclick="switchMentorTab(this,'live')">直播</div>
+          <div class="mp-tab" onclick="switchMentorTab(this,'circle')">圈子</div>
         </div>
 
-        <!-- ③ Course list -->
-        <div class="mp-course-list">
+        <!-- Tab panels -->
+        <div class="mp-tab-content">
 
-          <div class="mp-course-card">
-            <div class="mp-course-thumb" style="background:linear-gradient(135deg,#0D2B4E 0%,#1B5E8A 60%,#C9770A 100%);">
-              <span class="mp-course-status mp-status--active">学习中</span>
-            </div>
-            <div class="mp-course-body">
-              <div class="mp-course-title">期权双买实战7天训练营</div>
-              <div class="mp-course-meta">共 7 节 · 王老师主讲</div>
-              <div class="mp-progress-row">
-                <div class="mp-progress-bar">
-                  <div class="mp-progress-fill" style="width:43%;"></div>
-                </div>
-                <span class="mp-progress-pct">43%</span>
-              </div>
-              <div class="mp-course-foot">
-                <span class="mp-unlocked-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                  已解锁
-                </span>
-                <button class="mp-continue-btn">继续学习 →</button>
-              </div>
-            </div>
+          <!-- 课程面板 -->
+          <div class="mp-tab-panel active" id="mp-tp-course">
+            <div class="mp-course-list" id="mp-course-list"></div>
+            <div style="height:16px;"></div>
           </div>
 
-          <div class="mp-course-card" id="macro-course-card">
-            <div class="mp-course-thumb" style="background:linear-gradient(135deg,#1A3D2B 0%,#2E7D52 60%,#1677FF 100%);">
-              <span class="mp-course-status" style="background:#EF4444;color:#fff;" id="macro-course-status">已到期</span>
-            </div>
-            <div class="mp-course-body">
-              <div class="mp-course-title">宏观经济周期与资产配置精讲</div>
-              <div class="mp-course-meta">共 12 节 · 李光主讲</div>
-              <div class="mp-progress-row">
-                <div class="mp-progress-bar">
-                  <div class="mp-progress-fill" style="width:100%;background:#34D399;"></div>
-                </div>
-                <span class="mp-progress-pct" style="color:#34D399;">100%</span>
-              </div>
-              <div class="mp-course-foot">
-                <span class="mp-unlocked-badge" id="macro-course-badge" style="color:#EF4444;">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  权益已于今日到期
-                </span>
-                <button class="mp-continue-btn" id="macro-course-btn"
-                        style="background:linear-gradient(135deg,#FF6B6B,#EF4444);color:#fff;box-shadow:0 3px 10px rgba(239,68,68,0.35);"
-                        onclick="event.stopPropagation(); router.navigate('presales')">特惠续费</button>
-              </div>
-            </div>
+          <!-- 直播面板 -->
+          <div class="mp-tab-panel" id="mp-tp-live">
+            <div class="hm-live-grid" id="mp-live-list" style="padding:12px 16px 16px;"></div>
           </div>
 
-          <div class="mp-course-card">
-            <div class="mp-course-thumb" style="background:linear-gradient(135deg,#2A1A4E 0%,#6A3FA0 60%,#C9A94B 100%);">
-              <span class="mp-course-status mp-status--locked">待解锁</span>
-            </div>
-            <div class="mp-course-body">
-              <div class="mp-course-title">量化选股因子模型实操</div>
-              <div class="mp-course-meta">共 8 节 · 李光主讲</div>
-              <div class="mp-progress-row">
-                <div class="mp-progress-bar">
-                  <div class="mp-progress-fill" style="width:0%;"></div>
-                </div>
-                <span class="mp-progress-pct">0%</span>
-              </div>
-              <div class="mp-course-foot">
-                <span class="mp-locked-badge">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                  第4期开放
-                </span>
-                <button class="mp-continue-btn" style="background:#F3F4F6;color:#9CA3AF;box-shadow:none;">敬请期待</button>
-              </div>
-            </div>
+          <!-- 圈子面板 -->
+          <div class="mp-tab-panel" id="mp-tp-circle">
+            <div class="qz-list" id="mp-circle-list" style="padding:8px 0;"></div>
           </div>
 
         </div>
-        <!-- /mp-course-list -->
 
         <div style="height:32px;"></div>
       </div>
@@ -6355,6 +5696,183 @@ body {
 
     </div>
     <!-- /page-mentor -->
+    <!-- =============================================
+         PAGE: CIRCLE DETAIL — 圈子主页
+         ============================================= -->
+    <div class="page hidden" id="page-circle-detail" style="display:none;background:#F4F6FA;">
+
+      <!-- Status bar -->
+      <div class="status-bar" style="background:#0D1226;color:#fff;flex-shrink:0;">
+        <span class="time">9:41</span>
+        <div class="icons">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="1" y="15" width="4" height="6" rx="1"/><rect x="7" y="11" width="4" height="10" rx="1"/><rect x="13" y="7" width="4" height="14" rx="1"/><rect x="19" y="3" width="4" height="18" rx="1" opacity=".3"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 13v-2" stroke-linecap="round"/><rect x="3" y="8" width="14" height="8" rx="1" fill="currentColor" stroke="none"/></svg>
+        </div>
+      </div>
+
+      <!-- Dark hero -->
+      <div class="cd-hero">
+        <div class="cd-navbar">
+          <button class="cd-nav-btn" onclick="router.navigate('mentor')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <span class="cd-nav-title">刘纪鹏的圈子</span>
+          <button class="cd-nav-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+          </button>
+        </div>
+        <div class="cd-identity">
+          <div class="cd-cover-img"></div>
+          <div class="cd-identity-text">
+            <div class="cd-circle-name">刘纪鹏量化策略圈</div>
+            <div class="cd-circle-desc">量化实战学员专属，每日盘前分享模型跑出的高胜率标的，复盘策略回撤原因</div>
+          </div>
+        </div>
+        <div class="cd-stats-row">
+          <div class="cd-stat-group">
+            <span class="cd-stat-val">1.2w</span><span class="cd-stat-lbl"> 动态</span>
+            <span class="cd-stat-sep">|</span>
+            <span class="cd-stat-val">8.5k</span><span class="cd-stat-lbl"> 成员</span>
+          </div>
+          <div class="cd-rank-group">
+            <div class="cd-avatar-stack">
+              <div class="cd-mini-av" style="background:#4F46E5;left:0;">刘</div>
+              <div class="cd-mini-av" style="background:#059669;left:14px;">陈</div>
+              <div class="cd-mini-av" style="background:#D97706;left:28px;">吴</div>
+            </div>
+            <span class="cd-rank-link">排行榜 ›</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- White overlap content -->
+      <div class="cd-content">
+
+        <!-- Horizontal menu -->
+        <div class="cd-menu">
+          <div class="cd-menu-item">
+            <div class="cd-menu-icon" style="background:#FEF3C7;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <span class="cd-menu-label">动态</span>
+          </div>
+          <div class="cd-menu-item">
+            <div class="cd-menu-icon" style="background:#E8F1FF;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            </div>
+            <span class="cd-menu-label">课程</span>
+          </div>
+          <div class="cd-menu-item cd-menu-item--active">
+            <div class="cd-menu-icon" style="background:#E8F1FF;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <span class="cd-menu-label" style="color:#1677FF;font-weight:700;">群聊</span>
+          </div>
+          <div class="cd-menu-item">
+            <div class="cd-menu-icon" style="background:#EDE9FE;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <span class="cd-menu-label">成员</span>
+          </div>
+        </div>
+
+        <!-- Group chat entry card -->
+        <div class="cd-group-entry">
+          <div class="cd-group-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2" stroke-linecap="round" width="24" height="24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div class="cd-group-info">
+            <div class="cd-group-name">刘纪鹏·量化实战交流群</div>
+            <div class="cd-group-meta">圈主+助理在线答疑</div>
+          </div>
+          <button class="cd-enter-btn" onclick="router.navigate('group-chat')">进入</button>
+        </div>
+
+        <!-- Pinned post -->
+        <div class="cd-post-card">
+          <div class="cd-post-top">
+            <div class="cd-post-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);">助</div>
+            <div>
+              <div class="cd-post-author">团队助理
+                <span class="cd-post-tag cd-tag-assist">助理</span>
+                <span class="cd-post-tag cd-tag-top">置顶</span>
+              </div>
+              <div class="cd-post-time">今天 08:30</div>
+            </div>
+          </div>
+          <div class="cd-post-body">【早盘提示】量化模型今日信号：科技+新能源双线共振，注意控仓，勿追高。刘老师将在今晚直播中详细拆解策略逻辑 👇</div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /page-circle-detail -->
+
+    <!-- =============================================
+         PAGE: GROUP CHAT — 专属群聊页
+         ============================================= -->
+    <div class="page hidden" id="page-group-chat" style="display:none;background:#F4F6FA;flex-direction:column;">
+
+      <!-- Navbar -->
+      <div class="gc-navbar">
+        <button class="gc-nav-btn" onclick="router.navigate('circle-detail')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="gc-nav-center">
+          <div class="gc-nav-title">刘纪鹏·量化实战交流群</div>
+          <div class="gc-nav-sub">8500人</div>
+        </div>
+        <button class="gc-nav-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+        </button>
+      </div>
+
+      <!-- Chat body -->
+      <div class="gc-body" id="gc-body">
+
+        <!-- User bubble -->
+        <div class="gc-row gc-row--right">
+          <div class="gc-av gc-av--user">我</div>
+          <div class="gc-bubble gc-bubble--user">刘老师，今天早盘的新能源异动还能追吗？</div>
+        </div>
+
+        <!-- Assistant bubble -->
+        <div class="gc-row gc-row--left">
+          <div class="gc-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);">助</div>
+          <div>
+            <div class="gc-name-row">
+              <span class="gc-name">团队助理</span>
+              <span class="gc-role-tag gc-tag-assist">助理</span>
+            </div>
+            <div class="gc-bubble gc-bubble--ai">@你 短期波动较大，建议关注政策窗口期。</div>
+          </div>
+        </div>
+
+        <!-- Owner bubble -->
+        <div class="gc-row gc-row--left">
+          <div class="gc-av" style="background:linear-gradient(135deg,#4F46E5,#6366F1);">刘</div>
+          <div>
+            <div class="gc-name-row">
+              <span class="gc-name">刘纪鹏</span>
+              <span class="gc-role-tag gc-tag-owner">圈主</span>
+            </div>
+            <div class="gc-bubble gc-bubble--ai">长期看趋势仍在，但要警惕阶段性回撤，切忌满仓。</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Input bar -->
+      <div class="gc-input-bar">
+        <input class="gc-input" id="gc-input" placeholder="请输入消息..."
+               onkeydown="if(event.key==='Enter'){groupChatSend();}" />
+        <button class="gc-send-btn" onclick="groupChatSend()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+
+    </div>
+    <!-- /page-group-chat -->
     <!-- =============================================
          PAGE: PRESALES — 课程售前页
          ============================================= -->
@@ -6504,436 +6022,18 @@ body {
 
     </div>
     <!-- /page-payment-success -->
-    <!-- =============================================
-         PAGE: CIRCLE DETAIL — 圈子主页
-         ============================================= -->
-    <div class="page hidden" id="page-circle-detail" style="display:none;">
 
-      <!-- Status bar -->
-      <div class="status-bar" style="background:#0D1226;color:#fff;flex-shrink:0;">
-        <span class="time">9:41</span>
-        <div class="icons">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="1" y="15" width="4" height="6" rx="1"/><rect x="7" y="11" width="4" height="10" rx="1"/><rect x="13" y="7" width="4" height="14" rx="1"/><rect x="19" y="3" width="4" height="18" rx="1" opacity=".3"/></svg>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke-linecap="round"/></svg>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 13v-2" stroke-linecap="round"/><rect x="3" y="8" width="14" height="8" rx="1" fill="currentColor" stroke="none"/></svg>
-        </div>
-      </div>
 
-      <!-- Deep dark hero area -->
-      <div class="cd-hero">
-        <!-- Navbar -->
-        <div class="cd-navbar">
-          <button class="cd-nav-btn" onclick="router.navigate('main')">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
-          <span class="cd-nav-title">王明远的圈子</span>
-          <button class="cd-nav-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-          </button>
-        </div>
 
-        <!-- Circle identity row -->
-        <div class="cd-identity">
-          <div class="cd-cover-img"></div>
-          <div class="cd-identity-text">
-            <div class="cd-circle-name">王明远量化核心圈</div>
-            <div class="cd-circle-desc">量化实战学员专属，每日盘前分享高胜率标的，复盘策略回撤原因</div>
-          </div>
-        </div>
-
-        <!-- Stats + ranking row -->
-        <div class="cd-stats-row">
-          <div class="cd-stat-group">
-            <span class="cd-stat-val">1.8w</span><span class="cd-stat-lbl"> 动态</span>
-            <span class="cd-stat-sep">|</span>
-            <span class="cd-stat-val">1.2w</span><span class="cd-stat-lbl"> 成员</span>
-          </div>
-          <div class="cd-rank-group">
-            <div class="cd-avatar-stack">
-              <div class="cd-mini-av" style="background:#4F46E5;left:0px;">王</div>
-              <div class="cd-mini-av" style="background:#059669;left:14px;">陈</div>
-              <div class="cd-mini-av" style="background:#D97706;left:28px;">吴</div>
-            </div>
-            <span class="cd-rank-link">排行榜 ›</span>
-          </div>
-        </div>
-
-        <!-- Announcements -->
-        <div class="cd-announcements">
-          <div class="cd-announce">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="10" height="10" style="color:var(--c-gold);flex-shrink:0;margin-top:2px;"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-            <span>📌 最新研报已发布：《A股量化因子2026中期复盘》</span>
-          </div>
-          <div class="cd-announce">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="10" height="10" style="color:#EF4444;flex-shrink:0;margin-top:2px;"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12" stroke="white" stroke-width="2"/><line x1="12" y1="16" x2="12.01" y2="16" stroke="white" stroke-width="2"/></svg>
-            <span>⚡ 本周四晚8点 直播答疑，请准时参加</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- White overlay content -->
-      <div class="cd-content">
-
-        <!-- Five-icon menu -->
-        <div class="cd-menu">
-          <div class="cd-menu-item">
-            <div class="cd-menu-icon" style="background:#FEF3C7;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
-            <span class="cd-menu-label">课程</span>
-          </div>
-          <div class="cd-menu-item">
-            <div class="cd-menu-icon" style="background:#EDE9FE;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <span class="cd-menu-label">成员</span>
-          </div>
-          <div class="cd-menu-item cd-menu-item--active">
-            <div class="cd-menu-icon" style="background:#E8F1FF;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <span class="cd-menu-label" style="color:#1677FF;font-weight:700;">群聊</span>
-          </div>
-          <div class="cd-menu-item">
-            <div class="cd-menu-icon" style="background:#F0FDF4;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" width="22" height="22"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <span class="cd-menu-label">更多</span>
-          </div>
-          <div class="cd-menu-item">
-            <div class="cd-menu-icon" style="background:#F5F5F5;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <span class="cd-menu-label">我的</span>
-          </div>
-        </div>
-
-        <!-- Group chat entry card -->
-        <div class="cd-group-entry">
-          <div class="cd-group-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2" stroke-linecap="round" width="24" height="24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <div class="cd-group-info">
-            <div class="cd-group-name">王明远·量化实战交流群</div>
-            <div class="cd-group-meta">圈主+运营+助理在线 · 1.2万人</div>
-          </div>
-          <button class="cd-enter-btn" onclick="router.navigate('group-chat')">进入</button>
-        </div>
-
-        <!-- Pinned post -->
-        <div class="cd-post-card">
-          <div class="cd-post-top">
-            <div class="cd-post-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);">助</div>
-            <div>
-              <div class="cd-post-author">王老师的小助手
-                <span class="cd-post-tag cd-tag-assist">助理</span>
-                <span class="cd-post-tag cd-tag-top">置顶</span>
-              </div>
-              <div class="cd-post-time">今天 08:30</div>
-            </div>
-          </div>
-          <div class="cd-post-body">【早盘提示】今日量化模型信号：科技+新能源双线共振，注意控制仓位，勿追高。王老师将在今晚直播中详细拆解策略逻辑，请准时参加👇</div>
-        </div>
-
-      </div>
-    </div>
-    <!-- /page-circle-detail -->
-
-    <!-- =============================================
-         PAGE: GROUP CHAT — 群聊页面
-         ============================================= -->
-    <div class="page hidden" id="page-group-chat" style="display:none;">
-
-      <!-- Navbar -->
-      <div class="gc-navbar">
-        <button class="gc-nav-btn" onclick="router.navigate('circle-detail')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <div class="gc-nav-center">
-          <div class="gc-nav-title">王明远·内部交流群</div>
-          <div class="gc-nav-sub">1.2万人</div>
-        </div>
-        <button class="gc-nav-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-        </button>
-      </div>
-
-      <!-- Chat messages area -->
-      <div class="gc-body" id="gc-body">
-
-        <!-- 1. User bubble (right) -->
-        <div class="gc-row gc-row--right">
-          <div class="gc-bubble gc-bubble--user">王老师，今天早盘的新能源异动还能追吗？</div>
-          <div class="gc-av gc-av--user">我</div>
-        </div>
-
-        <!-- 2. Assistant reply (left) -->
-        <div class="gc-row gc-row--left">
-          <div class="gc-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);">助</div>
-          <div>
-            <div class="gc-name-row">
-              <span class="gc-name">团队助理</span>
-              <span class="gc-role-tag gc-tag-assist">助理</span>
-            </div>
-            <div class="gc-bubble gc-bubble--ai">@你 短期波动较大，建议关注政策窗口期，长期逻辑仍在。</div>
-          </div>
-        </div>
-
-        <!-- 3. Reader bubble (left, no tag) -->
-        <div class="gc-row gc-row--left">
-          <div class="gc-av" style="background:linear-gradient(135deg,#0284C7,#38BDF8);">追</div>
-          <div>
-            <div class="gc-name-row">
-              <span class="gc-name">追问的读者</span>
-            </div>
-            <div class="gc-bubble gc-bubble--ai">感谢老师分享，受益匪浅！</div>
-          </div>
-        </div>
-
-        <!-- 4. System tip (center) -->
-        <div class="gc-sys-tip">你撤回了一条消息</div>
-
-        <!-- 5. Circle owner (left, 圈主 tag) -->
-        <div class="gc-row gc-row--left">
-          <div class="gc-av" style="background:linear-gradient(135deg,#4F46E5,#6366F1);">王</div>
-          <div>
-            <div class="gc-name-row">
-              <span class="gc-name">王明远</span>
-              <span class="gc-role-tag gc-tag-owner">圈主</span>
-            </div>
-            <div class="gc-bubble gc-bubble--ai">长期看，趋势仍在，但要警惕阶段性的波动，切忌满仓。</div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Input bar -->
-      <div class="gc-input-bar">
-        <input class="gc-input" id="gc-input" placeholder="请输入消息..." />
-        <button class="gc-send-btn" onclick="groupChatSend()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        </button>
-      </div>
-
-    </div>
-    <!-- /page-group-chat -->
     <!-- =============================================
          PAGE: CIRCLE DETAIL (圈子主页)
          ============================================= -->
-    <div class="page hidden" id="page-circle-detail" style="display:none;">
-
-      <!-- Status bar -->
-      <div class="status-bar" style="background:#0D1226;color:#fff;flex-shrink:0;">
-        <span class="time">9:41</span>
-        <div class="icons">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="1" y="15" width="4" height="6" rx="1"/><rect x="7" y="11" width="4" height="10" rx="1"/><rect x="13" y="7" width="4" height="14" rx="1"/><rect x="19" y="3" width="4" height="18" rx="1" opacity=".3"/></svg>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke-linecap="round"/></svg>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 13v-2" stroke-linecap="round"/><rect x="3" y="8" width="14" height="8" rx="1" fill="currentColor" stroke="none"/></svg>
-        </div>
-      </div>
-
-      <!-- Dark hero header -->
-      <div class="cd-hero">
-        <div class="cd-hero-navbar">
-          <button class="cd-back-btn" onclick="router.navigate('main')">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
-          <span class="cd-hero-title">王明远的圈子</span>
-          <button class="cd-back-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-          </button>
-        </div>
-
-        <!-- Circle info row -->
-        <div class="cd-info-row">
-          <div class="cd-cover">
-            <div style="width:100%;height:100%;background:linear-gradient(135deg,#0D2B4E 0%,#1B5E8A 55%,#4F46E5 100%);border-radius:10px;"></div>
-          </div>
-          <div class="cd-info-text">
-            <div class="cd-circle-name">王明远量化核心圈</div>
-            <div class="cd-circle-desc">量化实战学员专属圈子，每日盘前策略，复盘与交流</div>
-            <div class="cd-circle-stats">
-              <span>1.8w <span class="cd-stat-label">动态</span></span>
-              <span class="cd-stat-sep">|</span>
-              <span>1.2w <span class="cd-stat-label">成员</span></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Member avatars + rank -->
-        <div class="cd-members-row">
-          <div class="cd-avatar-stack">
-            <div class="cd-mini-av" style="background:linear-gradient(135deg,#4F46E5,#6366F1);left:0px;">王</div>
-            <div class="cd-mini-av" style="background:linear-gradient(135deg,#059669,#10B981);left:18px;">李</div>
-            <div class="cd-mini-av" style="background:linear-gradient(135deg,#D97706,#F59E0B);left:36px;">陈</div>
-            <div class="cd-mini-av" style="background:linear-gradient(135deg,#DC2626,#EF4444);left:54px;">张</div>
-            <div class="cd-mini-av cd-mini-more" style="left:72px;">+99</div>
-          </div>
-          <span class="cd-rank-btn">排行榜 ›</span>
-        </div>
-
-        <!-- Announcements -->
-        <div class="cd-announcements">
-          <div class="cd-announcement">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span>📌 最新研报已发布：《新能源2026年中期策略》</span>
-          </div>
-          <div class="cd-announcement">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span>🎯 本周四晚8点 王老师直播答疑，记得预约！</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- White overlay sheet -->
-      <div class="cd-sheet">
-
-        <!-- 5-tab menu -->
-        <div class="cd-menu-row">
-          <div class="cd-menu-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            <span>课程</span>
-          </div>
-          <div class="cd-menu-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span>成员</span>
-          </div>
-          <div class="cd-menu-item cd-menu-active">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2" width="22" height="22" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <span>群聊</span>
-          </div>
-          <div class="cd-menu-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-            <span>更多</span>
-          </div>
-          <div class="cd-menu-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span>我的</span>
-          </div>
-        </div>
-
-        <!-- Group chat entry card -->
-        <div class="cd-chat-card">
-          <div class="cd-chat-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2" width="24" height="24" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <div class="cd-chat-info">
-            <div class="cd-chat-name">王明远·量化实战交流群</div>
-            <div class="cd-chat-sub">圈主+运营+助理在线 · 1.2万人</div>
-          </div>
-          <button class="cd-enter-btn" onclick="router.navigate('group-chat')">进入</button>
-        </div>
-
-        <!-- Pinned post -->
-        <div class="cd-post-card">
-          <div class="cd-post-header">
-            <div class="cd-post-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);">助</div>
-            <div>
-              <div class="cd-post-author">王老师的小助手 <span class="cd-tag-pin">置顶</span></div>
-              <div class="cd-post-time">10分钟前</div>
-            </div>
-          </div>
-          <div class="cd-post-body">
-            【本周学习提醒】王老师《量化实战》第4节课已更新，本节重点讲解网格策略在震荡市的实盘应用，建议大家配合研报一起看～有问题可以在群聊里直接问！
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!-- /page-circle-detail -->
+    
 
     <!-- =============================================
          PAGE: GROUP CHAT (群聊页)
          ============================================= -->
-    <div class="page hidden" id="page-group-chat" style="display:none;">
-
-      <!-- Status bar -->
-      <div class="status-bar" style="background:#fff;color:#0D1226;border-bottom:1px solid #F2F2F7;flex-shrink:0;">
-        <span class="time">9:41</span>
-        <div class="icons" style="color:#0D1226;">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="1" y="15" width="4" height="6" rx="1"/><rect x="7" y="11" width="4" height="10" rx="1"/><rect x="13" y="7" width="4" height="14" rx="1"/><rect x="19" y="3" width="4" height="18" rx="1" opacity=".3"/></svg>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke-linecap="round"/></svg>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 13v-2" stroke-linecap="round"/><rect x="3" y="8" width="14" height="8" rx="1" fill="currentColor" stroke="none"/></svg>
-        </div>
-      </div>
-
-      <!-- Navbar -->
-      <div class="gc-navbar">
-        <button class="gc-back-btn" onclick="router.navigate('circle-detail')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <div class="gc-navbar-center">
-          <div class="gc-title">王明远·内部交流群</div>
-          <div class="gc-subtitle">1.2万人</div>
-        </div>
-        <button class="gc-more-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" width="20" height="20"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-        </button>
-      </div>
-
-      <!-- Chat messages -->
-      <div class="gc-messages" id="gc-messages">
-
-        <!-- 1. User (right) -->
-        <div class="gc-row gc-row--user">
-          <div class="gc-bubble gc-bubble--user">王老师，今天早盘的新能源异动还能追吗？</div>
-          <div class="gc-av gc-av--user">我</div>
-        </div>
-
-        <!-- 2. Assistant (left) -->
-        <div class="gc-row">
-          <div class="gc-av" style="background:linear-gradient(135deg,#D97706,#F59E0B);">助</div>
-          <div class="gc-msg-wrap">
-            <div class="gc-name-row">
-              <span class="gc-name">团队助理</span>
-              <span class="gc-role-tag gc-tag--assistant">助理</span>
-            </div>
-            <div class="gc-bubble gc-bubble--left">@你 短期波动较大，建议关注政策窗口期，长期逻辑仍在。王老师今晚直播会详细分析。</div>
-          </div>
-        </div>
-
-        <!-- 3. Reader (left) -->
-        <div class="gc-row">
-          <div class="gc-av" style="background:linear-gradient(135deg,#0284C7,#38BDF8);">追</div>
-          <div class="gc-msg-wrap">
-            <div class="gc-name-row">
-              <span class="gc-name">追问的读者</span>
-            </div>
-            <div class="gc-bubble gc-bubble--left">感谢老师分享，受益匪浅！每次看完都有新收获 🙏</div>
-          </div>
-        </div>
-
-        <!-- 4. System tip (centered) -->
-        <div class="gc-system-tip">你撤回了一条消息</div>
-
-        <!-- 5. Circle owner (left) -->
-        <div class="gc-row">
-          <div class="gc-av" style="background:linear-gradient(135deg,#4F46E5,#6366F1);">王</div>
-          <div class="gc-msg-wrap">
-            <div class="gc-name-row">
-              <span class="gc-name">王明远</span>
-              <span class="gc-role-tag gc-tag--owner">圈主</span>
-            </div>
-            <div class="gc-bubble gc-bubble--left">长期看，趋势仍在，但要警惕阶段性的波动，<strong>切忌满仓</strong>。做好仓位管理，才能跑赢大多数人。</div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Input bar -->
-      <div class="gc-input-bar">
-        <div class="gc-input-wrap">
-          <input class="gc-input-field" id="gc-input-field"
-                 placeholder="请输入消息..."
-                 onkeydown="if(event.key==='Enter'){groupChatSend();}" />
-        </div>
-        <button class="gc-send-btn" onclick="groupChatSend()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        </button>
-      </div>
-
-    </div>
-    <!-- /page-group-chat -->
+    
 
   
 
@@ -7033,8 +6133,9 @@ window.router = new AppRouter();
     router.register('auth', authPage);
     router.register('main', mainPage);
     router.register('mentor',        document.getElementById('page-mentor'));
-    router.register('circle-detail',    document.getElementById('page-circle-detail'));
-    router.register('group-chat',       document.getElementById('page-group-chat'));
+    router.register('circle-detail', document.getElementById('page-circle-detail'));
+    router.register('group-chat',    document.getElementById('page-group-chat'));
+
     router.register('presales',          document.getElementById('page-presales'));
     router.register('payment-success',   document.getElementById('page-payment-success'));
 
@@ -7050,41 +6151,51 @@ window.router = new AppRouter();
           handleSendMessage();
         }
       });
-    }
-  });
+    }   // close: if (chatInput)
+  });   // close: DOMContentLoaded
 
   /* =============================================
      AUTH FLOW
      ============================================= */
-  async function handleWechatLogin() {
-    const btn = document.getElementById('btn-wechat-login');
+  function handleWechatLogin() {
+    // Step 1: Open phone-number auth sheet
+    openPhoneAuth();
+  }
+
+  /* ── Phone auth sheet controls ── */
+  function openPhoneAuth() {
+    document.getElementById('phone-auth-scrim').classList.add('open');
+    document.getElementById('phone-auth-sheet').classList.add('open');
+  }
+
+  function closePhoneAuth() {
+    document.getElementById('phone-auth-scrim').classList.remove('open');
+    document.getElementById('phone-auth-sheet').classList.remove('open');
+  }
+
+  async function confirmPhoneAuth() {
+    // 1. 关闭底部手机号授权面板
+    closePhoneAuth();
+    await sleep(160); // 等待面板下降动画
+    // 2. 唤起全屏 Loading
     const overlay = document.getElementById('loading-overlay');
-
-    // Disable button
-    btn.style.opacity = '0.7';
-    btn.style.pointerEvents = 'none';
-
-    // Show loading overlay
     overlay.classList.add('active');
-
-    // Simulate network delay (1s)
-    await sleep(1200);
-
-    // Navigate to main with slide transition
-    overlay.classList.remove('active');
-    await sleep(100);
-
+    // 3. 模拟网络请求与安全校验
+    await sleep(1000);
+    // 【核心修复】：不要过早移除 loading！直接跳转路由
     await router.navigate('main');
+    // 4. 跳转完全结束之后，在后台重置 Loading 状态
+    setTimeout(() => {
+      overlay.classList.remove('active');
+    }, 500);
   }
 
-  async function handleGuestMode() {
-    await router.navigate('main');
-  }
+
 
   /* =============================================
      TAB SWITCHING
      ============================================= */
-  const TAB_IDS = ['home', 'community', 'advisor', 'profile'];
+  const TAB_IDS = ['home', 'advisor', 'profile'];
 
   function switchTab(id) {
     // Update panels
@@ -7565,17 +6676,15 @@ window.router = new AppRouter();
 
   const MENTOR_LIST = [
     {
-      realname:  '李光',
+      realname:  '刘纪鹏',
       handle:    '牛角尖财经',
-      license:   'A0670626010092',
-      fans:      '42.8万粉丝',
       tags:      ['卫视嘉宾', '策略交易'],
       skill:     '擅长策略化交易',
       lessons:   7,
-      avatar:    '李',
+      avatar:    '刘',
       bandGrad:  'linear-gradient(135deg,#E8F0FF 0%,#C7D9FF 100%)',
       avatarBg:  'linear-gradient(135deg,#4F46E5,#6366F1)',
-      heroTitle: '李光 · 专属主页',
+      heroTitle: '刘纪鹏 · 专属主页',
       titleTag:  '量化策略主理人',
       heroGrad:  'linear-gradient(160deg,#0D1226 0%,#1B3A8C 55%,#0D1F6B 100%)',
       stats: [
@@ -7590,19 +6699,30 @@ window.router = new AppRouter();
         { title: '宏观经济周期与资产配置精讲', lessons: 12, progress: 100, grad: 'linear-gradient(135deg,#1A3D2B 0%,#2E7D52 60%,#1677FF 100%)', status: 'expired'  },
         { title: '量化选股因子模型实操',    lessons: 8,  progress: 0,   grad: 'linear-gradient(135deg,#2A1A4E 0%,#6A3FA0 60%,#C9A94B 100%)', status: 'locked'   },
       ],
+      lives: [
+        { id:'l1', title:'宏观周期研判直播课', views:'2,341人观看', priceNow:'¥199', priceOld:'¥499',
+          badge:'回放', badgeType:'', date:'05-12  19:00',
+          gradient:'linear-gradient(135deg,#0D2B4E 0%,#1B5E8A 100%)' },
+        { id:'l2', title:'量化选股实战直播', views:'1,102人观看', priceNow:'¥99', priceOld:'¥299',
+          badge:'直播中', badgeType:'live', date:'今天  20:00',
+          gradient:'linear-gradient(135deg,#1B3A6B 0%,#4F46E5 100%)' },
+      ],
+      circles: [
+        { name:'刘纪鹏量化策略圈', host:'刘纪鹏', hostAv:'刘', hostBg:'#4F46E5',
+          members:'8.5k', posts:'1.2w', grad:'linear-gradient(135deg,#0D2B4E 0%,#1B5E8A 55%,#4F46E5 100%)',
+          desc:'量化实战学员专属，每日盘前分享模型跑出的高胜率标的，复盘策略回撤原因，严禁无关讨论。' },
+      ],
     },
     {
-      realname:  '易文斌',
+      realname:  '洪灏',
       handle:    '牛眼老易',
-      license:   'A0680620080031',
-      fans:      '31.2万粉丝',
       tags:      ['价值投资', '长线持仓'],
       skill:     '擅长基本面深度研究',
       lessons:   12,
-      avatar:    '易',
+      avatar:    '洪',
       bandGrad:  'linear-gradient(135deg,#FFF7E8 0%,#FFE4B0 100%)',
       avatarBg:  'linear-gradient(135deg,#D97706,#F59E0B)',
-      heroTitle: '易文斌 · 专属主页',
+      heroTitle: '洪灏 · 专属主页',
       titleTag:  '价值投资主理人',
       heroGrad:  'linear-gradient(160deg,#1A0D00 0%,#5C3100 55%,#1A0A00 100%)',
       stats: [
@@ -7616,19 +6736,27 @@ window.router = new AppRouter();
         { title: '价值投资选股实战课',    lessons: 10, progress: 70,  grad: 'linear-gradient(135deg,#3D1F00 0%,#8B4800 60%,#D97706 100%)', status: 'active' },
         { title: '财报精读：看懂企业真实价值', lessons: 6, progress: 0, grad: 'linear-gradient(135deg,#1A0D00 0%,#5C3100 60%,#92400E 100%)', status: 'locked' },
       ],
+      lives: [
+        { id:'l3', title:'全球资产配置前瞻', views:'3,150人观看', priceNow:'¥299', priceOld:'¥699',
+          badge:'回放', badgeType:'', date:'05-08  19:30',
+          gradient:'linear-gradient(135deg,#1A0D00 0%,#8B4500 100%)' },
+      ],
+      circles: [
+        { name:'洪灏宏观研判圈', host:'洪灏', hostAv:'洪', hostBg:'#D97706',
+          members:'12.3k', posts:'3.4w', grad:'linear-gradient(135deg,#1A3D2B 0%,#2E7D52 55%,#D97706 100%)',
+          desc:'聚焦全球宏观周期与大类资产配置，每周发布宏观月报精读与交易机会推演，适合进阶学员。' },
+      ],
     },
     {
-      realname:  '潘延欢',
+      realname:  '邵宇',
       handle:    '富大官人',
-      license:   'A0920622050017',
-      fans:      '58.6万粉丝',
       tags:      ['量化交易', '期权策略'],
       skill:     '擅长期权组合对冲',
       lessons:   5,
-      avatar:    '潘',
+      avatar:    '邵',
       bandGrad:  'linear-gradient(135deg,#EDFFF6 0%,#B8F0D4 100%)',
       avatarBg:  'linear-gradient(135deg,#059669,#10B981)',
-      heroTitle: '潘延欢 · 专属主页',
+      heroTitle: '邵宇 · 专属主页',
       titleTag:  '期权策略主理人',
       heroGrad:  'linear-gradient(160deg,#001A0D 0%,#004D2B 55%,#001A0D 100%)',
       stats: [
@@ -7642,19 +6770,30 @@ window.router = new AppRouter();
         { title: '期权双买实战精讲',    lessons: 7, progress: 57, grad: 'linear-gradient(135deg,#003320 0%,#006641 60%,#10B981 100%)', status: 'active' },
         { title: '波动率交易策略体系',  lessons: 9, progress: 0,  grad: 'linear-gradient(135deg,#001A0D 0%,#003D1F 60%,#059669 100%)', status: 'locked' },
       ],
+      lives: [
+        { id:'l4', title:'期权Delta对冲实战课', views:'987人观看', priceNow:'¥149', priceOld:'¥399',
+          badge:'回放', badgeType:'', date:'04-30  20:00',
+          gradient:'linear-gradient(135deg,#001A0D 0%,#006641 100%)' },
+        { id:'l5', title:'波动率微笑曲线解析', views:'521人观看', priceNow:'¥199', priceOld:'¥499',
+          badge:'预约', badgeType:'', date:'05-22  19:00',
+          gradient:'linear-gradient(135deg,#003320 0%,#059669 100%)' },
+      ],
+      circles: [
+        { name:'邵宇期权策略研讨圈', host:'邵宇', hostAv:'邵', hostBg:'#059669',
+          members:'5.1k', posts:'8.6k', grad:'linear-gradient(135deg,#2A1A4E 0%,#6A3FA0 55%,#059669 100%)',
+          desc:'深入探讨期权定价、波动率曲面与组合对冲策略，每期附实盘案例与盈亏拆解。' },
+      ],
     },
     {
-      realname:  '吴晓峰',
+      realname:  '小可',
       handle:    '晓峰说基金',
-      license:   'A0560623070088',
-      fans:      '27.3万粉丝',
       tags:      ['基金研选', '定投策略'],
       skill:     '擅长基金组合定投',
       lessons:   9,
-      avatar:    '吴',
+      avatar:    '可',
       bandGrad:  'linear-gradient(135deg,#F3E8FF 0%,#DDB8FF 100%)',
       avatarBg:  'linear-gradient(135deg,#7C3AED,#A78BFA)',
-      heroTitle: '吴晓峰 · 专属主页',
+      heroTitle: '小可 · 专属主页',
       titleTag:  '基金研选主理人',
       heroGrad:  'linear-gradient(160deg,#0D0026 0%,#2D0F6B 55%,#0D0026 100%)',
       stats: [
@@ -7667,6 +6806,16 @@ window.router = new AppRouter();
       courses: [
         { title: '基金定投组合实战',     lessons: 8,  progress: 88, grad: 'linear-gradient(135deg,#1A0040 0%,#4A1A9B 60%,#7C3AED 100%)', status: 'active' },
         { title: 'ETF轮动策略精讲',     lessons: 6,  progress: 0,  grad: 'linear-gradient(135deg,#0D0026 0%,#2D0F6B 60%,#5B21B6 100%)', status: 'locked' },
+      ],
+      lives: [
+        { id:'l6', title:'基金定投避坑指南', views:'4,201人观看', priceNow:'免费', priceOld:'',
+          badge:'回放', badgeType:'', date:'05-01  19:00',
+          gradient:'linear-gradient(135deg,#1A0040 0%,#4A1A9B 100%)' },
+      ],
+      circles: [
+        { name:'小可基金定投研选圈', host:'小可', hostAv:'可', hostBg:'#7C3AED',
+          members:'21.7k', posts:'5.1w', grad:'linear-gradient(135deg,#1A0040 0%,#4A1A9B 55%,#7C3AED 100%)',
+          desc:'精选主动基金，跟踪基金经理换仓动向，定期发布基金评分卡与定投计划模板。' },
       ],
     },
   ];
@@ -7725,6 +6874,18 @@ window.router = new AppRouter();
   }
 
   /* ── Open mentor page: inject data then navigate ── */
+  /* ── switchMentorTab: 3-tab toggler on mentor page ── */
+  function switchMentorTab(el, tabId) {
+    // Toggle tab headers
+    document.querySelectorAll('.mp-tab').forEach(t => t.classList.remove('mp-tab--active'));
+    el.classList.add('mp-tab--active');
+    // Toggle panels
+    document.querySelectorAll('.mp-tab-panel').forEach(p => p.classList.remove('active'));
+    const panel = document.getElementById('mp-tp-' + tabId);
+    if (panel) panel.classList.add('active');
+  }
+
+  /* ── openMentorPage: inject data + render all 3 panels ── */
   function openMentorPage(idx) {
     const m = MENTOR_LIST[idx];
     if (!m) return;
@@ -7744,10 +6905,6 @@ window.router = new AppRouter();
     document.querySelector('.mp-realname').textContent  = m.realname;
     document.querySelector('.mp-title-tag').textContent = m.titleTag;
 
-    /* — Cert row — */
-    document.querySelector('.mp-cert-row span').textContent =
-      `证券执业资格 · ${m.license}`;
-
     /* — Stats — */
     const statEls = document.querySelectorAll('.mp-stat');
     m.stats.forEach((s, i) => {
@@ -7764,8 +6921,8 @@ window.router = new AppRouter();
     document.querySelector('.mp-bio-tags').innerHTML =
       m.bioTags.map(t => `<span class="mp-bio-tag">${t}</span>`).join('');
 
-    /* — Course list — */
-    document.querySelector('.mp-course-list').innerHTML =
+    /* — Course panel — */
+    document.getElementById('mp-course-list').innerHTML =
       m.courses.map(c => `
         <div class="mp-course-card">
           <div class="mp-course-thumb" style="background:${c.grad};">
@@ -7788,7 +6945,63 @@ window.router = new AppRouter();
           </div>
         </div>`).join('');
 
-    /* — Reset scroll position — */
+    /* — Live panel (reuse .hm-live-card) — */
+    const liveList = document.getElementById('mp-live-list');
+    if (liveList) {
+      liveList.innerHTML = (m.lives || []).map(item => `
+        <div class="hm-live-card">
+          <div class="hm-live-thumb">
+            <div class="hm-live-thumb-bg" style="background:${item.gradient};"></div>
+            <span class="hm-live-badge ${item.badgeType}">${item.badge}</span>
+            <div class="hm-live-scrim">
+              <span class="hm-live-date">${item.date}</span>
+            </div>
+          </div>
+          <div class="hm-live-body">
+            <div class="hm-live-title">${item.title}</div>
+            <div class="hm-live-views">${item.views}</div>
+            <div class="hm-live-price-row">
+              <span class="hm-price-now">${item.priceNow}</span>
+              ${item.priceOld ? `<span class="hm-price-old">${item.priceOld}</span>` : ''}
+            </div>
+          </div>
+        </div>`).join('');
+    }
+
+    /* — Circle panel (reuse .qz-card) — */
+    const circleList = document.getElementById('mp-circle-list');
+    if (circleList) {
+      const memberIcon = `<svg class="qz-meta-item" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="12" height="12"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`;
+      const postIcon  = `<svg class="qz-meta-item" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="12" height="12"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`;
+      circleList.innerHTML = (m.circles || []).map(c => `
+        <div class="qz-card" onclick="router.navigate('circle-detail')">
+          <div class="qz-cover">
+            <div class="qz-cover-bg" style="background:${c.grad};"></div>
+          </div>
+          <div class="qz-info">
+            <div class="qz-title">${c.name}</div>
+            <div class="qz-meta">
+              <div class="qz-meta-avatar" style="background:${c.hostBg};">${c.hostAv}</div>
+              <span class="qz-meta-name">${c.host}</span>
+              <span class="qz-meta-sep">|</span>
+              <div class="qz-meta-item">${memberIcon}<span>${c.members}</span></div>
+              <div class="qz-meta-item">${postIcon}<span>${c.posts}</span></div>
+            </div>
+            <div class="qz-desc">${c.desc}</div>
+          </div>
+          <button class="qz-join-btn">+ 加入</button>
+        </div>`).join('');
+    }
+
+    /* — Reset to course tab — */
+    document.querySelectorAll('.mp-tab').forEach((t, i) => {
+      t.classList.toggle('mp-tab--active', i === 0);
+    });
+    document.querySelectorAll('.mp-tab-panel').forEach((p, i) => {
+      p.classList.toggle('active', i === 0);
+    });
+
+    /* — Reset scroll — */
     const scroll = document.querySelector('.mp-scroll');
     if (scroll) scroll.scrollTop = 0;
 
@@ -7796,20 +7009,17 @@ window.router = new AppRouter();
     router.navigate('mentor');
   }
 
-  /* ── Render mentor grid (伴学 tab) ── */
-  function renderMentorGrid() {
+    function renderMentorGrid() {
     const grid = document.getElementById('lc-adv-grid');
     if (!grid) return;
     grid.innerHTML = MENTOR_LIST.map((m, index) => `
       <div class="lc-adv-card" onclick="openMentorPage(${index})">
         <div class="lc-adv-band" style="background:${m.bandGrad};">
           <div class="lc-adv-realname">${m.realname}</div>
-          <div class="lc-adv-fans">${m.fans}</div>
           <div class="lc-adv-avatar" style="background:${m.avatarBg};">${m.avatar}</div>
         </div>
         <div class="lc-adv-body">
           <div class="lc-adv-handle">${m.handle}</div>
-          <div class="lc-adv-license">投顾编号: ${m.license}</div>
           <div class="lc-adv-tags">
             ${m.tags.map(t => `<span class="lc-adv-tag">${t}</span>`).join('')}
           </div>
@@ -7828,179 +7038,6 @@ window.router = new AppRouter();
 
   renderMentorGrid();
 
-
-  /* =============================================
-     COMMUNITY — 圈子发现 Mock data & renderer
-     ============================================= */
-
-  const COMMUNITY_LIST = [
-    {
-      name:    '王明远量化核心圈',
-      host:    '王明远-量化...',
-      hostAv:  '王',
-      hostBg:  '#4F46E5',
-      members: '8.5k',
-      posts:   '1.2w',
-      grad:    'linear-gradient(135deg,#0D2B4E 0%,#1B5E8A 55%,#4F46E5 100%)',
-      desc:    '本圈子为量化实战学员专属，每日盘前分享模型跑出的高胜率标的，复盘策略回撤原因，同步更新因子优化进展，严禁无关讨论。',
-    },
-    {
-      name:    '宏观研判·策略共研',
-      host:    '李光-策略...',
-      hostAv:  '李',
-      hostBg:  '#1677FF',
-      members: '12.3k',
-      posts:   '3.4w',
-      grad:    'linear-gradient(135deg,#1A3D2B 0%,#2E7D52 55%,#059669 100%)',
-      desc:    '聚焦全球宏观周期与大类资产配置，每周发布宏观月报精读与交易机会推演，适合对宏观逻辑感兴趣的进阶学员。',
-    },
-    {
-      name:    '期权策略研讨圈',
-      host:    '潘延欢-期权...',
-      hostAv:  '潘',
-      hostBg:  '#059669',
-      members: '5.1k',
-      posts:   '8.6k',
-      grad:    'linear-gradient(135deg,#2A1A4E 0%,#6A3FA0 55%,#7C3AED 100%)',
-      desc:    '深入探讨期权定价、波动率曲面与组合对冲策略。每期附实盘案例与盈亏拆解，帮助学员真正理解期权的风险收益结构。',
-    },
-    {
-      name:    '基金定投研选圈',
-      host:    '吴晓峰-基金...',
-      hostAv:  '吴',
-      hostBg:  '#D97706',
-      members: '21.7k',
-      posts:   '5.1w',
-      grad:    'linear-gradient(135deg,#1A0D00 0%,#5C3100 55%,#D97706 100%)',
-      desc:    '精选主动基金，跟踪基金经理换仓动向，定期发布基金评分卡与定投计划模板，适合长期价值投资理念的学员。',
-    },
-    {
-      name:    '实盘打卡·交流营',
-      host:    '梦琪-实盘...',
-      hostAv:  '梦',
-      hostBg:  '#0284C7',
-      members: '9.8k',
-      posts:   '2.3w',
-      grad:    'linear-gradient(135deg,#003D5C 0%,#005F8C 55%,#0284C7 100%)',
-      desc:    '学员实盘公开打卡，互相监督交易纪律，严禁喊单。版主每周精选优质复盘帖，配合课程进行方法论对照讲解。',
-    },
-  ];
-
-  function renderCommunityList() {
-    const list = document.getElementById('qz-list');
-    if (!list) return;
-
-    const memberIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`;
-    const postIcon  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`;
-
-    list.innerHTML = COMMUNITY_LIST.map(c => `
-      <div class="qz-card" onclick="router.navigate('circle-detail')">
-        <div class="qz-cover">
-          <div class="qz-cover-bg" style="background:${c.grad};"></div>
-        </div>
-        <div class="qz-info">
-          <div class="qz-title">${c.name}</div>
-          <div class="qz-meta">
-            <div class="qz-meta-avatar" style="background:${c.hostBg};">${c.hostAv}</div>
-            <span class="qz-meta-name">${c.host}</span>
-            <span class="qz-meta-sep">|</span>
-            <div class="qz-meta-item">${memberIcon}<span>${c.members}</span></div>
-            <div class="qz-meta-item">${postIcon}<span>${c.posts}</span></div>
-          </div>
-          <div class="qz-desc">${c.desc}</div>
-        </div>
-        <button class="qz-join-btn">+ 加入</button>
-      </div>
-    `).join('');
-  }
-
-  function qzSwitchPill(el) {
-    document.querySelectorAll('.qz-pill').forEach(p => p.classList.remove('qz-pill--active'));
-    el.classList.add('qz-pill--active');
-  }
-
-  renderCommunityList();
-
-
-
-  /* =============================================
-     GROUP CHAT — send message interaction
-     ============================================= */
-
-  const GC_AUTO_REPLIES = [
-    { av: '助', bg: 'linear-gradient(135deg,#F59E0B,#D97706)', name: '团队助理', tag: 'assist', msg: '收到你的问题，稍后会整理王老师的观点同步给你。' },
-    { av: '王', bg: 'linear-gradient(135deg,#4F46E5,#6366F1)',  name: '王明远',   tag: 'owner',  msg: '好问题，这正是我们下次直播要重点拆解的内容，请关注直播预告。' },
-    { av: '助', bg: 'linear-gradient(135deg,#F59E0B,#D97706)', name: '团队助理', tag: 'assist', msg: '已记录你的问题，会在本周的精华汇总中整理回复给大家。' },
-  ];
-
-  let gcReplyIdx = 0;
-  let gcSending  = false;
-
-  function gcScrollBottom() {
-    const body = document.getElementById('gc-body');
-    if (body) body.scrollTop = body.scrollHeight;
-  }
-
-  function groupChatSend() {
-    if (gcSending) return;
-    const input = document.getElementById('gc-input');
-    const text  = input ? input.value.trim() : '';
-    if (!text) return;
-
-    gcSending = true;
-    input.value = '';
-    input.disabled = true;
-
-    const body = document.getElementById('gc-body');
-
-    // 1. User bubble
-    const userRow = document.createElement('div');
-    userRow.className = 'gc-row gc-row--right';
-    userRow.style.animation = 'fadeUp 0.25s var(--ease-out) both';
-    userRow.innerHTML = `
-      <div class="gc-bubble gc-bubble--user">${text.replace(/</g,'&lt;')}</div>
-      <div class="gc-av gc-av--user">我</div>`;
-    body.appendChild(userRow);
-    gcScrollBottom();
-
-    // 2. Auto reply after 1.5s
-    setTimeout(() => {
-      const r   = GC_AUTO_REPLIES[gcReplyIdx % GC_AUTO_REPLIES.length];
-      gcReplyIdx++;
-
-      const tagHtml = r.tag === 'owner'
-        ? `<span class="gc-role-tag gc-tag-owner">圈主</span>`
-        : `<span class="gc-role-tag gc-tag-assist">助理</span>`;
-
-      const aiRow = document.createElement('div');
-      aiRow.className = 'gc-row gc-row--left';
-      aiRow.style.animation = 'fadeUp 0.25s var(--ease-out) both';
-      aiRow.innerHTML = `
-        <div class="gc-av" style="background:${r.bg};">${r.av}</div>
-        <div>
-          <div class="gc-name-row">
-            <span class="gc-name">${r.name}</span>
-            ${tagHtml}
-          </div>
-          <div class="gc-bubble gc-bubble--ai">${r.msg}</div>
-        </div>`;
-      body.appendChild(aiRow);
-      gcScrollBottom();
-
-      input.disabled = false;
-      gcSending = false;
-    }, 1500);
-  }
-
-  // Enter key to send
-  document.addEventListener('DOMContentLoaded', () => {
-    const gcInput = document.getElementById('gc-input');
-    if (gcInput) {
-      gcInput.addEventListener('keydown', e => {
-        if (e.key === 'Enter') { e.preventDefault(); groupChatSend(); }
-      });
-    }
-  });
 
 
 
@@ -8034,6 +7071,55 @@ window.router = new AppRouter();
 
     // 3. Navigate back to mentor page
     router.navigate('mentor');
+  }
+
+
+  /* =============================================
+     GROUP CHAT — send interaction
+     ============================================= */
+  let _gcSending = false;
+
+  function groupChatSend() {
+    if (_gcSending) return;
+    const input = document.getElementById('gc-input');
+    const text  = (input && input.value.trim()) ? input.value.trim() : '';
+    if (!text) return;
+
+    _gcSending = true;
+    input.value = '';
+    input.disabled = true;
+
+    const body = document.getElementById('gc-body');
+
+    // User bubble
+    const userRow = document.createElement('div');
+    userRow.className = 'gc-row gc-row--right';
+    userRow.style.animation = 'fadeUp 0.25s var(--ease-out) both';
+    userRow.innerHTML = `
+      <div class="gc-av gc-av--user">我</div>
+      <div class="gc-bubble gc-bubble--user">${text.replace(/</g,'&lt;')}</div>`;
+    body.appendChild(userRow);
+    body.scrollTop = body.scrollHeight;
+
+    // Auto reply
+    setTimeout(() => {
+      const aiRow = document.createElement('div');
+      aiRow.className = 'gc-row gc-row--left';
+      aiRow.style.animation = 'fadeUp 0.25s var(--ease-out) both';
+      aiRow.innerHTML = `
+        <div class="gc-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);">助</div>
+        <div>
+          <div class="gc-name-row">
+            <span class="gc-name">团队助理</span>
+            <span class="gc-role-tag gc-tag-assist">助理</span>
+          </div>
+          <div class="gc-bubble gc-bubble--ai">收到，已为您记录，稍后会整理刘老师的观点同步在群里。</div>
+        </div>`;
+      body.appendChild(aiRow);
+      body.scrollTop = body.scrollHeight;
+      input.disabled = false;
+      _gcSending = false;
+    }, 1500);
   }
 
 </script>
