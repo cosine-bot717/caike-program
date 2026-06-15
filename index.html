@@ -415,214 +415,10 @@ body {
     }
 
     /* === Hero Background === */
-    .auth-hero {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 24px 0 0;
-      position: relative;
-      overflow: hidden;
-    }
 
-    /* Decorative mesh gradient */
-    .auth-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(22,119,255,0.12) 0%, transparent 65%),
-        radial-gradient(ellipse 60% 40% at 85% 20%, rgba(99,102,241,0.08) 0%, transparent 50%),
-        radial-gradient(ellipse 50% 30% at 10% 30%, rgba(6,182,212,0.06) 0%, transparent 50%);
-      pointer-events: none;
-    }
 
-    /* Decorative floating orbs */
-    .auth-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(40px);
-      pointer-events: none;
-      animation: float 6s ease-in-out infinite;
-    }
 
-    .auth-orb-1 {
-      width: 200px; height: 200px;
-      background: rgba(22, 119, 255, 0.08);
-      top: -40px; right: -60px;
-      animation-delay: 0s;
-    }
 
-    .auth-orb-2 {
-      width: 140px; height: 140px;
-      background: rgba(99, 102, 241, 0.07);
-      top: 80px; left: -40px;
-      animation-delay: 2s;
-    }
-
-    /* === Logo Mark === */
-    .auth-logo-wrap {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      animation: fadeUp var(--dur-slow) var(--ease-out) 0.1s both;
-    }
-
-    .auth-logo-icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 20px;
-      background: var(--grad-card);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: var(--shadow-blue);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .auth-logo-icon::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%);
-    }
-
-    .auth-logo-icon svg {
-      width: 38px;
-      height: 38px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .auth-brand-name {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-      color: var(--c-text-primary);
-    }
-
-    .auth-brand-name em {
-      font-style: normal;
-      background: var(--grad-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* === Illustration / Chart Area === */
-    .auth-illustration {
-      width: 100%;
-      padding: 32px 20px 0;
-      position: relative;
-      z-index: 1;
-      animation: fadeUp var(--dur-slow) var(--ease-out) 0.25s both;
-    }
-
-    .auth-chart-card {
-      background: var(--grad-card);
-      border-radius: 20px;
-      padding: 20px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 12px 40px rgba(11, 28, 80, 0.35);
-    }
-
-    .auth-chart-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    }
-
-    .chart-card-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-
-    .chart-card-label {
-      font-size: 11px;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .chart-card-value {
-      font-size: 28px;
-      font-weight: 700;
-      color: #FFFFFF;
-      letter-spacing: -1px;
-    }
-
-    .chart-card-badge {
-      background: rgba(16, 185, 129, 0.2);
-      border: 1px solid rgba(16, 185, 129, 0.35);
-      border-radius: 6px;
-      padding: 4px 8px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #34D399;
-    }
-
-    /* Mini sparkline SVG */
-    .chart-sparkline {
-      width: 100%;
-      height: 64px;
-    }
-
-    .chart-stats-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 12px;
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .chart-stat {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .chart-stat-label {
-      font-size: 10px;
-      color: rgba(255,255,255,0.4);
-    }
-
-    .chart-stat-val {
-      font-size: 13px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.9);
-    }
-
-    .chart-stat-val.up   { color: #34D399; }
-    .chart-stat-val.down { color: #F87171; }
-
-    /* Floating AI badge on card */
-    .chart-ai-badge {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background: rgba(99, 102, 241, 0.3);
-      border: 1px solid rgba(99, 102, 241, 0.5);
-      border-radius: var(--r-full);
-      padding: 4px 10px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 11px;
-      color: rgba(255,255,255,0.8);
-      backdrop-filter: blur(8px);
-    }
 
     .ai-dot {
       width: 6px; height: 6px;
@@ -630,121 +426,9 @@ body {
       background: #818CF8;
       animation: pulse-ring 1.5s ease-out infinite;
     }
-
-    /* === Bottom Sheet (Auth Actions) === */
-    .auth-bottom-sheet {
-      flex-shrink: 0;
-      background: var(--c-surface);
-      border-radius: 28px 28px 0 0;
-      padding: 0 24px calc(var(--safe-bottom) + 16px);
-      box-shadow: 0 -4px 32px rgba(13, 18, 38, 0.08);
-      animation: slideUp var(--dur-slow) var(--ease-out) 0.35s both;
-      position: relative;
-      z-index: 5;
-    }
-
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(40px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .sheet-handle {
-      width: 36px;
-      height: 4px;
-      background: var(--c-border);
-      border-radius: 2px;
-      margin: 12px auto 24px;
-    }
-
-    .auth-slogan {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
-    .auth-slogan h2 {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-      color: var(--c-text-primary);
-      margin-bottom: 6px;
-    }
-
-    .auth-slogan p {
-      font-size: 13px;
-      color: var(--c-text-secondary);
-      line-height: 1.5;
-    }
-
-    /* === Buttons === */
-    .btn-primary-auth {
-      width: 100%;
-      height: 52px;
-      background: var(--grad-primary);
-      border: none;
-      border-radius: var(--r-lg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-size: 16px;
-      font-weight: 600;
-      color: #FFFFFF;
-      cursor: pointer;
-      box-shadow: var(--shadow-blue);
-      transition:
-        transform var(--dur-fast) var(--ease-out),
-        box-shadow var(--dur-fast) var(--ease-out),
-        opacity var(--dur-fast);
-      position: relative;
-      overflow: hidden;
-      letter-spacing: 0.2px;
-    }
-
-    .btn-primary-auth::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.12), transparent);
-    }
-
-    .btn-primary-auth:active {
-      transform: scale(0.97);
-      box-shadow: 0 4px 12px rgba(22, 119, 255, 0.2);
-    }
-
-    .btn-primary-auth svg {
-      width: 22px; height: 22px;
-      position: relative; z-index: 1;
-    }
-
-    .btn-primary-auth span {
-      position: relative; z-index: 1;
-    }
-
-    /* Wechat green tint */
-    .btn-wechat {
-      background: linear-gradient(135deg, #07C160 0%, #059952 100%);
-      box-shadow: 0 8px 24px rgba(7, 193, 96, 0.32);
-    }
-
-    .btn-wechat:active {
-      box-shadow: 0 4px 12px rgba(7, 193, 96, 0.2);
-    }
-
-
-    /* Agreement text */
-    .auth-agreement {
-      text-align: center;
-      font-size: 11px;
-      color: var(--c-text-tertiary);
-      margin-top: 16px;
-      line-height: 1.6;
-    }
-
-    .auth-agreement a {
-      color: var(--c-primary);
-      text-decoration: none;
-    }
 
     /* === Loading Overlay === */
     #loading-overlay {
@@ -757,7 +441,7 @@ body {
       align-items: center;
       justify-content: center;
       gap: 16px;
-      z-index: 100;
+      z-index: 999;
       opacity: 0;
       pointer-events: none;
       transition: opacity var(--dur-base) var(--ease-out);
@@ -1978,7 +1662,61 @@ body {
       background: #FFFFFF;
     }
 
-    /* ── Section common ── */
+    /* ── 首页：最近学习白底卡片 ── */
+    .hm-recent-wrap {
+      padding: 14px 16px 0;
+    }
+    .hm-recent-card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: transform 150ms var(--ease-out);
+    }
+    .hm-recent-card:active { transform: scale(0.98); }
+
+    .hm-recent-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .hm-recent-title {
+      font-size: 14px; font-weight: 700; color: #1A1A1A;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .hm-recent-more {
+      font-size: 11px; color: #999999; display: flex; align-items: center;
+    }
+    .hm-recent-body {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hm-recent-icon {
+      width: 40px; height: 40px; border-radius: 8px;
+      background: #F4F6FA; display: flex; align-items: center; justify-content: center;
+      color: #1677FF; flex-shrink: 0;
+    }
+    .hm-recent-info { flex: 1; min-width: 0; }
+    .hm-recent-name {
+      font-size: 14px; font-weight: 700; color: #1A1A1A; margin-bottom: 6px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .hm-recent-progress-row {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .hm-recent-bar {
+      flex: 1; height: 4px; background: #F0F2F7; border-radius: 99px; overflow: hidden;
+    }
+    .hm-recent-fill {
+      height: 100%; background: #1677FF; border-radius: 99px;
+    }
+    .hm-recent-pct { font-size: 11px; color: #888; white-space: nowrap; }
+    .hm-recent-btn {
+      height: 28px; padding: 0 12px; background: #E8F1FF; color: #1677FF;
+      border: none; border-radius: 99px; font-size: 12px; font-weight: 600;
+      cursor: pointer; flex-shrink: 0;
+    }
+
+        /* ── Section common ── */
     .hm-section {
       margin-top: 16px;
       padding: 0 16px;
@@ -3412,7 +3150,7 @@ body {
     /* ── Hero card ── */
     .mp-hero {
       background: linear-gradient(160deg, #0D1226 0%, #1B3A8C 55%, #0D1F6B 100%);
-      padding: 24px 20px 28px;
+      padding: 44px 20px 28px;
       position: relative;
       overflow: hidden;
     }
@@ -3729,224 +3467,54 @@ body {
     /* Orb arch — 4-tab spacing */
     .tab-item-orb::before { width: 72px; }
 
-    /* =========================================
-       PROFILE PAGE  (.pf- prefix)
-       ========================================= */
-
-    #tab-profile { background: var(--c-bg); }
-
-    .pf-scroll {
-      flex: 1;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-      padding: 12px 16px 0;
-    }
+    /* ── 我的页面 (Profile) 新版 1:1 复刻 ── */
+    #tab-profile { background: #F4F6FA; display: flex; flex-direction: column; position: relative; height: 100%; overflow: hidden; }
+    
+    /* 顶部渐变背景 */
+    .pf-bg { position: absolute; top: 0; left: 0; right: 0; height: 280px; background: linear-gradient(180deg, #E6F0FA 0%, #F4F6FA 100%); z-index: 0; pointer-events: none; }
+    
+    .pf-scroll { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; position: relative; z-index: 1; padding-bottom: 24px; }
     .pf-scroll::-webkit-scrollbar { display: none; }
+    
+    /* 顶部用户信息 */
+    .pf-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 20px 24px; margin-top: 10px; }
+    .pf-user-info { display: flex; align-items: center; gap: 16px; }
+    .pf-avatar { width: 64px; height: 64px; border-radius: 50%; background: #DDE2EC; display: flex; align-items: center; justify-content: center; }
+    .pf-avatar svg { width: 40px; height: 40px; color: #FFFFFF; }
+    .pf-name-box { display: flex; flex-direction: column; gap: 4px; }
+    .pf-name { font-size: 20px; font-weight: 700; color: #1A1A1A; display: flex; align-items: center; gap: 4px; }
+    .pf-name span { font-size: 14px; font-weight: normal; }
+    .pf-sub { font-size: 12px; color: #888888; }
+    .pf-scan-btn { width: 24px; height: 24px; color: #333; }
+    
+    /* 两大金刚键 */
+    .pf-top-btns { display: flex; gap: 12px; padding: 0 16px; margin-bottom: 16px; }
+    .pf-tbtn { flex: 1; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; font-size: 15px; font-weight: 600; cursor: pointer; position: relative; overflow: hidden; }
+    .pf-tbtn-left { background: linear-gradient(135deg, #EAF4FF 0%, #F4F9FF 100%); color: #1677FF; }
+    .pf-tbtn-right { background: linear-gradient(135deg, #F3EFFF 0%, #FAF8FF 100%); color: #7C3AED; }
+    .pf-tbtn-icon { position: absolute; right: 12px; bottom: 8px; width: 32px; height: 32px; opacity: 0.3; }
+    
+    /* 通用卡片容器 */
+    .pf-card { background: #FFFFFF; border-radius: 16px; margin: 0 16px 12px; padding: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.02); }
+    .pf-card-title { display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 700; color: #1A1A1A; margin-bottom: 16px; }
+    .pf-card-more { font-size: 12px; color: #999; font-weight: 400; display: flex; align-items: center; }
+    
+    /* 图标网格 */
+    .pf-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 0; }
+    .pf-grid-item { display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; }
+    .pf-icon-wrap { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
+    .pf-icon-wrap svg { width: 28px; height: 28px; }
+    .pf-icon-bg { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 2px; }
+    .pf-grid-text { font-size: 12px; color: #333333; }
+    
+    /* 底部列表卡片 */
+    .pf-list { background: #FFFFFF; border-radius: 16px; margin: 0 16px 12px; padding: 4px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.02); }
+    .pf-list-item { display: flex; align-items: center; justify-content: space-between; padding: 16px; cursor: pointer; position: relative; }
+    .pf-list-item:not(:last-child)::after { content: ''; position: absolute; bottom: 0; left: 44px; right: 16px; height: 1px; background: #F5F5F5; }
+    .pf-list-left { display: flex; align-items: center; gap: 12px; font-size: 14px; color: #333; }
+    .pf-list-left svg { width: 20px; height: 20px; color: #666; }
+    .pf-list-arrow { color: #CCC; }
 
-    /* User card */
-    .pf-user-card {
-      background: #FFFFFF;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 12px;
-    }
-
-    .pf-user-main {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px 16px 14px;
-    }
-
-    .pf-user-avatar {
-      width: 52px; height: 52px;
-      border-radius: 16px;
-      background: linear-gradient(135deg,#1677FF,#0B5CCC);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; font-weight: 800; color: #FFF;
-      flex-shrink: 0;
-    }
-
-    .pf-user-info { flex: 1; }
-
-    .pf-user-name {
-      font-size: 17px;
-      font-weight: 800;
-      color: #1A1A1A;
-      letter-spacing: -0.3px;
-    }
-
-    .pf-user-phone {
-      font-size: 12px;
-      color: #AAAAAA;
-      margin-top: 2px;
-    }
-
-    .pf-user-edit {
-      font-size: 12px;
-      color: #AAAAAA;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    /* VIP banner */
-    .pf-vip-banner {
-      background: linear-gradient(135deg,#1A1207 0%,#3D2B00 50%,#1A1207 100%);
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .pf-vip-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .pf-vip-crown {
-      font-size: 20px;
-      filter: drop-shadow(0 0 6px rgba(201,169,75,0.8));
-    }
-
-    .pf-vip-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--c-gold);
-      letter-spacing: 0.5px;
-    }
-
-    .pf-vip-exp {
-      font-size: 10px;
-      color: rgba(201,169,75,0.55);
-      margin-top: 2px;
-    }
-
-    .pf-vip-right {
-      font-size: 11px;
-      color: rgba(201,169,75,0.65);
-      cursor: pointer;
-    }
-
-    /* Stats row */
-    .pf-stats-card {
-      background: #FFFFFF;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      padding: 16px 0;
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 12px;
-    }
-
-    .pf-stat-item {
-      flex: 1;
-      text-align: center;
-    }
-
-    .pf-stat-val {
-      font-size: 20px;
-      font-weight: 800;
-      color: #1A1A1A;
-      letter-spacing: -0.5px;
-    }
-
-    .pf-stat-label {
-      font-size: 10px;
-      color: #AAAAAA;
-      margin-top: 3px;
-    }
-
-    .pf-stat-divider {
-      width: 1px;
-      height: 28px;
-      background: #F0F0F0;
-    }
-
-    /* Section card (tools) */
-    .pf-section-card {
-      background: #FFFFFF;
-      border-radius: 14px;
-      padding: 16px;
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 12px;
-    }
-
-    .pf-section-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #1A1A1A;
-      margin-bottom: 14px;
-    }
-
-    .pf-tools-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-    }
-
-    .pf-tool-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 7px;
-      cursor: pointer;
-    }
-
-    .pf-tool-icon {
-      width: 48px; height: 48px;
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      transition: transform 150ms var(--ease-spring);
-    }
-    .pf-tool-icon:active { transform: scale(0.9); }
-
-    .pf-tool-label {
-      font-size: 10px;
-      color: #555;
-      text-align: center;
-      line-height: 1.3;
-    }
-
-    /* List group */
-    .pf-list-card {
-      background: #FFFFFF;
-      border-radius: 14px;
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      margin-bottom: 12px;
-    }
-
-    .pf-list-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 16px;
-      cursor: pointer;
-      transition: background 150ms;
-    }
-    .pf-list-item:active { background: #F8F8F8; }
-
-    .pf-list-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14px;
-      color: #1A1A1A;
-    }
-
-    .pf-service-tip {
-      font-size: 10px;
-      color: #AAAAAA;
-      margin-left: 4px;
-    }
-
-    .pf-list-divider {
-      height: 1px;
-      background: #F5F5F5;
-      margin: 0 16px;
-    }
 
 
     /* =========================================
@@ -4235,7 +3803,7 @@ body {
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.50);
-      z-index: 90;          /* below loading-overlay (100) */
+      z-index: 900;
       opacity: 0;
       pointer-events: none;
       transition: opacity 300ms var(--ease-out);
@@ -4250,7 +3818,7 @@ body {
       left: 0; right: 0; bottom: 0;
       background: #FFFFFF;
       border-radius: 16px 16px 0 0;
-      z-index: 95;          /* below loading-overlay (100) */
+      z-index: 905;
       padding: 0 20px calc(16px + env(safe-area-inset-bottom, 0px));
       transform: translateY(100%);
       transition: transform 320ms var(--ease-out);
@@ -4752,6 +4320,203 @@ body {
     }
     .gc-send-btn:active { transform: scale(0.88); }
 
+
+    .auth-close-btn {
+      position: absolute;
+      top: calc(var(--safe-top) + 6px);
+      left: 16px;
+      width: 34px; height: 34px;
+      background: rgba(0,0,0,0.05);
+      border: none; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 20;
+      color: #0D1226;
+      transition: background 150ms;
+    }
+    .auth-close-btn:active { background: rgba(0,0,0,0.1); }
+
+
+    /* ── 我的学习 (二级页面) ── */
+    #page-my-courses { background: #F4F6FA; display: flex; flex-direction: column; }
+    .mc-tabs { display: flex; background: #FFFFFF; padding: 0 16px; border-bottom: 1px solid #F0F2F7; flex-shrink: 0; }
+    .mc-tab { flex: 1; text-align: center; padding: 12px 0; font-size: 14px; font-weight: 500; color: #888888; cursor: pointer; position: relative; transition: color 150ms; }
+    .mc-tab.active { color: #1677FF; font-weight: 700; }
+    .mc-tab.active::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 24px; height: 3px; background: #1677FF; border-radius: 3px; }
+    .mc-scroll { flex: 1; overflow-y: auto; padding: 12px 16px; -webkit-overflow-scrolling: touch; }
+    .mc-scroll::-webkit-scrollbar { display: none; }
+    .mc-panel { display: none; flex-direction: column; gap: 12px; }
+    .mc-panel.active { display: flex; animation: fadeIn 0.3s ease; }
+    .mc-card { background: #FFFFFF; border-radius: 12px; padding: 12px; display: flex; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); cursor: pointer; transition: transform 150ms; }
+    .mc-card:active { transform: scale(0.98); }
+    .mc-thumb { width: 110px; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; position: relative; flex-shrink: 0; }
+    .mc-thumb-bg { width: 100%; height: 100%; }
+    .mc-info { flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; }
+    .mc-title { font-size: 14px; font-weight: 700; color: #1A1A1A; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 4px; }
+    .mc-meta { font-size: 11px; color: #888888; }
+
+    .mc-live-time { font-size: 10px; font-weight: 600; color: #1677FF; background: #E8F1FF; padding: 3px 6px; border-radius: 4px; display: inline-block; margin-top: 6px; align-self: flex-start; }
+
+
+    /* ── Tab: 圈子 (Circle) ── */
+    #tab-circle { background: #F4F6FA; display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+    .tc-scroll { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .tc-scroll::-webkit-scrollbar { display: none; }
+
+    .tc-hero { background: linear-gradient(160deg, #6C829D 0%, #4B6382 100%); padding: 48px 16px 36px; position: relative; }
+    .tc-hero-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .tc-hero-cover { width: 60px; height: 60px; border-radius: 12px; background: #E8F1FF; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; color: #4B6382; font-weight: 800; font-size: 15px; text-align: center; line-height: 1.2; }
+    .tc-hero-info { flex: 1; color: #FFFFFF; }
+    .tc-hero-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.2px; }
+    .tc-hero-desc { font-size: 11px; color: rgba(255,255,255,0.7); line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+    .tc-hero-stats { display: flex; align-items: center; gap: 10px; font-size: 11px; color: rgba(255,255,255,0.85); margin-bottom: 16px; }
+    .tc-hero-stats-divider { width: 1px; height: 10px; background: rgba(255,255,255,0.3); }
+    .tc-avatar-stack { position: relative; width: 44px; height: 18px; margin-right: 4px; }
+    .tc-mini-av { position: absolute; width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.4); font-size: 8px; font-weight: 700; color: #fff; display: flex; align-items: center; justify-content: center; }
+
+    .tc-hero-notices { background: rgba(255,255,255,0.12); border-radius: 8px; padding: 10px 12px; margin-bottom: 16px; }
+    .tc-notice-item { display: flex; align-items: center; gap: 8px; font-size: 11px; color: rgba(255,255,255,0.95); margin-bottom: 8px; }
+    .tc-notice-item:last-child { margin-bottom: 0; }
+    .tc-notice-icon { background: rgba(255,255,255,0.25); width: 14px; height: 14px; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 9px; }
+
+    .tc-task-pill { margin: 0 auto; display: table; background: rgba(0,0,0,0.2); color: #FFF; font-size: 11px; font-weight: 500; padding: 4px 14px; border-radius: 99px; }
+
+    .tc-overlap { background: #FFFFFF; border-radius: 20px 20px 0 0; margin-top: -24px; position: relative; z-index: 2; padding-bottom: 24px; min-height: 500px; }
+
+    .tc-menu { display: flex; padding: 18px 8px 14px; border-bottom: 1px solid #F0F2F7; }
+    .tc-menu-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; cursor: pointer; }
+    .tc-menu-icon { width: 34px; height: 34px; border-radius: 50%; background: #F4F6FA; display: flex; align-items: center; justify-content: center; color: #555; transition: background 150ms; }
+    .tc-menu-item.active .tc-menu-icon { background: #4B6382; color: #FFF; box-shadow: 0 4px 12px rgba(75,99,130,0.3); }
+    .tc-menu-item.active .tc-menu-label { color: #4B6382; font-weight: 700; }
+    .tc-menu-label { font-size: 11px; color: #888; }
+
+    .tc-group-sec { padding: 18px 16px; border-bottom: 8px solid #F4F6FA; }
+    .tc-group-title { font-size: 14px; font-weight: 700; color: #1A1A1A; margin-bottom: 12px; }
+    .tc-group-card { background: #FFFFFF; border: 1px solid #E8ECF4; border-radius: 12px; padding: 14px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.03); }
+    .tc-group-av { width: 42px; height: 42px; border-radius: 10px; background: linear-gradient(135deg,#6C829D,#4B6382); display: flex; align-items: center; justify-content: center; color: #FFF; flex-shrink: 0; }
+    .tc-group-info { flex: 1; }
+    .tc-group-name { font-size: 14px; font-weight: 700; color: #1A1A1A; margin-bottom: 4px; }
+    .tc-group-desc { font-size: 11px; color: #888; }
+    .tc-group-btn { background: #4B6382; color: #FFF; border: none; border-radius: 99px; padding: 6px 16px; font-size: 12px; font-weight: 600; cursor: pointer; }
+    .tc-group-tip { background: #F0F4FA; color: #4B6382; font-size: 11px; padding: 8px; border-radius: 6px; text-align: center; margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 4px; font-weight: 500; }
+
+    .tc-post-tabs { display: flex; align-items: center; gap: 20px; padding: 14px 16px 0; border-bottom: 1px solid #F0F2F7; overflow-x: auto; white-space: nowrap; }
+    .tc-post-tabs::-webkit-scrollbar { display: none; }
+    .tc-ptab { font-size: 14px; color: #666; padding-bottom: 10px; cursor: pointer; }
+    .tc-ptab.active { font-size: 15px; font-weight: 700; color: #1A1A1A; position: relative; }
+    .tc-ptab.active::after { content:''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 3px; background: #4B6382; border-radius: 2px; }
+
+    .tc-posts { padding: 0 16px; }
+    .tc-post { padding: 18px 0; border-bottom: 1px solid #F0F2F7; }
+    .tc-post-head { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+    .tc-post-av { width: 38px; height: 38px; border-radius: 50%; background: #E8F1FF; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; flex-shrink: 0; }
+    .tc-post-user { flex: 1; }
+    .tc-post-name { font-size: 14px; font-weight: 700; color: #1A1A1A; display: flex; align-items: center; gap: 6px; }
+    .tc-post-badge { font-size: 9px; color: #D97706; background: #FEF3C7; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .tc-post-time { font-size: 11px; color: #999; margin-top: 3px; }
+    .tc-post-text { font-size: 14px; color: #333; line-height: 1.6; margin-bottom: 10px; }
+    .tc-post-tags { display: flex; gap: 8px; margin-bottom: 10px; }
+    .tc-post-tag { font-size: 12px; color: #1677FF; font-weight: 500; }
+    .tc-post-action { font-size: 13px; color: #1677FF; display: inline-flex; align-items: center; gap: 2px; font-weight: 500; cursor: pointer; }
+
+
+    /* ── 新版群聊页 (低饱和蓝白 & 活跃交互) ── */
+    .gc-announcement { background: #F0F4FA; color: #4B6382; padding: 10px 16px; font-size: 12px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #E8ECF4; }
+    .gc-sys-msg { text-align: center; margin: 16px 0; }
+    .gc-sys-msg span { background: rgba(0,0,0,0.05); color: #888; font-size: 11px; padding: 4px 10px; border-radius: 4px; display: inline-block; }
+    
+    .gc-card-bubble { background: #FFFFFF; border: 1px solid #E8ECF4; border-radius: 8px; overflow: hidden; margin-top: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); max-width: 260px;}
+    .gc-card-img { width: 100%; height: 120px; background: linear-gradient(135deg, #6C829D 0%, #4B6382 100%); display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 18px; font-weight: bold; letter-spacing: 2px;}
+    .gc-card-text { padding: 10px; font-size: 12px; color: #333; line-height: 1.5; }
+
+    .gc-input-bar { background: #F4F6FA; border-top: 1px solid #E8ECF4; padding: 10px 16px; display: flex; align-items: center; gap: 12px; padding-bottom: calc(10px + var(--safe-bottom)); }
+    .gc-input-field { flex: 1; min-width: 0; border: none; padding: 10px 14px; border-radius: 20px; background: #FFFFFF; font-size: 14px; color: #333; outline: none; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+    .gc-send-btn { background: #4B6382; color: #FFF; border: none; border-radius: 20px; padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+
+
+    /* ── 伴学页：课程列表与 Tab 切换 ── */
+    .mentor-panel { display: none; padding: 12px 16px; background: #F4F6FA; min-height: 50vh; }
+    .mentor-panel.active { display: block; animation: fadeIn 0.3s ease; }
+    
+    .mcc-card { background: #FFFFFF; border-radius: 12px; padding: 12px; display: flex; gap: 12px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .mcc-card:last-child { margin-bottom: 0; }
+    .mcc-thumb { width: 130px; aspect-ratio: 16/9; border-radius: 8px; flex-shrink: 0; position: relative; overflow: hidden; background: #E8ECF4; }
+    .mcc-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    
+    .mcc-info { flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; }
+    .mcc-title { font-size: 14px; font-weight: 700; color: #1A1A1A; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .mcc-meta { font-size: 11px; color: #888; margin-top: 6px; }
+    
+    .mcc-bottom { display: flex; align-items: flex-end; justify-content: flex-end; margin-top: 8px; }
+    .mcc-btn { background: #1677FF; color: #FFF; border: none; border-radius: 99px; padding: 6px 16px; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+
+
+    /* ── 课程详情页 (Course Detail) ── */
+    #page-course-detail { background: #F4F6FA; display: flex; flex-direction: column; height: 100%; position: relative; z-index: 50;}
+    
+    .cdet-header { position: relative; width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, #2B4365 0%, #162E4A 100%); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #FFF; }
+    .cdet-back { position: absolute; top: calc(12px + var(--safe-top, 0px)); left: 16px; width: 32px; height: 32px; background: rgba(0,0,0,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); cursor: pointer; z-index: 10; }
+    .cdet-play-btn { width: 56px; height: 56px; background: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.6); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
+    .cdet-play-icon { width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid #FFF; margin-left: 4px; }
+    
+    .cdet-tabs { display: flex; background: #FFFFFF; border-bottom: 1px solid #F0F2F7; flex-shrink: 0; position: sticky; top: 0; z-index: 10; }
+    .cdet-tab { flex: 1; text-align: center; padding: 14px 0; font-size: 15px; font-weight: 500; color: #666; cursor: pointer; position: relative; }
+    .cdet-tab.active { color: #1677FF; font-weight: 700; }
+    .cdet-tab.active::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 24px; height: 3px; background: #1677FF; border-radius: 3px; }
+    
+    .cdet-scroll { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-bottom: 24px; }
+    .cdet-scroll::-webkit-scrollbar { display: none; }
+    .cdet-panel { display: none; padding: 16px; animation: fadeIn 0.3s ease; }
+    .cdet-panel.active { display: block; }
+    
+    .cdet-title-sec { background: #FFFFFF; border-radius: 12px; padding: 16px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .cdet-title { font-size: 18px; font-weight: 800; color: #1A1A1A; line-height: 1.4; margin-bottom: 8px; }
+    .cdet-tags { display: flex; gap: 8px; margin-bottom: 12px; }
+    .cdet-tag { font-size: 11px; color: #1677FF; background: #E8F1FF; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+    .cdet-meta { font-size: 12px; color: #888; display: flex; justify-content: space-between; }
+    
+    .cdet-mentor-card { background: #FFFFFF; border-radius: 12px; padding: 16px; display: flex; align-items: center; gap: 12px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .cdet-mentor-av { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #D8E2F0, #A0B2C9); flex-shrink: 0; }
+    .cdet-mentor-info { flex: 1; }
+    .cdet-mentor-name { font-size: 15px; font-weight: 700; color: #1A1A1A; margin-bottom: 4px; }
+    .cdet-mentor-title { font-size: 12px; color: #666; }
+    
+    .cdet-desc-sec { background: #FFFFFF; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .cdet-desc-title { font-size: 15px; font-weight: 700; color: #1A1A1A; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    .cdet-desc-title::before { content: ''; width: 3px; height: 14px; background: #1677FF; border-radius: 2px; }
+    .cdet-desc-text { font-size: 13px; color: #444; line-height: 1.6; }
+    
+    .cdet-chap-item { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid #F0F2F7; }
+    .cdet-chap-item:last-child { border-bottom: none; }
+    .cdet-chap-left { display: flex; flex-direction: column; gap: 4px; }
+    .cdet-chap-title { font-size: 14px; color: #333; font-weight: 500; }
+    .cdet-chap-time { font-size: 11px; color: #999; }
+    .cdet-chap-status { font-size: 12px; color: #1677FF; font-weight: 500; }
+    
+    .cdet-bottom { position: absolute; bottom: 0; left: 0; width: 100%; background: #FFFFFF; border-top: 1px solid #F0F2F7; padding: 10px 16px; padding-bottom: calc(10px + var(--safe-bottom, 12px)); display: flex; align-items: center; justify-content: space-between; box-shadow: 0 -2px 10px rgba(0,0,0,0.03); z-index: 20; }
+    .cdet-price-area { display: flex; flex-direction: column; }
+    .cdet-price { font-size: 18px; font-weight: 800; color: #FF4D4F; }
+    .cdet-price span { font-size: 12px; font-weight: 500; }
+    .cdet-original { font-size: 11px; color: #999; text-decoration: line-through; }
+    .cdet-actions { display: flex; gap: 10px; }
+    .cdet-btn-ghost { background: #E8F1FF; color: #1677FF; border: none; border-radius: 99px; padding: 0 16px; height: 40px; font-size: 14px; font-weight: 600; cursor: pointer; }
+    .cdet-btn-main { background: #1677FF; color: #FFFFFF; border: none; border-radius: 99px; padding: 0 24px; height: 40px; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(22,119,255,0.3); }
+
+
+    /* ── 支付收银台 ── */
+    .payment-scrim { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 900; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+    .payment-scrim.open { opacity: 1; pointer-events: auto; }
+    .payment-sheet { position: absolute; bottom: 0; left: 0; width: 100%; background: #FFF; border-radius: 20px 20px 0 0; padding: 20px 24px calc(24px + var(--safe-bottom, 12px)); z-index: 905; transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 -4px 20px rgba(0,0,0,0.08); }
+    .payment-sheet.open { transform: translateY(0); }
+    .pay-header { font-size: 16px; font-weight: 700; text-align: center; margin-bottom: 24px; position: relative; }
+    .pay-close { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: #999; cursor: pointer; }
+    .pay-amount { font-size: 36px; font-weight: 800; color: #1A1A1A; text-align: center; margin-bottom: 32px; }
+    .pay-amount span { font-size: 20px; }
+    .pay-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 16px; }
+    .pay-lbl { color: #888; }
+    .pay-val { color: #1A1A1A; font-weight: 500; }
+    .pay-btn { width: 100%; height: 48px; background: #09B83E; color: #FFF; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; margin-top: 16px; cursor: pointer; }
+
   </style>
 </head>
 <body>
@@ -4762,191 +4527,6 @@ body {
     <!-- Dynamic Island -->
     <div class="dynamic-island"></div>
 
-    <!-- =============================================
-         PAGE 1: AUTH / LOGIN
-         ============================================= -->
-    <div class="page" id="page-auth">
-
-      <!-- Status Bar -->
-      <div class="status-bar" style="color: #0D1226;">
-        <span class="time">9:41</span>
-        <div class="icons">
-          <!-- Signal -->
-          <svg viewBox="0 0 24 24" fill="currentColor"><rect x="1" y="15" width="4" height="6" rx="1"/><rect x="7" y="11" width="4" height="10" rx="1"/><rect x="13" y="7" width="4" height="14" rx="1"/><rect x="19" y="3" width="4" height="18" rx="1" opacity=".3"/></svg>
-          <!-- WiFi -->
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
-          <!-- Battery -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 13v-2" stroke-linecap="round"/><rect x="3" y="8" width="14" height="8" rx="1" fill="currentColor"/></svg>
-        </div>
-      </div>
-
-      <!-- Hero Area -->
-      <div class="auth-hero">
-        <div class="auth-orb auth-orb-1"></div>
-        <div class="auth-orb auth-orb-2"></div>
-
-        <!-- Logo -->
-        <div class="auth-logo-wrap">
-          <div class="auth-logo-icon">
-            <svg viewBox="0 0 48 48" fill="none">
-              <!-- Stylized rising bar chart + spark -->
-              <rect x="6" y="26" width="7" height="14" rx="2" fill="rgba(255,255,255,0.5)"/>
-              <rect x="16" y="18" width="7" height="22" rx="2" fill="rgba(255,255,255,0.7)"/>
-              <rect x="26" y="10" width="7" height="30" rx="2" fill="rgba(255,255,255,0.9)"/>
-              <!-- AI spark -->
-              <path d="M38 6 L40 12 L46 14 L40 16 L38 22 L36 16 L30 14 L36 12 Z" fill="#E8C97A"/>
-            </svg>
-          </div>
-          <div class="auth-brand-name">沙丘<em>学习交流平台</em></div>
-        </div>
-
-        <!-- Illustration Card -->
-        <div class="auth-illustration">
-          <div class="auth-chart-card">
-            <div class="auth-chart-card::before"></div>
-            <div class="auth-orb-1" style="width:100px;height:100px;background:rgba(99,102,241,0.12);top:-20px;right:-20px;position:absolute;filter:blur(30px);"></div>
-
-            <div class="chart-card-header">
-              <div>
-                <div class="chart-card-label">AI 伴学统计 · 本周学习</div>
-                <div class="chart-card-value"><span style="font-size:20px;margin-right:4px">已攻克</span>8<span style="font-size:20px;margin-left:4px">个核心知识点</span></div>
-              </div>
-              <div class="chart-card-badge">超越 92% 学员</div>
-            </div>
-
-            <!-- Sparkline -->
-            <svg class="chart-sparkline" viewBox="0 0 320 64" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#1677FF" stop-opacity="0.3"/>
-                  <stop offset="100%" stop-color="#1677FF" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <path d="M0,52 C20,50 35,48 50,42 C65,36 75,30 90,26 C105,22 115,28 130,20 C145,12 155,16 170,10 C185,4 195,8 210,6 C225,4 240,10 255,8 C270,6 285,4 320,2 L320,64 L0,64 Z" fill="url(#sg)"/>
-              <path d="M0,52 C20,50 35,48 50,42 C65,36 75,30 90,26 C105,22 115,28 130,20 C145,12 155,16 170,10 C185,4 195,8 210,6 C225,4 240,10 255,8 C270,6 285,4 320,2" fill="none" stroke="#4096FF" stroke-width="2" stroke-linecap="round"/>
-              <!-- Dot at end -->
-              <circle cx="320" cy="2" r="3.5" fill="#1677FF"/>
-              <circle cx="320" cy="2" r="6" fill="rgba(22,119,255,0.25)"/>
-            </svg>
-
-            <div class="chart-stats-row">
-              <div class="chart-stat">
-                <div class="chart-stat-label">累计听课</div>
-                <div class="chart-stat-val">1,240 分钟</div>
-              </div>
-              <div class="chart-stat">
-                <div class="chart-stat-label">随堂测试</div>
-                <div class="chart-stat-val up">全A通过</div>
-              </div>
-              <div class="chart-stat">
-                <div class="chart-stat-label">AI 答疑</div>
-                <div class="chart-stat-val">15 次</div>
-              </div>
-            </div>
-
-            <!-- AI badge overlay -->
-            <div class="chart-ai-badge" style="position:absolute;top:14px;right:14px;">
-              <div class="ai-dot"></div>
-              AI 助教在线
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Sheet -->
-      <div class="auth-bottom-sheet">
-        <div class="sheet-handle"></div>
-
-        <div class="auth-slogan">
-          <h2>跟着大V，学透财经</h2>
-          <p>沙丘学习交流平台官方伴学<br/>AI 助教 24 小时答疑，让投资学习更高效</p>
-        </div>
-
-        <!-- WeChat Auth Button -->
-        <button class="btn-primary-auth btn-wechat" id="btn-wechat-login" onclick="handleWechatLogin()">
-          <!-- WeChat icon -->
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.045c.134 0 .241-.107.241-.245 0-.06-.023-.12-.04-.177l-.325-1.233a.491.491 0 01.177-.554 6.257 6.257 0 002.5-4.633c.025-3.551-3.058-6.148-7.06-6.11zm-2.098 2.439c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982zm4.406 0c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982z"/>
-          </svg>
-          <span>微信一键授权登录</span>
-        </button>
-
-        
-
-        <div class="auth-agreement">
-          登录即代表同意
-          <a href="#">《用户服务协议》</a> 与
-          <a href="#">《隐私政策》</a><br/>
-          我们承诺保护您的个人信息安全
-        </div>
-      </div>
-
-      <!-- Phone Auth Sheet (WeChat-style) -->
-      <div class="phone-auth-scrim" id="phone-auth-scrim" onclick="closePhoneAuth()"></div>
-
-      <div class="phone-auth-sheet" id="phone-auth-sheet">
-
-        <!-- Sheet header -->
-        <div class="pa-header">
-          <span class="pa-header-title">微信授权</span>
-          <button class="pa-close-btn" onclick="closePhoneAuth()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="18" height="18">
-              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-          </button>
-        </div>
-
-        <!-- App identity -->
-        <div class="pa-identity">
-          <div class="pa-app-icon">
-            <svg viewBox="0 0 48 48" fill="none" width="32" height="32">
-              <rect x="6" y="26" width="7" height="14" rx="2" fill="rgba(255,255,255,0.5)"/>
-              <rect x="16" y="18" width="7" height="22" rx="2" fill="rgba(255,255,255,0.7)"/>
-              <rect x="26" y="10" width="7" height="30" rx="2" fill="rgba(255,255,255,0.9)"/>
-              <path d="M38 6 L40 12 L46 14 L40 16 L38 22 L36 16 L30 14 L36 12 Z" fill="#E8C97A"/>
-            </svg>
-          </div>
-          <p class="pa-app-name"><strong>沙丘学习交流平台</strong> 申请获取你的手机号</p>
-        </div>
-
-        <!-- Phone number card -->
-        <div class="pa-phone-card">
-          <div class="pa-phone-row">
-            <!-- WeChat icon -->
-            <div class="pa-wechat-icon">
-              <svg viewBox="0 0 24 24" fill="#07C160" width="22" height="22">
-                <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.045c.134 0 .241-.107.241-.245 0-.06-.023-.12-.04-.177l-.325-1.233a.491.491 0 01.177-.554 6.257 6.257 0 002.5-4.633c.025-3.551-3.058-6.148-7.06-6.11zm-2.098 2.439c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982zm4.406 0c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982z"/>
-              </svg>
-            </div>
-            <div class="pa-phone-info">
-              <div class="pa-phone-number">138 **** 8866</div>
-              <div class="pa-phone-sub">微信绑定手机号</div>
-            </div>
-            <div class="pa-safe-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#07C160" stroke-width="2" stroke-linecap="round" width="12" height="12"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              安全绑定
-            </div>
-          </div>
-        </div>
-
-        <!-- Tip text -->
-        <p class="pa-tip">授权后可使用手机号快捷登录，我们承诺不会向第三方泄露你的手机号</p>
-
-        <!-- Action buttons -->
-        <button class="pa-allow-btn" onclick="confirmPhoneAuth()">允许</button>
-        <button class="pa-deny-btn"  onclick="closePhoneAuth()">拒绝</button>
-
-      </div>
-      <!-- /phone-auth-sheet -->
-
-      <!-- Loading Overlay -->
-      <div id="loading-overlay">
-        <div class="loading-spinner"></div>
-        <div class="loading-text">正在安全登录中…</div>
-      </div>
-
-    </div>
-    <!-- /page-auth -->
 
 
     <!-- =============================================
@@ -4990,48 +4570,29 @@ body {
                 </svg>
               </button>
             </div>
-
-            <!-- Search Box -->
-            <div class="hm-search-box">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#AAAAAA" stroke-width="2.2" stroke-linecap="round">
-                <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
-              </svg>
-              <span class="hm-search-placeholder">搜索课程、直播、老师...</span>
-            </div>
-
-            <!-- Guess Tags -->
-            <div class="hm-guess-row">
-              <span class="hm-guess-label">猜你想搜：</span>
-              <span class="hm-guess-tag">最近直播</span>
-              <span class="hm-guess-tag">精品课</span>
-            </div>
           </div>
 
-          <!-- ② HERO BANNER -->
-          <div class="hm-banner-wrap">
-            <div class="hm-banner-card">
-              <!-- Gradient placeholder simulating a warm photo -->
-              <div class="hm-banner-img">
-                <div class="hm-banner-overlay"></div>
-                <div class="hm-banner-text">
-                  <div class="hm-banner-eyebrow">限时特惠 · 名额有限</div>
-                  <div class="hm-banner-headline">投资者必修<br/>财富增长实战课</div>
-                  <div class="hm-banner-sub">顶级私募基金经理亲授 · 12课时</div>
-                  <div class="hm-banner-cta">立即报名 →</div>
+          <div class="hm-recent-wrap" onclick="ensureAuth()">
+            <div class="hm-recent-card">
+              <div class="hm-recent-header">
+                <div class="hm-recent-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2.5" stroke-linecap="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  最近学习
                 </div>
-                <!-- Decorative chart lines -->
-                <svg class="hm-banner-deco" viewBox="0 0 200 80" preserveAspectRatio="none">
-                  <polyline points="0,60 30,45 60,50 90,25 120,30 150,10 200,15"
-                    fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
-                  <polyline points="0,70 40,58 80,62 110,40 150,45 200,30"
-                    fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
-                </svg>
+                <div class="hm-recent-more" onclick="event.stopPropagation(); ensureAuth(() => router.navigate('my-courses'))">全部课程 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg></div>
               </div>
-              <!-- Dots indicator -->
-              <div class="hm-banner-dots">
-                <span class="hm-dot active"></span>
-                <span class="hm-dot"></span>
-                <span class="hm-dot"></span>
+              <div class="hm-recent-body">
+                <div class="hm-recent-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M4 3h16a2 2 0 012 2v14a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2zm2 4v10h12V7H6zm2 2h8v2H8V9zm0 4h5v2H8v-2z"/></svg>
+                </div>
+                <div class="hm-recent-info">
+                  <div class="hm-recent-name">期权双买实战7天训练营</div>
+                  <div class="hm-recent-progress-row">
+                    <div class="hm-recent-bar"><div class="hm-recent-fill" style="width: 43%;"></div></div>
+                    <span class="hm-recent-pct">已学 3/7 节</span>
+                  </div>
+                </div>
+                <button class="hm-recent-btn">继续</button>
               </div>
             </div>
           </div>
@@ -5090,7 +4651,7 @@ body {
               <div class="hm-tab-panel active" id="tp-course">
 
                 <!-- Hero course banner -->
-                <div class="hm-course-hero-card">
+                <div class="hm-course-hero-card" onclick="ensureAuth()">
                   <div class="hm-course-hero-img">
                     <div class="hm-course-hero-overlay"></div>
                     <div class="hm-course-hero-text">
@@ -5141,6 +4702,133 @@ body {
 
         </div>
         <!-- /tab-home -->
+        <!-- CIRCLE TAB -->
+        <div class="tab-panel" id="tab-circle">
+          <div class="tc-scroll">
+
+            <div class="tc-hero">
+              <div class="tc-hero-header">
+                <div class="tc-hero-cover">财富<br/>进阶</div>
+                <div class="tc-hero-info">
+                  <div class="tc-hero-title">财富进阶交流圈</div>
+                  <div class="tc-hero-desc">名师的学习交流圈，在这里一起记录读书心得，分享行业洞察与实战交易经验...</div>
+                </div>
+              </div>
+              <div class="tc-hero-stats">
+                <span>1.79w 动态</span> <div class="tc-hero-stats-divider"></div>
+                <span>7.53w 成员 &rsaquo;</span>
+                <div style="flex:1;"></div>
+                <div class="tc-avatar-stack">
+                  <div class="tc-mini-av" style="background:#4F46E5;left:0;z-index:3;">李</div>
+                  <div class="tc-mini-av" style="background:#059669;left:12px;z-index:2;">王</div>
+                  <div class="tc-mini-av" style="background:#D97706;left:24px;z-index:1;">张</div>
+                </div>
+                <span>排行榜 &rsaquo;</span>
+              </div>
+              <div class="tc-hero-notices">
+                <div class="tc-notice-item">
+                  <div class="tc-notice-icon">⬆</div>
+                  <span>深入研判当前宏观周期：A股核心资产...</span>
+                </div>
+                <div class="tc-notice-item">
+                  <div class="tc-notice-icon">⬆</div>
+                  <span>下定决心过好投资与生活的每一天！</span>
+                </div>
+              </div>
+              <div class="tc-task-pill">你有 1 个新任务 &rsaquo;</div>
+            </div>
+
+            <div class="tc-overlap">
+              <div class="tc-menu">
+                <div class="tc-menu-item">
+                  <div class="tc-menu-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4z"/></svg></div>
+                  <div class="tc-menu-label">课程</div>
+                </div>
+                <div class="tc-menu-item">
+                  <div class="tc-menu-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-7 8-7s8 3 8 7"/></svg></div>
+                  <div class="tc-menu-label">成员</div>
+                </div>
+                <div class="tc-menu-item active">
+                  <div class="tc-menu-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+                  <div class="tc-menu-label">群聊</div>
+                </div>
+                <div class="tc-menu-item">
+                  <div class="tc-menu-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+                  <div class="tc-menu-label">更多</div>
+                </div>
+                <div class="tc-menu-item">
+                  <div class="tc-menu-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                  <div class="tc-menu-label">我的</div>
+                </div>
+              </div>
+
+              <div class="tc-group-sec">
+                <div class="tc-group-title">圈子群聊</div>
+                <div class="tc-group-card">
+                  <div class="tc-group-av">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><circle cx="9" cy="10" r="1.5" fill="#FFF"/><circle cx="15" cy="10" r="1.5" fill="#FFF"/></svg>
+                  </div>
+                  <div class="tc-group-info">
+                    <div class="tc-group-name">财富进阶交流圈</div>
+                    <div class="tc-group-desc">圈主+运营+助理在线 · 1.2万人</div>
+                  </div>
+                  <button class="tc-group-btn" onclick="openGroupChat('财富进阶交流圈')">进入</button>
+                </div>
+                <div class="tc-group-tip">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  加入群聊后可与名师、运营团队实时互动
+                </div>
+              </div>
+
+              <div class="tc-post-tabs">
+                <div class="tc-ptab active">全部</div>
+                <div class="tc-ptab">圈主</div>
+                <div class="tc-ptab">特邀嘉宾分享</div>
+                <div class="tc-ptab">AI 学习圈</div>
+                <div class="tc-ptab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+              </div>
+
+              <div class="tc-posts">
+                <div class="tc-post">
+                  <div class="tc-post-head">
+                    <div class="tc-post-av" style="color:#D97706; background:#FEF3C7;">助</div>
+                    <div class="tc-post-user">
+                      <div class="tc-post-name">老师的小助手 <span class="tc-post-badge">置顶</span></div>
+                      <div class="tc-post-time">04-17 11:24</div>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                  </div>
+                  <div class="tc-post-text">
+                    你终于来了！<br/>
+                    欢迎加入「财富进阶」圈子，在这里分享你的所感所想，交流市场动态，崇尚商业之美，拥抱自由人生。
+                  </div>
+                  <div class="tc-post-action">展开 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+                </div>
+
+                <div class="tc-post">
+                  <div class="tc-post-head">
+                    <div class="tc-post-av" style="color:#EF4444; background:#FEE2E2;">梦</div>
+                    <div class="tc-post-user">
+                      <div class="tc-post-name">追梦人儿</div>
+                      <div class="tc-post-time">15小时前</div>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                  </div>
+                  <div class="tc-post-tags">
+                    <span class="tc-post-tag">#我的读书日常</span>
+                    <span class="tc-post-tag">#复盘总结</span>
+                  </div>
+                  <div class="tc-post-text">
+                    今天重新听了老师关于资产配置的那节课，终于明白为什么前段时间的收益总是不稳定了。You are that <u>cherry on top</u>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- /tab-circle -->
+
 
 
         <!-- AI TUTOR TAB -->
@@ -5264,168 +4952,260 @@ body {
         <!-- ADVISOR TAB -->
         <div class="tab-panel" id="tab-advisor">
 
-          <!-- ① Learning progress card -->
-          <div class="lc-progress-wrap">
-            <div class="lc-progress-card">
-              <!-- Decorative background circles -->
-              <div class="lc-deco-circle lc-deco-1"></div>
-              <div class="lc-deco-circle lc-deco-2"></div>
-
-              <!-- Top row -->
-              <div class="lc-card-top">
-                <span class="lc-studying-label">
-                  <span class="lc-studying-dot"></span>正在学习
-                </span>
-                <span class="lc-all-courses" onclick="">全部课程 &rsaquo;</span>
+          <!-- ① 16:9 导师海报组件 -->
+          <div style="padding: 16px 16px 0; background: #FFFFFF;">
+            <div style="width: 100%; aspect-ratio: 16/9; border-radius: 12px; background: linear-gradient(135deg, #F8F9FC 0%, #E8ECF4 100%); overflow: hidden; display: flex; align-items: stretch; box-shadow: 0 4px 12px rgba(0,0,0,0.03); position: relative; border: 1px solid #F0F2F7;">
+              
+              <div style="width: 45%; background: #D8E2F0; display: flex; align-items: flex-end; justify-content: center; position: relative;">
+                 <svg viewBox="0 0 24 24" fill="none" stroke="#A0B2C9" stroke-width="1.5" style="width: 80%; height: 80%; margin-bottom: -10%;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </div>
-
-              <!-- Main content + progress ring -->
-              <div class="lc-card-mid">
-                <div class="lc-card-text">
-                  <div class="lc-course-title">《期权双买实战<br/>7天训练营》</div>
-                  <div class="lc-course-sub">已学习 3&thinsp;/&thinsp;7 节 &nbsp;·&nbsp; 刘纪鹏主讲</div>
-                  <button class="lc-continue-btn">继续学习 →</button>
-                </div>
-
-                <!-- SVG ring progress -->
-                <div class="lc-ring-wrap">
-                  <svg class="lc-ring" viewBox="0 0 64 64">
-                    <circle class="lc-ring-track" cx="32" cy="32" r="26"/>
-                    <circle class="lc-ring-fill"  cx="32" cy="32" r="26"
-                            stroke-dasharray="163.4"
-                            stroke-dashoffset="114.4"/><!-- 3/7 ≈ 43% -->
-                    <text class="lc-ring-text" x="32" y="36">43%</text>
-                  </svg>
-                  <div class="lc-ring-label">完成度</div>
+              
+              <div style="width: 55%; padding: 20px 16px; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 20px; font-weight: 800; color: #1A1A1A; margin-bottom: 8px;">刘纪鹏</div>
+                <div style="font-size: 12px; color: #555555; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">
+                  著名经济学家，股份制和公司问题专家。致力于宏观经济与资本市场研究，带你洞悉市场周期，把握投资机遇。
                 </div>
               </div>
+
+              <div style="position: absolute; top: 8px; right: 8px; background: rgba(22,119,255,0.1); color: #1677FF; font-size: 10px; padding: 3px 6px; border-radius: 4px; font-weight: 600;">16:9 海报组件</div>
             </div>
           </div>
 
-          <!-- ② My VIP mentors -->
-          <div class="lc-section-header">
-            <span class="lc-section-title">我的大V导师</span>
-            <span class="lc-section-more">管理 &rsaquo;</span>
+          <!-- ② Content tabs -->
+          <div class="mentor-tabs" style="display: flex; padding: 0 16px; border-bottom: 1px solid #F0F2F7; background: #FFFFFF; position: sticky; top: 0; z-index: 20;">
+            <div class="mentor-tab active" id="mt-compulsory" onclick="switchMentorTab('compulsory')" style="flex: 1; text-align: center; padding: 14px 0; font-size: 15px; font-weight: 700; color: #1677FF; position: relative; cursor: pointer;">
+              必修课
+              <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 24px; height: 3px; background: #1677FF; border-radius: 3px;"></div>
+            </div>
+            <div class="mentor-tab" id="mt-elective" onclick="switchMentorTab('elective')" style="flex: 1; text-align: center; padding: 14px 0; font-size: 14px; font-weight: 500; color: #888888; cursor: pointer; transition: color 150ms;">
+              选修课
+            </div>
+            <div class="mentor-tab" id="mt-practical" onclick="switchMentorTab('practical')" style="flex: 1; text-align: center; padding: 14px 0; font-size: 14px; font-weight: 500; color: #888888; cursor: pointer; transition: color 150ms;">
+              实战课
+            </div>
           </div>
 
-          <div class="lc-adv-scroll">
-            <div class="lc-adv-grid" id="lc-adv-grid"></div>
+          <div class="mentor-panels">
+          
+            <div class="mentor-panel active" id="mp-compulsory">
+              <div class="mcc-card" onclick="ensureAuth()">
+                <div class="mcc-thumb">
+                  <div style="width:100%;height:100%;background:linear-gradient(135deg,#0D2B4E,#1B5E8A);"></div>
+                </div>
+                <div class="mcc-info">
+                  <div>
+                    <div class="mcc-title">宏观经济与周期研判核心课</div>
+                    <div class="mcc-meta">刘纪鹏 · 共 12 节</div>
+                  </div>
+                  <div class="mcc-bottom">
+                    <button class="mcc-btn" onclick="event.stopPropagation(); ensureAuth(() => router.navigate('course-detail'))">去学习</button>
+                  </div>
+                </div>
+              </div>
+              <div class="mcc-card" onclick="ensureAuth()">
+                <div class="mcc-thumb">
+                  <div style="width:100%;height:100%;background:linear-gradient(135deg,#3D1F00,#8B4800);"></div>
+                </div>
+                <div class="mcc-info">
+                  <div>
+                    <div class="mcc-title">美联储降息周期的资产配置</div>
+                    <div class="mcc-meta">系列直播 · 3小时大课</div>
+                  </div>
+                  <div class="mcc-bottom">
+                    <button class="mcc-btn">去学习</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mentor-panel" id="mp-elective">
+              <div class="mcc-card" onclick="ensureAuth()">
+                <div class="mcc-thumb">
+                  <div style="width:100%;height:100%;background:linear-gradient(135deg,#1B3A6B,#4F46E5);"></div>
+                </div>
+                <div class="mcc-info">
+                  <div>
+                    <div class="mcc-title">量化因子构建与多头策略解析</div>
+                    <div class="mcc-meta">特邀讲师 · 共 8 节</div>
+                  </div>
+                  <div class="mcc-bottom">
+                    <button class="mcc-btn" style="background:#FF4D4F; box-shadow:0 4px 12px rgba(255,77,79,0.3);" onclick="event.stopPropagation(); ensureAuth(() => router.navigate('course-detail-renewal'))">去续费</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mentor-panel" id="mp-practical">
+              <div class="mcc-card" onclick="ensureAuth()">
+                <div class="mcc-thumb">
+                  <div style="width:100%;height:100%;background:linear-gradient(135deg,#4A044E,#9D174D);"></div>
+                </div>
+                <div class="mcc-info">
+                  <div>
+                    <div class="mcc-title">A股核心资产财报拆解实战</div>
+                    <div class="mcc-meta">刘纪鹏 · 带练营</div>
+                  </div>
+                  <div class="mcc-bottom">
+                    <button class="mcc-btn">去学习</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
+
+          <div style="height:32px;"></div>
 
         </div>
         <!-- /tab-advisor -->
 
 
         <!-- PROFILE TAB -->
+        <!-- PROFILE TAB -->
         <div class="tab-panel" id="tab-profile">
+          <div class="pf-bg"></div>
           <div class="pf-scroll">
-
-            <!-- A: User card -->
-            <div class="pf-user-card">
-              <div class="pf-user-main">
-                <div class="pf-user-avatar">李</div>
-                <div class="pf-user-info">
-                  <div class="pf-user-name">李明</div>
-                  <div class="pf-user-phone">+86 138 **** 8866</div>
+            
+            <!-- Header -->
+            <div class="pf-header">
+              <div class="pf-user-info">
+                <div class="pf-avatar">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                 </div>
-                <div class="pf-user-edit">编辑资料 ›</div>
+                <div class="pf-name-box">
+                  <div class="pf-name">Cosine<span>°</span></div>
+                  <div class="pf-sub">个人信息 ›</div>
+                </div>
               </div>
-              <!-- VIP banner -->
-              <div class="pf-vip-banner">
-                <div class="pf-vip-left">
-                  <div class="pf-vip-crown">♛</div>
-                  <div>
-                    <div class="pf-vip-title">SVIP 年度会员</div>
-                    <div class="pf-vip-exp">有效期至 2026-12-31</div>
-                  </div>
-                </div>
-                <div class="pf-vip-right">查看权益 ›</div>
+              <svg class="pf-scan-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></svg>
+            </div>
+
+            <!-- Top Buttons -->
+            <div class="pf-top-btns">
+              <div class="pf-tbtn pf-tbtn-left">
+                <span>全部订单</span>
+                <svg class="pf-tbtn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              </div>
+              <div class="pf-tbtn pf-tbtn-right">
+                <span>退款/售后</span>
+                <svg class="pf-tbtn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
               </div>
             </div>
 
-            <!-- B: Stats row -->
-            <div class="pf-stats-card">
-              <div class="pf-stat-item">
-                <div class="pf-stat-val">1,280</div>
-                <div class="pf-stat-label">账户余额(元)</div>
+            <!-- Order Card -->
+            <div class="pf-card">
+              <div class="pf-card-title">
+                订单
+                <div class="pf-card-more">查看 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
               </div>
-              <div class="pf-stat-divider"></div>
-              <div class="pf-stat-item">
-                <div class="pf-stat-val">3,560</div>
-                <div class="pf-stat-label">我的积分</div>
-              </div>
-              <div class="pf-stat-divider"></div>
-              <div class="pf-stat-item">
-                <div class="pf-stat-val">4</div>
-                <div class="pf-stat-label">优惠券(张)</div>
-              </div>
-              <div class="pf-stat-divider"></div>
-              <div class="pf-stat-item">
-                <div class="pf-stat-val">2</div>
-                <div class="pf-stat-label">已获证书</div>
-              </div>
-            </div>
-
-            <!-- C: 学习工具金刚区 -->
-            <div class="pf-section-card">
-              <div class="pf-section-title">我的学习</div>
-              <div class="pf-tools-grid">
-                <div class="pf-tool-item">
-                  <div class="pf-tool-icon" style="background:#E8F1FF;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                  </div>
-                  <span class="pf-tool-label">已购课程</span>
+              <div class="pf-grid">
+                <div class="pf-grid-item">
+                  <div class="pf-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M7 14h1.01"/></svg></div>
+                  <div class="pf-grid-text">待付款</div>
                 </div>
-                <div class="pf-tool-item">
-                  <div class="pf-tool-icon" style="background:#FEF3C7;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                  </div>
-                  <span class="pf-tool-label">我的研报</span>
+                <div class="pf-grid-item">
+                  <div class="pf-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+                  <div class="pf-grid-text">待发货</div>
                 </div>
-                <div class="pf-tool-item">
-                  <div class="pf-tool-icon" style="background:#EDE9FE;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" width="22" height="22"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                  </div>
-                  <span class="pf-tool-label">随堂错题本</span>
+                <div class="pf-grid-item">
+                  <div class="pf-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+                  <div class="pf-grid-text">待收货</div>
                 </div>
-                <div class="pf-tool-item">
-                  <div class="pf-tool-icon" style="background:#D1FAE5;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" width="22" height="22"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  </div>
-                  <span class="pf-tool-label">直播预约</span>
+                <div class="pf-grid-item">
+                  <div class="pf-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="12" y1="9" x2="12" y2="15"/></svg></div>
+                  <div class="pf-grid-text">退款/售后</div>
                 </div>
               </div>
             </div>
 
-            <!-- D: Service list -->
-            <div class="pf-list-card">
+            <!-- Learning Card -->
+            <div class="pf-card">
+              <div class="pf-card-title">我的学习</div>
+              <div class="pf-grid">
+                <div class="pf-grid-item">
+                  <div class="pf-icon-bg" style="background: #E6F9EE; color: #07C160;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="3" y="4" width="18" height="18" rx="2"/><polyline points="8 14 11 17 16 10"/></svg></div>
+                  <div class="pf-grid-text">日历</div>
+                </div>
+                <div class="pf-grid-item">
+                  <div class="pf-icon-bg" style="background: #EBF4FF; color: #1677FF;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+                  <div class="pf-grid-text">我的下载</div>
+                </div>
+                <div class="pf-grid-item">
+                  <div class="pf-icon-bg" style="background: #EBF4FF; color: #1677FF;"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 14l-3-3-3 3V5h6v12z"/></svg></div>
+                  <div class="pf-grid-text">错题本</div>
+                </div>
+                <div class="pf-grid-item">
+                  <div class="pf-icon-bg" style="background: #FFF1E6; color: #FA8C16;"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                  <div class="pf-grid-text">超级会员</div>
+                </div>
+                <div class="pf-grid-item">
+                  <div class="pf-icon-bg" style="background: #EBF4FF; color: #1677FF;"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20 4H4v2h16V4zm1 10v4c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2zm-7-2H9v2h5v-2z"/></svg></div>
+                  <div class="pf-grid-text">订阅店铺</div>
+                </div>
+                <div class="pf-grid-item">
+                  <div class="pf-icon-bg" style="background: #FFF1E6; color: #FA8C16;"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 11l-2-1.5-2 1.5V6h4v8z"/></svg></div>
+                  <div class="pf-grid-text">题目收藏</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Account Card -->
+            <div class="pf-card">
+              <div class="pf-card-title">我的账户</div>
+              <div class="pf-grid">
+                <div class="pf-grid-item">
+                  <div class="pf-icon-bg" style="background: #FFF1E6; color: #FA8C16;"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
+                  <div class="pf-grid-text">我的钱包</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- List Menu -->
+            <div class="pf-list">
               <div class="pf-list-item">
                 <div class="pf-list-left">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                  <span>订单记录</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                  回收站
                 </div>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#CCC" stroke-width="2.5" stroke-linecap="round" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg class="pf-list-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
               </div>
-              <div class="pf-list-divider"></div>
               <div class="pf-list-item">
                 <div class="pf-list-left">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                  <span>专属客服</span>
-                  <span class="pf-service-tip">工作时间 9:00–18:00</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                  通知设置
                 </div>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#CCC" stroke-width="2.5" stroke-linecap="round" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg class="pf-list-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
               </div>
-              <div class="pf-list-divider"></div>
               <div class="pf-list-item">
                 <div class="pf-list-left">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" width="18" height="18"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-                  <span>设置</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  意见反馈
                 </div>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#CCC" stroke-width="2.5" stroke-linecap="round" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg class="pf-list-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
+              <div class="pf-list-item">
+                <div class="pf-list-left">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  在线客服
+                </div>
+                <svg class="pf-list-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
+              <div class="pf-list-item">
+                <div class="pf-list-left">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                  了解沙丘
+                </div>
+                <svg class="pf-list-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
+              <div class="pf-list-item">
+                <div class="pf-list-left">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                  设置
+                </div>
+                <svg class="pf-list-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
               </div>
             </div>
 
-            <div style="height:32px;"></div>
           </div>
         </div>
         <!-- /tab-profile -->
@@ -5446,6 +5226,16 @@ body {
             </svg>
           </div>
           <span class="tab-label">首页</span>
+        </div>
+
+        <!-- 圈子 -->
+        <div class="tab-item" id="tab-btn-circle" onclick="switchTab('circle')">
+          <div class="tab-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/>
+            </svg>
+          </div>
+          <span class="tab-label">圈子</span>
         </div>
 
         <!-- AI 半球悬浮按钮（居中） -->
@@ -5585,10 +5375,12 @@ body {
     <!-- =============================================
          PAGE: MENTOR PROFILE
          ============================================= -->
-    <div class="page hidden" id="page-mentor" style="display:none;">
-
-      <!-- Status bar -->
-      <div class="status-bar mp-status-bar">
+    
+    <!-- =============================================
+         PAGE: MY COURSES — 我的学习
+         ============================================= -->
+    <div class="page hidden" id="page-my-courses" style="display:none;">
+      <div class="status-bar" style="background:#fff;color:#1A1A1A;border-bottom:none;flex-shrink:0;">
         <span class="time">9:41</span>
         <div class="icons">
           <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="1" y="15" width="4" height="6" rx="1"/><rect x="7" y="11" width="4" height="10" rx="1"/><rect x="13" y="7" width="4" height="14" rx="1"/><rect x="19" y="3" width="4" height="18" rx="1" opacity=".3"/></svg>
@@ -5596,106 +5388,52 @@ body {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 13v-2" stroke-linecap="round"/><rect x="3" y="8" width="14" height="8" rx="1" fill="currentColor" stroke="none"/></svg>
         </div>
       </div>
-
-      <!-- Sticky navbar -->
-      <div class="mp-navbar">
-        <button class="mp-back-btn" onclick="router.navigate('main')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-            <polyline points="15 18 9 12 15 6"/>
-          </svg>
+      <div class="ps-navbar" style="border-bottom: none;">
+        <button class="ps-nav-btn" onclick="router.navigate('main')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
-        <span class="mp-navbar-title">李光 · 专属主页</span>
-        <button class="mp-action-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20">
-            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-          </svg>
-        </button>
+        <span class="ps-nav-title">我的学习</span>
+        <button class="ps-nav-btn" style="opacity: 0; pointer-events: none;"></button>
       </div>
 
-      <!-- Scrollable content -->
-      <div class="mp-scroll">
-
-        <!-- ① Hero profile card -->
-        <div class="mp-hero">
-          <!-- Decorative orbs -->
-          <div class="mp-hero-orb mp-orb-1"></div>
-          <div class="mp-hero-orb mp-orb-2"></div>
-
-          <!-- Avatar + identity -->
-          <div class="mp-identity">
-            <div class="mp-avatar">李</div>
-            <div class="mp-identity-text">
-              <div class="mp-realname">李光</div>
-              <div class="mp-title-tag">量化策略主理人</div>
-            </div>
-          </div>
-
-          <!-- Private delivery stats — NO follower counts -->
-          <div class="mp-stats-row">
-            <div class="mp-stat">
-              <div class="mp-stat-val">1,200<span class="mp-stat-unit">+</span></div>
-              <div class="mp-stat-label">累计服务学员</div>
-            </div>
-            <div class="mp-stat-divider"></div>
-            <div class="mp-stat">
-              <div class="mp-stat-val">99.8<span class="mp-stat-unit">%</span></div>
-              <div class="mp-stat-label">课程好评率</div>
-            </div>
-            <div class="mp-stat-divider"></div>
-            <div class="mp-stat">
-              <div class="mp-stat-val">12<span class="mp-stat-unit">期</span></div>
-              <div class="mp-stat-label">已交付期数</div>
-            </div>
-          </div>
-
-          <!-- Bio -->
-          <div class="mp-bio">
-            15年金融从业经验，原某知名公募基金经理，擅长通过宏观周期寻找高确定性交易机会。曾管理规模逾50亿的量化策略产品，现专注私域知识交付，每期限额30席。
-          </div>
-
-          <!-- Tags -->
-          <div class="mp-bio-tags">
-            <span class="mp-bio-tag">卫视嘉宾</span>
-            <span class="mp-bio-tag">策略交易</span>
-            <span class="mp-bio-tag">量化对冲</span>
-          </div>
-        </div>
-
-        <!-- ② Content tabs -->
-        <div class="mp-tabs-bar">
-          <div class="mp-tab mp-tab--active" onclick="switchMentorTab(this,'course')">课程</div>
-          <div class="mp-tab" onclick="switchMentorTab(this,'live')">直播</div>
-          <div class="mp-tab" onclick="switchMentorTab(this,'circle')">圈子</div>
-        </div>
-
-        <!-- Tab panels -->
-        <div class="mp-tab-content">
-
-          <!-- 课程面板 -->
-          <div class="mp-tab-panel active" id="mp-tp-course">
-            <div class="mp-course-list" id="mp-course-list"></div>
-            <div style="height:16px;"></div>
-          </div>
-
-          <!-- 直播面板 -->
-          <div class="mp-tab-panel" id="mp-tp-live">
-            <div class="hm-live-grid" id="mp-live-list" style="padding:12px 16px 16px;"></div>
-          </div>
-
-          <!-- 圈子面板 -->
-          <div class="mp-tab-panel" id="mp-tp-circle">
-            <div class="qz-list" id="mp-circle-list" style="padding:8px 0;"></div>
-          </div>
-
-        </div>
-
-        <div style="height:32px;"></div>
+      <div class="mc-tabs">
+        <div class="mc-tab active" onclick="switchMcTab(event, 'course')">课程 (2)</div>
+        <div class="mc-tab" onclick="switchMcTab(event, 'live')">直播 (1)</div>
       </div>
-      <!-- /mp-scroll -->
 
+      <div class="mc-scroll">
+        <div class="mc-panel active" id="mc-panel-course">
+          <div class="mc-card">
+            <div class="mc-thumb"><div class="mc-thumb-bg" style="background:linear-gradient(135deg,#0D2B4E 0%,#1B5E8A 60%,#C9770A 100%);"></div></div>
+            <div class="mc-info">
+              <div class="mc-title">期权双买实战7天训练营</div>
+              <div class="mc-meta">刘纪鹏主讲 · 共 7 节</div>
+            </div>
+          </div>
+          <div class="mc-card">
+            <div class="mc-thumb"><div class="mc-thumb-bg" style="background:linear-gradient(135deg,#3D1F00 0%,#8B4800 60%,#D97706 100%);"></div></div>
+            <div class="mc-info">
+              <div class="mc-title">价值投资选股实战课</div>
+              <div class="mc-meta">洪灏主讲 · 共 10 节</div>
+            </div>
+          </div>
+        </div>
+        <div class="mc-panel" id="mc-panel-live">
+          <div class="mc-card">
+            <div class="mc-thumb"><div class="mc-thumb-bg" style="background:linear-gradient(135deg,#1B3A6B 0%,#4F46E5 100%);"></div></div>
+            <div class="mc-info">
+              <div>
+                <div class="mc-title">美联储议息会议与A股走势推演</div>
+                <div class="mc-meta">主讲：刘纪鹏</div>
+              </div>
+              <div class="mc-live-time">直播中 · 点击进入</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- /page-mentor -->
+    <!-- /page-my-courses -->
+
     <!-- =============================================
          PAGE: CIRCLE DETAIL — 圈子主页
          ============================================= -->
@@ -5714,7 +5452,7 @@ body {
       <!-- Dark hero -->
       <div class="cd-hero">
         <div class="cd-navbar">
-          <button class="cd-nav-btn" onclick="router.navigate('mentor')">
+          <button class="cd-nav-btn" onclick="switchTab('advisor')">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
           </button>
           <span class="cd-nav-title">刘纪鹏的圈子</span>
@@ -5783,10 +5521,10 @@ body {
             <svg viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2" stroke-linecap="round" width="24" height="24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
           </div>
           <div class="cd-group-info">
-            <div class="cd-group-name">刘纪鹏·量化实战交流群</div>
+            <div class="cd-group-name">刘纪鹏量化策略圈</div>
             <div class="cd-group-meta">圈主+助理在线答疑</div>
           </div>
-          <button class="cd-enter-btn" onclick="router.navigate('group-chat')">进入</button>
+          <button class="cd-enter-btn" onclick="openGroupChat('刘纪鹏量化策略圈')">进入</button>
         </div>
 
         <!-- Pinned post -->
@@ -5812,66 +5550,65 @@ body {
          PAGE: GROUP CHAT — 专属群聊页
          ============================================= -->
     <div class="page hidden" id="page-group-chat" style="display:none;background:#F4F6FA;flex-direction:column;">
-
-      <!-- Navbar -->
-      <div class="gc-navbar">
-        <button class="gc-nav-btn" onclick="router.navigate('circle-detail')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <div class="gc-nav-center">
-          <div class="gc-nav-title">刘纪鹏·量化实战交流群</div>
-          <div class="gc-nav-sub">8500人</div>
+        <div class="status-bar" style="background:#fff;color:#0D1226;border-bottom:none;flex-shrink:0;">
+          <span class="time">9:41</span>
+          <div class="icons">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="1" y="15" width="4" height="6" rx="1"/><rect x="7" y="11" width="4" height="10" rx="1"/><rect x="13" y="7" width="4" height="14" rx="1"/><rect x="19" y="3" width="4" height="18" rx="1" opacity=".3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 13v-2" stroke-linecap="round"/><rect x="3" y="8" width="14" height="8" rx="1" fill="currentColor" stroke="none"/></svg>
+          </div>
         </div>
-        <button class="gc-nav-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-        </button>
-      </div>
-
-      <!-- Chat body -->
-      <div class="gc-body" id="gc-body">
-
-        <!-- User bubble -->
-        <div class="gc-row gc-row--right">
-          <div class="gc-av gc-av--user">我</div>
-          <div class="gc-bubble gc-bubble--user">刘老师，今天早盘的新能源异动还能追吗？</div>
+        <div class="ps-navbar" style="border-bottom: 1px solid #F0F2F7;">
+          <button class="ps-nav-btn" onclick="router.navigate('main')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <span class="ps-nav-title" id="dynamic-gc-title" style="font-size: 16px;">内部交流群 (1.2w)</span>
+          <button class="ps-nav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
         </div>
 
-        <!-- Assistant bubble -->
-        <div class="gc-row gc-row--left">
-          <div class="gc-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);">助</div>
-          <div>
-            <div class="gc-name-row">
-              <span class="gc-name">团队助理</span>
-              <span class="gc-role-tag gc-tag-assist">助理</span>
+        <div class="gc-announcement">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="flex-shrink:0;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">管理员：下拉查看本周市场研报与重要更新说明...</span>
+        </div>
+
+        <div class="gc-body" id="gc-body" style="flex: 1; overflow-y: auto; padding: 16px; background: #F4F6FA;">
+          
+          <div class="gc-sys-msg">
+            <span>您已加入群聊，请遵守群规，友善交流</span>
+          </div>
+
+          <div class="gc-row gc-row--left">
+            <div class="gc-av" style="background: linear-gradient(135deg, #6C829D, #4B6382);">助</div>
+            <div>
+              <div class="gc-name-row">
+                <span class="gc-name">AI 助教</span>
+                <span class="gc-role-tag" style="background:#E8F1FF; color:#4B6382;">管理员</span>
+              </div>
+              <div class="gc-bubble gc-bubble--ai" style="margin-bottom: 8px;">
+                欢迎加入专属交流圈！这是本周的宏观经济复盘与策略指引，请各位同学查收👇
+              </div>
+              <div class="gc-card-bubble">
+                <div class="gc-card-img">WEEKLY REPORT</div>
+                <div class="gc-card-text">
+                  <strong>《宏观周期与资产配置周报》</strong><br/>
+                  内含：美联储降息预期分析、核心资产估值模型更新、下周关键数据前瞻。<br/>
+                  <span style="color: #1677FF; margin-top: 6px; display: inline-block;">点击查看全文 &gt;</span>
+                </div>
+              </div>
             </div>
-            <div class="gc-bubble gc-bubble--ai">@你 短期波动较大，建议关注政策窗口期。</div>
           </div>
         </div>
 
-        <!-- Owner bubble -->
-        <div class="gc-row gc-row--left">
-          <div class="gc-av" style="background:linear-gradient(135deg,#4F46E5,#6366F1);">刘</div>
-          <div>
-            <div class="gc-name-row">
-              <span class="gc-name">刘纪鹏</span>
-              <span class="gc-role-tag gc-tag-owner">圈主</span>
-            </div>
-            <div class="gc-bubble gc-bubble--ai">长期看趋势仍在，但要警惕阶段性回撤，切忌满仓。</div>
-          </div>
+        <div class="gc-input-bar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4B6382" stroke-width="2" width="24" height="24" style="flex-shrink: 0;"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          
+          <input type="text" id="gc-input" class="gc-input-field" placeholder="和老师、同学们聊聊..." onkeydown="if(event.key==='Enter') groupChatSend()"/>
+          
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4B6382" stroke-width="2" width="24" height="24" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          
+          <button class="gc-send-btn" onclick="groupChatSend()">发送</button>
         </div>
-
       </div>
-
-      <!-- Input bar -->
-      <div class="gc-input-bar">
-        <input class="gc-input" id="gc-input" placeholder="请输入消息..."
-               onkeydown="if(event.key==='Enter'){groupChatSend();}" />
-        <button class="gc-send-btn" onclick="groupChatSend()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        </button>
-      </div>
-
-    </div>
     <!-- /page-group-chat -->
     <!-- =============================================
          PAGE: PRESALES — 课程售前页
@@ -5890,7 +5627,7 @@ body {
 
       <!-- Navbar -->
       <div class="ps-navbar">
-        <button class="ps-nav-btn" onclick="router.navigate('mentor')">
+        <button class="ps-nav-btn" onclick="switchTab('advisor')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
         <span class="ps-nav-title">课程详情</span>
@@ -5988,6 +5725,120 @@ body {
     <!-- /page-presales -->
 
     <!-- =============================================
+         PAGE: COURSE DETAIL — 课程详情页
+         ============================================= -->
+    <div class="page hidden" id="page-course-detail" style="display:none;">
+        
+        <div class="cdet-header">
+          <div class="cdet-back" onclick="router.navigate('main')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="15 18 9 12 15 6"/></svg>
+          </div>
+          <div class="cdet-play-btn"><div class="cdet-play-icon"></div></div>
+        </div>
+        <div class="cdet-tabs">
+          <div class="cdet-tab active" id="tab-cdet-intro" onclick="switchCdetTab('intro')">简介</div>
+          <div class="cdet-tab" id="tab-cdet-catalog" onclick="switchCdetTab('catalog')">目录</div>
+        </div>
+        <div class="cdet-scroll">
+          
+          <div class="cdet-panel active" id="panel-cdet-intro">
+            <div class="cdet-title-sec">
+              <div class="cdet-title">宏观经济与周期研判核心课</div>
+              <div class="cdet-tags">
+                <div class="cdet-tag">核心必修</div>
+                <div class="cdet-tag">包含内部讲义</div>
+              </div>
+              <div class="cdet-meta">
+                <span>共 12 节课 · 已更新完毕</span>
+                <span>1.2w 人在学</span>
+              </div>
+            </div>
+            <div class="cdet-mentor-card">
+              <div class="cdet-mentor-av">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" style="width:100%;height:100%;padding:8px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="cdet-mentor-info">
+                <div class="cdet-mentor-name">刘纪鹏</div>
+                <div class="cdet-mentor-title">著名经济学家 · 宏观周期研究专家</div>
+              </div>
+            </div>
+            <div class="cdet-desc-sec">
+              <div class="cdet-desc-title">课程亮点</div>
+              <div class="cdet-desc-text">
+                本课程专为高阶投资者打造，深度解析美联储降息周期下的全球资产流动规律。<br/><br/>
+                核心涵盖：<br/>
+                1. 宏观经济数据拆解与真伪辨别<br/>
+                2. A股核心资产的估值模型重塑<br/>
+                3. 大类资产配置的实战推演逻辑<br/><br/>
+                带你建立系统的投研框架，穿越牛熊周期。
+              </div>
+            </div>
+          </div>
+          <div class="cdet-panel" id="panel-cdet-catalog" style="background:#FFF; border-radius:12px;">
+            <div class="cdet-chap-item">
+              <div class="cdet-chap-left">
+                <div class="cdet-chap-title">01 | 导论：如何看懂宏观经济指标？</div>
+                <div class="cdet-chap-time">视频 · 45分钟</div>
+              </div>
+              <div class="cdet-chap-status">试看</div>
+            </div>
+            <div class="cdet-chap-item">
+              <div class="cdet-chap-left">
+                <div class="cdet-chap-title" style="color:#888;">02 | 降息周期下的全球资本流动</div>
+                <div class="cdet-chap-time">视频 · 50分钟</div>
+              </div>
+              <div class="cdet-chap-status" style="color:#999;">锁定</div>
+            </div>
+            <div class="cdet-chap-item">
+              <div class="cdet-chap-left">
+                <div class="cdet-chap-title" style="color:#888;">03 | 核心资产估值体系重构</div>
+                <div class="cdet-chap-time">视频 · 48分钟</div>
+              </div>
+              <div class="cdet-chap-status" style="color:#999;">锁定</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- /page-course-detail -->
+
+    <!-- =============================================
+         PAGE: COURSE DETAIL RENEWAL — 续费提醒详情页
+         ============================================= -->
+    <div class="page hidden" id="page-course-detail-renewal" style="display:none; background:#F4F6FA; flex-direction:column; height:100%; position:relative; z-index:50;">
+        <div class="cdet-header">
+          <div class="cdet-back" onclick="router.navigate('main')"><svg viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="15 18 9 12 15 6"/></svg></div>
+          <div style="text-align:center;">
+             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32" style="margin-bottom:8px; opacity:0.8;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+             <div style="font-size:14px; font-weight:500;">课程权益已到期，请续费后观看</div>
+          </div>
+        </div>
+        <div class="cdet-scroll" style="padding-bottom:80px; padding-top:16px;">
+          <div class="cdet-panel active" style="padding-top:0;">
+            <div class="cdet-title-sec">
+              <div class="cdet-title">量化因子构建与多头策略解析</div>
+              <div class="cdet-tags"><div class="cdet-tag" style="background:#FFF1F0; color:#FF4D4F;">已过期</div><div class="cdet-tag">高阶进阶</div></div>
+              <div class="cdet-meta"><span>共 8 节实战课</span><span>原有效期: 2026.01.15</span></div>
+            </div>
+            <div class="cdet-desc-sec">
+              <div class="cdet-desc-title">课程亮点</div>
+              <div class="cdet-desc-text">本课程提炼了主流私募机构的量化因子挖掘框架。您的学习权益已于近期结束，继续学习可解锁最新的回测源码与策略更新包。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cdet-bottom">
+          <div class="cdet-price-area">
+            <div class="cdet-price"><span>¥</span> 1,280</div>
+            <div class="cdet-original">续费立省 ¥500</div>
+          </div>
+          <div class="cdet-actions">
+            <button class="cdet-btn-ghost" onclick="openAIPanel()">咨询助理</button>
+            <button class="cdet-btn-main" style="background:#FF4D4F; box-shadow:0 4px 12px rgba(255,77,79,0.3);" onclick="openPaymentSheet()">立即续费</button>
+          </div>
+        </div>
+      </div>
+    <!-- /page-course-detail-renewal -->
+
+    <!-- =============================================
          PAGE: PAYMENT SUCCESS — 支付成功页
          ============================================= -->
     <div class="page hidden" id="page-payment-success" style="display:none;">
@@ -6023,22 +5874,98 @@ body {
     </div>
     <!-- /page-payment-success -->
 
+      <!-- Global Phone Auth Sheet -->
+      <!-- Phone Auth Sheet (WeChat-style) -->
+      <div class="phone-auth-scrim" id="phone-auth-scrim" onclick="closePhoneAuth()"></div>
 
+      <div class="phone-auth-sheet" id="phone-auth-sheet">
 
-    <!-- =============================================
-         PAGE: CIRCLE DETAIL (圈子主页)
-         ============================================= -->
-    
+        <!-- Sheet header -->
+        <div class="pa-header">
+          <span class="pa-header-title">微信授权</span>
+          <button class="pa-close-btn" onclick="closePhoneAuth()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="18" height="18">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+          </button>
+        </div>
 
-    <!-- =============================================
-         PAGE: GROUP CHAT (群聊页)
-         ============================================= -->
-    
+        <!-- App identity -->
+        <div class="pa-identity">
+          <div class="pa-app-icon">
+        <svg viewBox="0 0 48 48" fill="none" width="32" height="32">
+          <rect x="6" y="26" width="7" height="14" rx="2" fill="rgba(255,255,255,0.5)"/>
+          <rect x="16" y="18" width="7" height="22" rx="2" fill="rgba(255,255,255,0.7)"/>
+          <rect x="26" y="10" width="7" height="30" rx="2" fill="rgba(255,255,255,0.9)"/>
+          <path d="M38 6 L40 12 L46 14 L40 16 L38 22 L36 16 L30 14 L36 12 Z" fill="#E8C97A"/>
+        </svg>
+          </div>
+          <p class="pa-app-name"><strong>沙丘学习交流平台</strong> 申请获取你的手机号</p>
+        </div>
 
-  
+        <!-- Phone number card -->
+        <div class="pa-phone-card">
+          <div class="pa-phone-row">
+        <!-- WeChat icon -->
+        <div class="pa-wechat-icon">
+          <svg viewBox="0 0 24 24" fill="#07C160" width="22" height="22">
+            <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.045c.134 0 .241-.107.241-.245 0-.06-.023-.12-.04-.177l-.325-1.233a.491.491 0 01.177-.554 6.257 6.257 0 002.5-4.633c.025-3.551-3.058-6.148-7.06-6.11zm-2.098 2.439c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982zm4.406 0c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982z"/>
+          </svg>
+        </div>
+        <div class="pa-phone-info">
+          <div class="pa-phone-number">138 **** 8866</div>
+          <div class="pa-phone-sub">微信绑定手机号</div>
+        </div>
+        <div class="pa-safe-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#07C160" stroke-width="2" stroke-linecap="round" width="12" height="12"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          安全绑定
+        </div>
+          </div>
+        </div>
 
-</div>
-</div>
+        <!-- Tip text -->
+        <p class="pa-tip">授权后可使用手机号快捷登录，我们承诺不会向第三方泄露你的手机号</p>
+
+        <!-- Action buttons -->
+        <button class="pa-allow-btn" onclick="confirmPhoneAuth()">允许</button>
+        <button class="pa-deny-btn"  onclick="closePhoneAuth()">拒绝</button>
+
+      </div>
+      <!-- /phone-auth-sheet -->
+
+      <div class="payment-scrim" id="payment-scrim" onclick="closePaymentSheet()"></div>
+      <div class="payment-sheet" id="payment-sheet">
+        <div class="pay-header">
+          <svg class="pay-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" onclick="closePaymentSheet()"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          确认付款
+        </div>
+        <div class="pay-amount"><span>¥</span> 1,280.00</div>
+        <div class="pay-info">
+          <div class="pay-row"><span class="pay-lbl">订单信息</span><span class="pay-val">量化因子构建课-续费</span></div>
+          <div class="pay-row"><span class="pay-lbl">支付方式</span><span class="pay-val" style="display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="#09B83E" width="16" height="16"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.5 14.5v-9l6 4.5-6 4.5z"/></svg> 微信支付</span></div>
+        </div>
+        <button class="pay-btn" onclick="confirmPayment()">确认支付</button>
+      </div>
+
+      <div class="page hidden" id="page-renewal-success" style="display:none; background:#FFF; flex-direction:column; height:100%; position:relative; z-index:100;">
+        <div class="status-bar" style="background:#fff;color:#0D1226;border:none;"></div>
+        <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:0 32px; margin-top:-10vh;">
+          <div style="width:72px; height:72px; background:#09B83E; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:24px; box-shadow:0 8px 24px rgba(9,184,62,0.3);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div style="font-size:22px; font-weight:800; color:#1A1A1A; margin-bottom:8px;">支付成功</div>
+          <div style="font-size:14px; color:#888; text-align:center; margin-bottom:40px;">您已成功续费《量化因子构建与多头策略解析》，权益已重新激活。</div>
+          <button style="width:100%; height:48px; background:#1677FF; color:#FFF; border:none; border-radius:99px; font-size:16px; font-weight:600; cursor:pointer;" onclick="router.navigate('course-detail')">去学习</button>
+        </div>
+      </div>
+
+      <div id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">正在安全登录中…</div>
+      </div>
+
+    </div><!-- /.phone-frame -->
+  </div><!-- /#app-shell -->
 
 <script>
 /* === ROUTER (inlined from router.js) === */
@@ -6122,17 +6049,36 @@ class AppRouter {
 
 window.router = new AppRouter();
 
+  /* ── Global auth state ── */
+  let isLoggedIn = false;
+  let pendingAuthAction = null;
+
+  function ensureAuth(callback) {
+    if (isLoggedIn) {
+      if (callback) callback();
+    } else {
+      pendingAuthAction = callback;
+      const scrim = document.getElementById('phone-auth-scrim');
+      const sheet = document.getElementById('phone-auth-sheet');
+      if (scrim) scrim.classList.add('open');
+      if (sheet) sheet.classList.add('open');
+    }
+  }
+
+  function cancelAuth() {
+    closePhoneAuth();
+  }
+
+
 
 /* =============================================
      INIT
      ============================================= */
   document.addEventListener('DOMContentLoaded', () => {
-    const authPage = document.getElementById('page-auth');
     const mainPage = document.getElementById('page-main');
 
-    router.register('auth', authPage);
     router.register('main', mainPage);
-    router.register('mentor',        document.getElementById('page-mentor'));
+    router.register('my-courses', document.getElementById('page-my-courses'));
     router.register('circle-detail', document.getElementById('page-circle-detail'));
     router.register('group-chat',    document.getElementById('page-group-chat'));
 
@@ -6140,7 +6086,7 @@ window.router = new AppRouter();
     router.register('payment-success',   document.getElementById('page-payment-success'));
 
     // Show auth page immediately
-    router.show('auth');
+    router.show('main');
 
     // Wire chat input Enter key
     const chatInput = document.getElementById('chat-input-field');
@@ -6169,24 +6115,32 @@ window.router = new AppRouter();
   }
 
   function closePhoneAuth() {
-    document.getElementById('phone-auth-scrim').classList.remove('open');
-    document.getElementById('phone-auth-sheet').classList.remove('open');
+    const scrim = document.getElementById('phone-auth-scrim');
+    const sheet = document.getElementById('phone-auth-sheet');
+    if (scrim) scrim.classList.remove('open');
+    if (sheet) sheet.classList.remove('open');
+    pendingAuthAction = null;
   }
 
   async function confirmPhoneAuth() {
-    // 1. 关闭底部手机号授权面板
-    closePhoneAuth();
-    await sleep(160); // 等待面板下降动画
-    // 2. 唤起全屏 Loading
+    const sheet = document.getElementById('phone-auth-sheet');
+    if (sheet) sheet.classList.remove('open');
+    await sleep(160);
+
     const overlay = document.getElementById('loading-overlay');
-    overlay.classList.add('active');
-    // 3. 模拟网络请求与安全校验
+    if (overlay) overlay.classList.add('active');
     await sleep(1000);
-    // 【核心修复】：不要过早移除 loading！直接跳转路由
-    await router.navigate('main');
-    // 4. 跳转完全结束之后，在后台重置 Loading 状态
+
+    isLoggedIn = true;
+    const scrim = document.getElementById('phone-auth-scrim');
+    if (scrim) scrim.classList.remove('open');
+
     setTimeout(() => {
-      overlay.classList.remove('active');
+      if (overlay) overlay.classList.remove('active');
+      if (pendingAuthAction) {
+        pendingAuthAction();
+        pendingAuthAction = null;
+      }
     }, 500);
   }
 
@@ -6195,15 +6149,24 @@ window.router = new AppRouter();
   /* =============================================
      TAB SWITCHING
      ============================================= */
-  const TAB_IDS = ['home', 'advisor', 'profile'];
+  const TAB_IDS = ['home', 'circle', 'advisor', 'profile'];
 
   function switchTab(id) {
+    if (id !== 'home' && !isLoggedIn) { ensureAuth(() => switchTab(id)); return; }
     // Update panels
     TAB_IDS.forEach(t => {
       const panel = document.getElementById(`tab-${t}`);
       const btn   = document.getElementById(`tab-btn-${t}`);
       if (panel) panel.classList.toggle('active', t === id);
       if (btn)   btn.classList.toggle('active', t === id);
+    });
+  }
+
+  function openGroupChat(groupName) {
+    const titleEl = document.getElementById('dynamic-gc-title');
+    if (titleEl) titleEl.textContent = groupName + ' (1.2w)';
+    ensureAuth(() => {
+      router.navigate('group-chat');
     });
   }
 
@@ -6326,7 +6289,7 @@ window.router = new AppRouter();
   const LIVE_DATA = [
     {
       id: 1,
-      title: '财富增长实战训练营',
+      title: '美联储议息会议与A股走势推演',
       views: '3,241人观看',
       priceNow: '¥198.00',
       priceOld: '¥398.00',
@@ -6337,7 +6300,7 @@ window.router = new AppRouter();
     },
     {
       id: 2,
-      title: '新能源板块深度解析',
+      title: '量化CTA策略：震荡市做多波动率',
       views: '1,872人观看',
       priceNow: '¥99.00',
       priceOld: '¥199.00',
@@ -6348,7 +6311,7 @@ window.router = new AppRouter();
     },
     {
       id: 3,
-      title: '量化投资策略入门精讲',
+      title: '高频交易与订单簿动力学解析',
       views: '987人观看',
       priceNow: '¥149.00',
       priceOld: '¥299.00',
@@ -6359,7 +6322,7 @@ window.router = new AppRouter();
     },
     {
       id: 4,
-      title: '期货交易风控实操课',
+      title: '可转债下修博弈与套利实战',
       views: '54人观看',
       priceNow: '¥198.00',
       priceOld: '¥398.00',
@@ -6374,7 +6337,7 @@ window.router = new AppRouter();
     const grid = document.getElementById('live-grid');
     if (!grid) return;
     grid.innerHTML = LIVE_DATA.map(item => `
-      <div class="hm-live-card">
+      <div class="hm-live-card" onclick="ensureAuth()">
         <div class="hm-live-thumb">
           <div class="hm-live-thumb-bg" style="background:${item.gradient};"></div>
           <span class="hm-live-badge ${item.badgeType}">${item.badge}</span>
@@ -6457,7 +6420,7 @@ window.router = new AppRouter();
     const el = document.getElementById('report-list');
     if (!el) return;
     el.innerHTML = REPORT_DATA.map(item => `
-      <div class="hm-report-card">
+      <div class="hm-report-card" onclick="ensureAuth()">
         <div class="hm-report-cover">
           <div class="hm-report-cover-bg" style="background:${item.gradient};"></div>
           <span class="hm-report-cover-badge">解读</span>
@@ -6488,7 +6451,7 @@ window.router = new AppRouter();
     const el = document.getElementById('course-grid');
     if (!el) return;
     el.innerHTML = COURSE_DATA.map(item => `
-      <div class="hm-course-card">
+      <div class="hm-course-card" onclick="ensureAuth()">
         <div class="hm-course-thumb">
           <div class="hm-course-thumb-bg" style="background:${item.gradient};"></div>
         </div>
@@ -6537,6 +6500,7 @@ window.router = new AppRouter();
   const aiScrim  = document.getElementById('ai-scrim');
 
   function openAIPanel() {
+    if (!isLoggedIn) { ensureAuth(() => openAIPanel()); return; }
     aiDrawer.classList.add('open');
     aiScrim.classList.add('open');
     // Prevent body scroll while drawer is open
@@ -6555,6 +6519,16 @@ window.router = new AppRouter();
 
   /* ── Keyword-based reply engine ── */
   function getAIReply(text) {
+    if (/小助理|人工/.test(text)) {
+      return `这是我们的专属小助理，你可以识别或截屏保存下方二维码添加👇
+      <div style="margin-top: 12px;">
+        <div style="display: inline-flex; flex-direction: column; align-items: center; background: #FFFFFF; padding: 12px; border-radius: 12px; border: 1px solid #EAECEF; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://work.weixin.qq.com/k/wecom_assistant"
+               style="width: 120px; height: 120px; display: block; border-radius: 6px;" alt="小助理二维码"/>
+          <span style="font-size: 11px; color: #555555; margin-top: 8px; font-weight: 600; letter-spacing: 0.5px;">扫码添加专属助教</span>
+        </div>
+      </div>`;
+    }
     if (/总结|第三节课/.test(text)) {
       return "王老师《量化实战》第三节课的核心观点如下：\n\n1. 震荡市中的网格交易法构建。\n2. 如何利用期权备兑策略增加收益。\n\n建议您重点复习视频第 24 分钟的实操演示部分。";
     }
@@ -6874,15 +6848,30 @@ window.router = new AppRouter();
   }
 
   /* ── Open mentor page: inject data then navigate ── */
-  /* ── switchMentorTab: 3-tab toggler on mentor page ── */
-  function switchMentorTab(el, tabId) {
-    // Toggle tab headers
-    document.querySelectorAll('.mp-tab').forEach(t => t.classList.remove('mp-tab--active'));
-    el.classList.add('mp-tab--active');
-    // Toggle panels
-    document.querySelectorAll('.mp-tab-panel').forEach(p => p.classList.remove('active'));
-    const panel = document.getElementById('mp-tp-' + tabId);
-    if (panel) panel.classList.add('active');
+  /* ── switchMentorTab: 伴学页三栏切换 ── */
+  function switchMentorTab(tabId) {
+    // 重置所有 Tab 状态
+    document.querySelectorAll('.mentor-tab').forEach(t => {
+      t.style.color = '#888888';
+      t.style.fontWeight = '500';
+      const indicator = t.querySelector('div');
+      if (indicator) t.removeChild(indicator);
+    });
+    
+    // 隐藏所有面板
+    document.querySelectorAll('.mentor-panel').forEach(p => p.classList.remove('active'));
+    
+    // 激活当前 Tab
+    const currentTab = document.getElementById('mt-' + tabId);
+    if (currentTab) {
+      currentTab.style.color = '#1677FF';
+      currentTab.style.fontWeight = '700';
+      currentTab.innerHTML += `<div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 24px; height: 3px; background: #1677FF; border-radius: 3px;"></div>`;
+    }
+    
+    // 显示对应面板
+    const currentPanel = document.getElementById('mp-' + tabId);
+    if (currentPanel) currentPanel.classList.add('active');
   }
 
   /* ── openMentorPage: inject data + render all 3 panels ── */
@@ -7006,7 +6995,7 @@ window.router = new AppRouter();
     if (scroll) scroll.scrollTop = 0;
 
     /* — Navigate — */
-    router.navigate('mentor');
+    switchTab('advisor');
   }
 
     function renderMentorGrid() {
@@ -7069,8 +7058,8 @@ window.router = new AppRouter();
     // 2. Re-render mentor page with updated data
     openMentorPage(0);
 
-    // 3. Navigate back to mentor page
-    router.navigate('mentor');
+    // 3. Navigate back to advisor tab
+    switchTab('advisor');
   }
 
 
@@ -7122,6 +7111,50 @@ window.router = new AppRouter();
     }, 1500);
   }
 
+
+  function switchMcTab(e, tabId) {
+    const page = document.getElementById('page-my-courses');
+    page.querySelectorAll('.mc-tab').forEach(t => t.classList.remove('active'));
+    page.querySelectorAll('.mc-panel').forEach(p => p.classList.remove('active'));
+    e.currentTarget.classList.add('active');
+    const panel = document.getElementById('mc-panel-' + tabId);
+    if (panel) panel.classList.add('active');
+  }
+
+  // 注册详情页面
+  router.register('course-detail', document.getElementById('page-course-detail'));
+  // 详情页内部 Tab 切换
+  function switchCdetTab(tabId) {
+    document.getElementById('tab-cdet-intro').classList.remove('active');
+    document.getElementById('tab-cdet-catalog').classList.remove('active');
+    document.getElementById('panel-cdet-intro').classList.remove('active');
+    document.getElementById('panel-cdet-catalog').classList.remove('active');
+    
+    document.getElementById('tab-cdet-' + tabId).classList.add('active');
+    document.getElementById('panel-cdet-' + tabId).classList.add('active');
+  }
+
+  // 注册续费相关路由
+  router.register('course-detail-renewal', document.getElementById('page-course-detail-renewal'));
+  router.register('renewal-success', document.getElementById('page-renewal-success'));
+
+  function openPaymentSheet() {
+    document.getElementById('payment-scrim').classList.add('open');
+    document.getElementById('payment-sheet').classList.add('open');
+  }
+  function closePaymentSheet() {
+    document.getElementById('payment-scrim').classList.remove('open');
+    document.getElementById('payment-sheet').classList.remove('open');
+  }
+  function confirmPayment() {
+    closePaymentSheet();
+    const overlay = document.getElementById('loading-overlay');
+    if(overlay) overlay.classList.add('active');
+    setTimeout(() => {
+      if(overlay) overlay.classList.remove('active');
+      router.navigate('renewal-success');
+    }, 1200);
+  }
 </script>
 
 </body>
